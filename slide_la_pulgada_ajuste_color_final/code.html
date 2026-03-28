@@ -1,0 +1,269 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#131313",
+              "surface-dim": "#131313",
+              "primary-container": "#1bff3c",
+              "on-tertiary-container": "#c5020c",
+              "inverse-surface": "#e5e2e1",
+              "on-primary": "#003a05",
+              "surface-bright": "#393939",
+              "on-secondary-container": "#6f5c00",
+              "on-background": "#e5e2e1",
+              "tertiary-container": "#ffd3cd",
+              "on-surface": "#e5e2e1",
+              "tertiary-fixed": "#ffdad5",
+              "secondary-fixed-dim": "#eac300",
+              "on-surface-variant": "#baccb2",
+              "on-secondary-fixed-variant": "#554500",
+              "on-primary-fixed-variant": "#00530a",
+              "on-primary-container": "#007112",
+              "surface-container": "#201f1f",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-container-low": "#1c1b1b",
+              "on-error-container": "#ffdad6",
+              "on-error": "#690005",
+              "error-container": "#93000a",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "surface-container-highest": "#353534",
+              "surface-tint": "#00e631",
+              "on-tertiary-fixed": "#410001",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-fixed": "#221b00",
+              "secondary": "#fff3d3",
+              "primary": "#ecffe3",
+              "tertiary": "#fff8f7",
+              "secondary-fixed": "#ffe174",
+              "error": "#ffb4ab",
+              "outline-variant": "#3b4b37",
+              "outline": "#84967e",
+              "on-secondary": "#3b2f00",
+              "inverse-primary": "#006e11",
+              "inverse-on-surface": "#313030",
+              "background": "#131313",
+              "on-tertiary-fixed-variant": "#930005",
+              "surface-variant": "#353534",
+              "secondary-container": "#fed400",
+              "on-tertiary": "#690003",
+              "primary-fixed-dim": "#00e631",
+              "primary-fixed": "#74ff6d",
+              "on-primary-fixed": "#002202"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani", "sans-serif"],
+              "body": ["Space Grotesk", "sans-serif"],
+              "label": ["Space Grotesk", "sans-serif"],
+              "technical": ["JetBrains Mono", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-primary {
+            box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
+<!-- Top Navigation Shell -->
+<header class="bg-[#131313] dark:bg-zinc-950 flex justify-between items-center w-full px-6 py-4 border-b border-zinc-800 fixed top-0 z-50">
+<div class="text-xl font-bold tracking-widest text-[#1BFF3C] font-['Rajdhani'] uppercase" style=""><span style="font-size: 24px; letter-spacing: 2.4px; background-color: rgb(19, 19, 19);" class="">WELD BEAR IEDU&nbsp;</span></div>
+<div class="flex gap-4">
+<button class="text-zinc-500 hover:bg-emerald-950/30 hover:text-[#1BFF3C] transition-colors duration-150 p-2" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+</button>
+<button class="text-zinc-500 hover:bg-emerald-950/30 hover:text-[#1BFF3C] transition-colors duration-150 p-2" style="">
+<span class="material-symbols-outlined" data-icon="help" style="">help</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="h-[calc(100vh-100px)] overflow-hidden pt-24 pb-8 px-8 blueprint-grid relative">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Page Title Header -->
+<div class="col-span-12 mb-8">
+<div class="flex items-center gap-4">
+<div class="w-2 h-12 bg-primary-container glow-primary"></div>
+<h1 class="font-headline font-bold text-6xl lg:text-8xl uppercase tracking-tighter text-on-surface" style="">
+                        LA <span class="text-primary-container" style="">PULGADA</span>
+</h1>
+</div>
+</div>
+<!-- Technical Definition Block (Left) -->
+<div class="col-span-12 md:col-span-5 flex flex-col gap-6">
+<section class="bg-surface-container-low border-l-4 border-primary-container p-8 relative overflow-hidden">
+<div class="absolute top-2 right-4 font-technical text-[10px] text-outline opacity-40" style="">DEFINICIÓN_TÉCNICA_BLOCK</div>
+<h2 class="font-headline font-bold text-2xl text-primary-container mb-4 tracking-wider uppercase" style="">DEFINICIÓN TÉCNICA</h2>
+<p class="text-on-surface-variant text-xl leading-relaxed mb-8" style="">
+                        En soldadura se utiliza con frecuencia la pulgada como unidad de medida.
+                    </p>
+<div class="bg-surface-container-highest p-6 border border-outline-variant/30 relative">
+<div class="absolute -top-3 left-4 bg-surface px-2 text-[10px] font-technical text-primary-container" style="">CONVERSIÓN_ESTÁNDAR</div>
+<div class="flex flex-col items-center justify-center py-4">
+<span class="font-technical text-4xl lg:text-5xl font-bold text-on-surface tracking-tighter" style="">
+                                1 PULGADA = <span class="text-primary-container glow-primary" style="">25.4 MM</span>
+</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-2 gap-4">
+<div class="border border-outline-variant/20 p-4">
+<span class="block font-technical text-[10px] text-outline mb-1" style="">UNIDAD</span>
+<span class="font-headline font-bold text-xl uppercase" style="">Imperial</span>
+</div>
+<div class="border border-outline-variant/20 p-4">
+<span class="block font-technical text-[10px] text-outline mb-1" style="">EQUIVALENCIA</span>
+<span class="font-headline font-bold text-xl uppercase" style="">Métrica</span>
+</div>
+</div>
+</div>
+<!-- Fracciones Comunes Block (Right) -->
+<div class="col-span-12 md:col-span-7">
+<div class="bg-surface-container-low p-8 border border-outline-variant/20 h-full relative">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline font-bold text-2xl text-on-surface tracking-wider uppercase" style="">FRACCIONES COMUNES</h2>
+<span class="font-technical text-xs text-primary-container" style="">[ WELD_TOLERANCE_LIST ]</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-1">
+<!-- Fraction Card 1/16 -->
+<div class="bg-surface-container-high border border-outline-variant/40 aspect-square flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-default">
+<span class="font-technical text-3xl font-bold group-hover:text-primary-container transition-colors" style="">1/16</span>
+<span class="text-[10px] font-technical text-outline mt-2" style="">1.5875 mm</span>
+</div>
+<!-- Fraction Card 1/8 -->
+<div class="bg-surface-container-high border border-outline-variant/40 aspect-square flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-default">
+<span class="font-technical text-3xl font-bold group-hover:text-primary-container transition-colors" style="">1/8</span>
+<span class="text-[10px] font-technical text-outline mt-2" style="">3.1750 mm</span>
+</div>
+<!-- Fraction Card 3/16 -->
+<div class="bg-surface-container-high border border-outline-variant/40 aspect-square flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-default">
+<span class="font-technical text-3xl font-bold group-hover:text-primary-container transition-colors" style="">3/16</span>
+<span class="text-[10px] font-technical text-outline mt-2" style="">4.7625 mm</span>
+</div>
+<!-- Fraction Card 1/4 -->
+<div class="bg-surface-container-high border border-outline-variant/40 aspect-square flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-default">
+<span class="font-technical text-3xl font-bold group-hover:text-primary-container transition-colors" style="">1/4</span>
+<span class="text-[10px] font-technical text-outline mt-2" style="">6.3500 mm</span>
+</div>
+<!-- Fraction Card 3/8 -->
+<div class="bg-surface-container-high border border-outline-variant/40 aspect-square flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-default">
+<span class="font-technical text-3xl font-bold group-hover:text-primary-container transition-colors" style="">3/8</span>
+<span class="text-[10px] font-technical text-outline mt-2" style="">9.5250 mm</span>
+</div>
+<!-- Fraction Card 1/2 -->
+<div class="bg-surface-container-high border border-outline-variant/40 aspect-square flex flex-col items-center justify-center group hover:border-primary-container transition-all cursor-default">
+<span class="font-technical text-3xl font-bold group-hover:text-primary-container transition-colors" style="">1/2</span>
+<span class="text-[10px] font-technical text-outline mt-2" style="">12.700 mm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Important Note (Bottom) -->
+<div class="col-span-12 mt-4">
+<div class="p-6 flex flex-col md:flex-row items-center gap-6 relative bg-zinc-900">
+<div class="text-primary-container font-headline font-bold text-2xl px-6 py-2 uppercase tracking-tighter shrink-0 bg-zinc-800" style="">
+                        IMPORTANTE
+                    </div>
+<p class="font-medium text-lg lg:text-xl leading-snug text-white" style="">
+                        Saber leer la pulgada es fundamental para medir material, electrodos, separación de juntas y espesores.
+                    </p>
+<div class="absolute right-0 bottom-0 opacity-10">
+<span class="material-symbols-outlined text-8xl text-primary-container" data-icon="warning" style="">warning</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-12 h-16 bg-[#1C1B1B] dark:bg-zinc-900 border-t border-zinc-800 shadow-[0px_0px_15px_rgba(27,255,60,0.1)]">
+<button class="flex flex-col items-center justify-center text-zinc-400 px-4 md:px-8 py-2 hover:bg-zinc-800 hover:text-[#1BFF3C] transition-all active:scale-95 group" style="">
+<span class="material-symbols-outlined text-xl mb-0.5" data-icon="arrow_back" style="">arrow_back</span>
+<span class="uppercase font-medium text-[10px] tracking-widest font-technical" style="">ANTERIOR</span>
+</button>
+<div class="flex flex-col items-center justify-center bg-[#1BFF3C] px-8 md:px-16 py-2 font-bold h-full border border-primary-container text-primary-container bg-transparent">
+<span class="material-symbols-outlined text-xl mb-0.5" data-icon="numbers" style="">numbers</span>
+<span class="uppercase font-bold text-xs tracking-widest font-technical" style="">15</span>
+</div>
+<button class="flex flex-col items-center justify-center text-zinc-400 px-4 md:px-8 py-2 hover:bg-zinc-800 hover:text-[#1BFF3C] transition-all active:scale-95 group" style="">
+<span class="material-symbols-outlined text-xl mb-0.5" data-icon="arrow_forward" style="">arrow_forward</span>
+<span class="uppercase font-medium text-[10px] tracking-widest font-technical" style="">SIGUIENTE</span>
+</button>
+</nav>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

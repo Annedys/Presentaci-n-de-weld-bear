@@ -1,0 +1,252 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>WELD_TECH: INDUSTRIAL SCHEMATICS - Slide 37</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-container": "#007112",
+                        "error-container": "#93000a",
+                        "on-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-container": "#6f5c00",
+                        "tertiary-container": "#ffd3cd",
+                        "on-secondary-fixed": "#221b00",
+                        "background": "#131313",
+                        "primary": "#ecffe3",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#84967e",
+                        "on-tertiary": "#690003",
+                        "primary-fixed-dim": "#00e631",
+                        "on-primary-fixed-variant": "#00530a",
+                        "on-secondary": "#3b2f00",
+                        "surface-bright": "#393939",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "on-primary-fixed": "#002202",
+                        "on-tertiary-container": "#c5020c",
+                        "on-primary": "#003a05",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#00e631",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#baccb2",
+                        "error": "#ffb4ab",
+                        "primary-container": "#1bff3c",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353534",
+                        "secondary-fixed": "#ffe174",
+                        "tertiary-fixed": "#ffdad5",
+                        "outline-variant": "#3b4b37",
+                        "on-tertiary-fixed": "#410001",
+                        "inverse-primary": "#006e11",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary": "#fff3d3",
+                        "secondary-container": "#fed400",
+                        "on-secondary-fixed-variant": "#554500",
+                        "primary-fixed": "#74ff6d",
+                        "secondary-fixed-dim": "#eac300",
+                        "surface-container": "#201f1f",
+                        "surface-variant": "#353534",
+                        "tertiary": "#fff8f7",
+                        "surface": "#131313",
+                        "on-error-container": "#ffdad6"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"],
+                        "technical": ["JetBrains Mono"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-active {
+            box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.2);
+        }
+        .header-anchor {
+            font-family: 'Rajdhani', sans-serif;
+            letter-spacing: -0.05em;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col blueprint-grid">
+<!-- TopAppBar -->
+<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
+<div class="text-2xl font-bold tracking-tighter text-[#1BFF3C] uppercase header-anchor" style=""><span style="font-family: Rajdhani; letter-spacing: -1.2px;">WELD BEAR IIEDU&nbsp;</span></div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors font-headline text-lg tracking-widest" href="#" style="">MODULES</a>
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors font-headline text-lg tracking-widest" href="#" style="">SAFETY</a>
+<a class="text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1 font-headline text-lg tracking-widest" href="#" style="">PROCEDURES</a>
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors font-headline text-lg tracking-widest" href="#" style="">METRICS</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-all active:scale-[0.98]" style="">
+<span class="material-symbols-outlined" data-icon="help_outline" style="">help_outline</span>
+</button>
+<button class="p-2 text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-all active:scale-[0.98]" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="h-[calc(100vh-100px)] overflow-hidden flex flex-col pt-24 pb-12 px-6 md:px-12 max-w-7xl mx-auto w-full justify-center">
+<!-- Section Title with Technical Metadata -->
+<div class="relative mb-12 border-l-4 border-primary-container pl-6 py-2">
+<span class="font-technical text-[10px] text-outline absolute -top-4 left-6 tracking-[0.2em]" style="">SCHEMA_ID: REF-37_60</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-on-surface uppercase tracking-tight leading-none" style="">
+                TIPOS DE <span class="text-primary-container" style="">CORRIENTE</span><br>POR ELECTRODO
+            </h1>
+</div>
+<!-- Bento Layout for Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 border border-outline-variant/30">
+<!-- E6013 Block -->
+<div class="md:col-span-6 bg-surface-container-low p-8 border-b md:border-b-0 md:border-r border-outline-variant/30 relative overflow-hidden group hover:bg-surface-container">
+<div class="absolute top-0 right-0 p-4 font-technical text-outline/30 text-xs" style="">SPEC_TYPE: CELLULOSIC</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-primary-container text-on-primary text-2xl font-bold font-technical" style="">60</div>
+<h2 class="font-headline text-3xl font-bold tracking-wider" style="">E6013</h2>
+</div>
+                <p class="text-2xl leading-relaxed text-on-surface font-bold" style="">
+                    Puede trabajar con <span class="text-primary-container font-technical" style="">AC</span> y también con <span class="text-primary-container font-technical" style="">DC</span> según el equipo y la aplicación.
+                </p>
+<div class="mt-8 flex gap-2">
+<span class="px-2 py-1 text-[10px] font-technical border border-primary-container/40 text-primary-container" style="">VERSATILITY: HIGH</span>
+<span class="px-2 py-1 text-[10px] font-technical border border-outline/40 text-outline" style="">PENETRATION: MED</span>
+</div>
+</div>
+<!-- E7018 Block -->
+<div class="md:col-span-6 bg-surface-container-low p-8 relative overflow-hidden group hover:bg-surface-container">
+<div class="absolute top-0 right-0 p-4 font-technical text-outline/30 text-xs" style="">SPEC_TYPE: LOW_HYDROGEN</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container text-on-secondary text-2xl font-bold font-technical" style="">70</div>
+<h2 class="font-headline text-3xl font-bold tracking-wider" style="">E7018</h2>
+</div>
+                <p class="text-2xl leading-relaxed text-on-surface font-bold" style="">
+                    Comúnmente trabaja con <span class="text-secondary-container font-technical" style="">AC</span> y <span class="text-secondary-container font-technical" style="">DC+</span>, siendo muy usado con corriente continua positiva.
+                </p>
+<div class="mt-8 flex gap-2">
+<span class="px-2 py-1 text-[10px] font-technical border border-secondary-container/40 text-secondary-container" style="">STRENGTH: HIGH</span>
+<span class="px-2 py-1 text-[10px] font-technical border border-outline/40 text-outline" style="">POLARITY: DCEP</span>
+</div>
+</div>
+<!-- Technical Status Bar -->
+<div class="md:col-span-12 bg-surface-container-lowest p-6 border-t border-outline-variant/30 flex flex-col md:flex-row items-center gap-4 justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-icon="info" style="">info</span>
+                        <p class="text-lg font-bold text-outline max-w-2xl italic leading-tight" style="">
+                            La compatibilidad final depende del fabricante y del electrodo específico, pero estas referencias sirven como base para enseñanza básica.
+                        </p>
+</div>
+<div class="flex gap-4">
+<div class="text-right">
+<div class="text-[10px] font-technical text-outline-variant" style="">SYSTEM_STATUS</div>
+<div class="text-xs font-technical text-primary-container" style="">OPERATIONAL // NO_ERRORS</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Schematic Decor -->
+<div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 opacity-50">
+<div class="border-t border-outline-variant/30 pt-2 font-technical text-[10px] text-outline uppercase" style="">Phase_Calibration</div>
+<div class="border-t border-outline-variant/30 pt-2 font-technical text-[10px] text-outline uppercase" style="">Arc_Stability_Index</div>
+<div class="border-t border-outline-variant/30 pt-2 font-technical text-[10px] text-outline uppercase" style="">Thermal_Load_Dist</div>
+<div class="border-t border-outline-variant/30 pt-2 font-technical text-[10px] text-outline uppercase" style="">Voltage_Curve_37</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-4 h-20 bg-[#1C1B1B] border-t border-[#3B4B37]/20" style="box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.15);">
+<!-- Previous Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all duration-200 group px-6 py-2 h-full" style="">
+<span class="material-symbols-outlined text-2xl" data-icon="arrow_back" style="">arrow_back</span>
+<span class="font-technical text-[10px] tracking-widest mt-1" style="">ANTERIOR</span>
+</button>
+<!-- Slide Counter (Active) -->
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] font-bold">
+<span class="material-symbols-outlined text-2xl" data-icon="analytics" style="font-variation-settings: &quot;FILL&quot; 1;">analytics</span>
+<span class="font-technical text-sm tracking-tighter mt-1" style="">19</span>
+</div>
+<!-- Next Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all duration-200 group px-6 py-2 h-full" style="">
+<span class="material-symbols-outlined text-2xl" data-icon="arrow_forward" style="">arrow_forward</span>
+<span class="font-technical text-[10px] tracking-widest mt-1" style="">SIGUIENTE</span>
+</button>
+</nav>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

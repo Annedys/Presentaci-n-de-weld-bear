@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELD BEAR - Presentation Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #0d0d0d;
+            font-family: sans-serif;
+        }
+        #frame-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1920px;
+            height: 1080px;
+            transform-origin: center center;
+        }
+        .slide-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #131313;
+        }
+        .slide-frame.active {
+            opacity: 1;
+            z-index: 10;
+        }
+        .slide-frame.standby {
+            z-index: 1;
+        }
+        #nav-indicator {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 200;
+            background: rgba(0,0,0,0.8);
+            border: 1px solid #1BFF3C;
+            color: #1BFF3C;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-family: monospace;
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        body:hover #nav-indicator { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div id="nav-indicator">Slide <span id="current">1</span> of 69</div>
+    <div id="frame-container">
+        <iframe id="frame-a" class="slide-frame active" src=""></iframe>
+        <iframe id="frame-b" class="slide-frame standby" src=""></iframe>
+    </div>
+
+    <script>
+        const slides = ["car_tula_principal_layout_sin_imagen_inferior/code.html","portada_herramientas_necesarias_limpia/code.html","slide_equipo_recibido_careta_actualizada/code.html","slide_herramientas_del_taller_1_3/code.html","slide_herramientas_del_taller_2_3_1/code.html","slide_herramientas_del_taller_2_3_2/code.html","slide_equipo_del_estudiante_limpio_v2/code.html","slide_estructura_del_curso/code.html","slide_seguridad_industrial_intro/code.html","slide_riesgos_en_soldadura/code.html","slide_normativa_osha_detallada/code.html","slide_normativa_aws_nav_style_fix/code.html","slide_epp_detallado_ajuste_men_lateral/code.html","slide_riesgos_principales_del_soldador/code.html","slide_extintores_ajuste_men/code.html","portada_corte_de_metales_sin_imagen/code.html","slide_corte_oxiacetileno_intro/code.html","slide_equipo_oxiacetileno_1_2_imagen_actualizada/code.html","slide_equipo_oxiacetileno_2_2_blanco_y_negro/code.html","slide_tipos_de_boquillas_fix_layout/code.html","slide_tipos_de_llama_imagen_carburante_actualizada/code.html","slide_psi_oxiacetileno_completo_con_referencia/code.html","slide_espesores_corte_oxiacetileno_sin_icono/code.html","slide_preparaci_n_equipo_oxiacetileno_final/code.html","slide_seguridad_oxiacetileno_nav_style_fix/code.html","slide_proceso_de_corte_v7_sin_icono/code.html","slide_corte_plasma_intro/code.html","slide_equipo_corte_plasma_imagen_limpia/code.html","slide_preparaci_n_equipo_plasma_imagen_actualizada/code.html","slide_espesor_corte_plasma_matrix/code.html","slide_seguridad_corte_plasma_layout_final/code.html","slide_procesos_smaw_y_fcaw_detalle/code.html","slide_proceso_smaw_nav_style_fix/code.html","slide_proceso_fcaw_nav_fix_final/code.html","slide_tipos_de_corriente_contenido_auditado/code.html","slide_arco_el_ctrico_solo_texto/code.html","slide_partes_visibles_solo_texto/code.html","slide_porosidad_nav_style_fix/code.html","slide_socavado_nav_style_fix/code.html","slide_cord_n_de_soldadura_nav_fix_final/code.html","slide_cordones_solapados_ajuste_color/code.html","slide_la_escoria_nav_style_fix/code.html","slide_limpieza_del_cord_n_ajuste_color_final/code.html","slide_postura_para_soldar_imagen_limpia/code.html","slide_movimientos_de_oscilaci_n_nav_fix_final/code.html","slide_uso_de_oscilaciones_ajuste_nav/code.html","slide_la_pulgada_ajuste_color_final/code.html","slide_clasificaci_n_de_electrodos/code.html","slide_significado_del_c_digo/code.html","slide_clasificaci_n_de_cada_electrodo/code.html","slide_corriente_por_electrodo/code.html","slide_tabla_ltimo_d_gito/code.html","slide_amperajes_teor_a_auditado/code.html","slide_matriz_de_amperajes_dise_o_limpio/code.html","slide_tipos_de_metales/code.html","slide_electrodo_seg_n_metal_solo_texto/code.html","portada_sistema_alfanum_rico_logo_fix/code.html","slide_sistema_alfanum_rico_nav_fix/code.html","slide_tipos_de_juntas_solo_texto/code.html","slide_posici_n_1f_nav_style_fix/code.html","slide_posici_n_2f_layout_limpio/code.html","slide_posici_n_3f_layout_limpio/code.html","slide_posici_n_4f_texto_simplificado/code.html","slide_posici_n_1g_texto_simplificado/code.html","slide_pases_dentro_del_bisel_ajuste_visual/code.html","slide_resultados_de_alumnos_doble_testimonio/code.html","slide_empresas_aliadas_clean_version/code.html","slide_ruta_para_tu_prop_sito_ajuste_est_tico_final/code.html","slide_redes_sociales_y_contacto_logo_final/code.html"];
+        let currentIndex = -1;
+        
+        let activeFrameId = 'frame-a';
+        const frameA = document.getElementById('frame-a');
+        const frameB = document.getElementById('frame-b');
+        const currentSpan = document.getElementById('current');
+        const container = document.getElementById('frame-container');
+
+        function scaleContainer() {
+            const winW = window.innerWidth;
+            const winH = window.innerHeight;
+            const scale = Math.min(winW / 1920, winH / 1080);
+            container.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        }
+        window.addEventListener('resize', scaleContainer);
+        scaleContainer();
+
+        function loadSlide(index) {
+            if (index < 0 || index >= slides.length || index === currentIndex) return;
+            
+            const nextFrameId = activeFrameId === 'frame-a' ? 'frame-b' : 'frame-a';
+            const nextFrame = activeFrameId === 'frame-a' ? frameB : frameA;
+            const activeFrame = activeFrameId === 'frame-a' ? frameA : frameB;
+            
+            nextFrame.src = slides[index];
+            
+            nextFrame.onload = () => {
+                nextFrame.classList.remove('standby');
+                nextFrame.classList.add('active');
+                
+                activeFrame.classList.remove('active');
+                activeFrame.classList.add('standby');
+                
+                activeFrameId = nextFrameId;
+                currentIndex = index;
+                currentSpan.textContent = currentIndex + 1;
+                
+                nextFrame.focus();
+            };
+        }
+
+        window.addEventListener('message', (e) => {
+            if (e.data === 'NEXT') {
+                loadSlide(currentIndex + 1);
+            } else if (e.data === 'PREV') {
+                loadSlide(currentIndex - 1);
+            } else if (e.data === 'HOME') {
+                loadSlide(0);
+            }
+        });
+
+        loadSlide(0);
+    </script>
+</body>
+</html>

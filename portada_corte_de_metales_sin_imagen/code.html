@@ -1,0 +1,232 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#690005",
+              "tertiary-fixed": "#ffdad5",
+              "on-tertiary-container": "#c5020c",
+              "inverse-on-surface": "#313030",
+              "error": "#ffb4ab",
+              "on-tertiary": "#690003",
+              "on-error-container": "#ffdad6",
+              "inverse-primary": "#006e11",
+              "on-primary-fixed-variant": "#00530a",
+              "on-tertiary-fixed-variant": "#930005",
+              "outline-variant": "#3b4b37",
+              "on-tertiary-fixed": "#410001",
+              "surface-bright": "#393939",
+              "tertiary-container": "#ffd3cd",
+              "secondary-fixed": "#ffe174",
+              "surface-tint": "#00e631",
+              "on-secondary-fixed-variant": "#554500",
+              "surface-container-highest": "#353534",
+              "secondary-fixed-dim": "#eac300",
+              "primary-fixed": "#74ff6d",
+              "secondary-container": "#fed400",
+              "on-primary": "#003a05",
+              "background": "#131313",
+              "on-primary-fixed": "#002202",
+              "outline": "#84967e",
+              "on-secondary-container": "#6f5c00",
+              "surface-container-lowest": "#0e0e0e",
+              "on-secondary": "#3b2f00",
+              "on-background": "#e5e2e1",
+              "surface-container-low": "#1c1b1b",
+              "surface-variant": "#353534",
+              "secondary": "#fff3d3",
+              "inverse-surface": "#e5e2e1",
+              "surface-dim": "#131313",
+              "primary-container": "#1bff3c",
+              "tertiary": "#fff8f7",
+              "surface-container-high": "#2a2a2a",
+              "surface": "#131313",
+              "on-primary-container": "#007112",
+              "surface-container": "#201f1f",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "primary": "#ecffe3",
+              "on-secondary-fixed": "#221b00",
+              "on-surface": "#e5e2e1",
+              "error-container": "#93000a",
+              "on-surface-variant": "#baccb2",
+              "primary-fixed-dim": "#00e631"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani", "sans-serif"],
+              "body": ["Space Grotesk", "sans-serif"],
+              "label": ["Space Grotesk", "sans-serif"],
+              "mono": ["JetBrains Mono", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden h-screen flex flex-col">
+<!-- Top Navigation Shell -->
+<header class="flex justify-between items-center w-full px-6 h-16 bg-[#131313] border-b border-[#3B4B37]/20 z-50">
+<div class="font-['Rajdhani'] font-black text-[#1BFF3C] tracking-widest border-l-4 border-[#1BFF3C] pl-3" style=""><span style="font-family: Rajdhani, sans-serif; font-size: 24px; letter-spacing: -1.2px; text-transform: uppercase;">WELD&nbsp; BEAR&nbsp; IEDU</span></div>
+<div class="flex gap-4">
+<button class="text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-all duration-75 p-2" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+</button>
+<button class="text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-all duration-75 p-2" style="">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing" style="">precision_manufacturing</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow relative blueprint-grid flex items-center justify-center p-8">
+<!-- Technical Background Metadata (Top-Left) -->
+<div class="absolute top-12 left-12 font-mono text-[10px] text-outline opacity-40 leading-relaxed uppercase tracking-tighter">
+<p class="" style=""><br></p>
+<p class="" style=""><br></p>
+<p class="" style=""><br></p>
+<p class="mt-2 text-primary-container opacity-100" style="">TEMA PRINCIPAAL 3</p>
+</div>
+<!-- Technical Background Metadata (Top-Right) -->
+<div class="absolute top-12 right-12 font-mono text-[10px] text-outline opacity-40 text-right leading-relaxed uppercase tracking-tighter">
+<p class="" style="">TIMESTAMP: 2024-05-24 // 08:42:12</p>
+<p class="" style="">SESSION_ID: WLD-AX-892</p>
+<p class="" style="">KERN_V: 4.2.0-STABLE</p>
+<p class="mt-2 text-primary-container opacity-100" style="">SYNC_STATUS: ACTIVE</p>
+</div>
+<!-- Technical Background Metadata (Bottom-Left) -->
+<div class="absolute bottom-12 left-12 font-mono text-[10px] text-outline opacity-40 leading-relaxed uppercase tracking-tighter">
+<p class="" style="">PROTOCOL: ARC_CORE_V1</p>
+<p class="" style="">ENCRYPTION: AES-256-GCM</p>
+</div>
+<!-- Central Content Block -->
+<div class="text-center relative z-10 max-w-4xl mx-auto px-4">
+<!-- Decorative Accent Lines -->
+<div class="flex justify-center mb-6">
+<div class="w-24 h-px bg-primary-container shadow-[0_0_10px_#1BFF3C]"></div>
+</div>
+<h1 class="font-headline font-black text-6xl md:text-8xl lg:text-9xl text-primary-container tracking-[0.15em] leading-none mb-4 uppercase drop-shadow-[0_0_20px_rgba(27,255,60,0.4)]" style="">
+                CORTE DE METALES
+            </h1>
+<div class="inline-block border-y border-outline-variant py-4 px-8 mt-4">
+<p class="font-body font-medium text-lg md:text-xl text-on-surface tracking-[0.3em] uppercase" style="">
+                    PROCEDIMIENTOS TÉCNICOS Y ESTÁNDARES INDUSTRIALES
+                </p>
+</div>
+<!-- Kinetic Elements (Schematic Markers) -->
+<div class="flex justify-center gap-16 mt-12">
+<div class="flex flex-col items-center">
+<span class="font-mono text-[10px] text-outline mb-1" style="">AXIS_X</span>
+<div class="w-[2px] h-12 bg-outline-variant"></div>
+<span class="font-mono text-xs text-primary-container mt-1" style="">180.00°</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-mono text-[10px] text-outline mb-1" style="">AXIS_Y</span>
+<div class="w-[2px] h-12 bg-primary-container shadow-[0_0_8px_#1BFF3C]"></div>
+<span class="font-mono text-xs text-primary-container mt-1" style="">045.21°</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-mono text-[10px] text-outline mb-1" style="">AXIS_Z</span>
+<div class="w-[2px] h-12 bg-outline-variant"></div>
+<span class="font-mono text-xs text-primary-container mt-1" style="">000.00°</span>
+</div>
+</div>
+</div>
+<!-- Decorative Corners -->
+<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary-container opacity-50 m-6"></div>
+<div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary-container opacity-50 m-6"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary-container opacity-50 m-6"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary-container opacity-50 m-6"></div>
+</main>
+<!-- Bottom Navigation Shell -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-4 bg-[#131313] h-20 border-t border-[#1BFF3C]/30 shadow-[0_0_15px_rgba(27,255,60,0.15)]">
+<!-- Previous Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] border border-[#3B4B37]/20 p-4 min-w-[120px] hover:border-[#1BFF3C] hover:bg-[#1BFF3C]/5 transition-colors" style="">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back_ios" style="">arrow_back_ios</span>
+<span class="font-['JetBrains_Mono'] text-xs font-bold tracking-widest uppercase" style="">PREVIOUS</span>
+</button>
+<!-- Active Page Marker -->
+<div class="flex flex-col items-center justify-center border border-[#1BFF3C] bg-[#1BFF3C]/10 text-[#1BFF3C] p-4 min-w-[140px] shadow-[0_0_10px_#1BFF3C] scale-98">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view" style="">grid_view</span>
+<span class="font-['JetBrains_Mono'] text-xs font-bold tracking-widest uppercase" style=""><br></span>
+</div>
+<!-- Next Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] border border-[#3B4B37]/20 p-4 min-w-[120px] hover:border-[#1BFF3C] hover:bg-[#1BFF3C]/5 transition-colors" style="">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_forward_ios" style="">arrow_forward_ios</span>
+<span class="font-['JetBrains_Mono'] text-xs font-bold tracking-widest uppercase" style="">NEXT</span>
+</button>
+</footer>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

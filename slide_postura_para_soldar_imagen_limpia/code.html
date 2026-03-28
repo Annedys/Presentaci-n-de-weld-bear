@@ -1,0 +1,246 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#410001",
+              "tertiary-fixed": "#ffdad5",
+              "on-tertiary-fixed-variant": "#930005",
+              "on-tertiary-container": "#c5020c",
+              "on-primary-container": "#007112",
+              "inverse-surface": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "on-tertiary": "#690003",
+              "on-error": "#690005",
+              "surface-container-low": "#1c1b1b",
+              "primary": "#ecffe3",
+              "outline": "#84967e",
+              "on-primary-fixed-variant": "#00530a",
+              "on-secondary-fixed-variant": "#554500",
+              "background": "#131313",
+              "primary-container": "#1bff3c",
+              "on-surface": "#e5e2e1",
+              "outline-variant": "#3b4b37",
+              "secondary-container": "#fed400",
+              "on-secondary-fixed": "#221b00",
+              "on-primary": "#003a05",
+              "surface-dim": "#131313",
+              "surface": "#131313",
+              "on-secondary-container": "#6f5c00",
+              "surface-container-high": "#2a2a2a",
+              "surface-bright": "#393939",
+              "on-error-container": "#ffdad6",
+              "secondary": "#fff3d3",
+              "inverse-primary": "#006e11",
+              "error-container": "#93000a",
+              "surface-tint": "#00e631",
+              "surface-container-highest": "#353534",
+              "on-surface-variant": "#baccb2",
+              "on-secondary": "#3b2f00",
+              "surface-variant": "#353534",
+              "error": "#ffb4ab",
+              "surface-container": "#201f1f",
+              "tertiary": "#fff8f7",
+              "surface-container-lowest": "#0e0e0e",
+              "primary-fixed": "#74ff6d",
+              "primary-fixed-dim": "#00e631",
+              "secondary-fixed-dim": "#eac300",
+              "secondary-fixed": "#ffe174",
+              "tertiary-container": "#ffd3cd",
+              "on-primary-fixed": "#002202",
+              "on-background": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani", "sans-serif"],
+              "body": ["Space Grotesk", "sans-serif"],
+              "label": ["JetBrains Mono", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #131313;
+        background-image: 
+          linear-gradient(rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .technical-line {
+        background: repeating-linear-gradient(90deg, #1bff3c 0, #1bff3c 2px, transparent 2px, transparent 4px);
+        height: 1px;
+        opacity: 0.3;
+      }
+    </style>
+</head>
+<body class="font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#131313] dark:bg-[#131313] flex justify-between items-center w-full px-6 py-4 docked full-width top-0 border-b border-[#3B4B37]/20 z-50">
+<div class="text-2xl font-black text-[#1BFF3C] tracking-tighter font-headline" style=""><span class="" style="font-family: Rajdhani; letter-spacing: -1.2px;">WELD BEAR IEDU&nbsp;</span></div>
+<nav class="hidden md:flex space-x-8">
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#" style="">MODULES</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SCHEMATICS</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SAFETY</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">RESOURCES</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="material-symbols-outlined text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] p-2 transition-all" style="">settings</button>
+<button class="material-symbols-outlined text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] p-2 transition-all" style="">help</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+    <main class="flex-grow flex flex-col md:flex-row p-6 gap-6 h-[calc(100vh-100px)] overflow-hidden">
+        <!-- Left Column: Schematic & Imagery -->
+        <section class="w-full md:w-1/2 h-full flex flex-col">
+            <div class="relative bg-surface-container-low border border-outline-variant/30 h-full flex items-center justify-center group overflow-hidden">
+                <!-- Grid Annotations -->
+                <div class="absolute top-2 left-2 font-label text-[10px] text-outline opacity-50 uppercase" style="">Ref_System: ERGO_029</div>
+                <div class="absolute bottom-2 right-2 font-label text-[10px] text-outline opacity-50" style="">COORD: 29.60.Z</div>
+                <!-- Main Illustration -->
+                <div class="w-full h-full relative">
+                    <img alt="Welder ergonomics" class="w-full h-full object-cover opacity-60 grayscale filter contrast-125" data-alt="Technical diagram of a welder in correct ergonomic posture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtsPBQ2ZWsNmdQZxlsJBSG8d2KFbKYYwCtppI4fM-EIhVW7vPZKlUNo5dEEBhthPJ0B2_odTpdd-BEXLxIu7a-LYE4S0m1tgvNgTb9Ss66hRTwcItLPN38uLQWvQSbLvjIM9Yotj02eLNu8D-YThr_Vr3ka-ZZDaAf5j4ZnubcgF5FuUll0rAd6o33uGT6vggU6rdJvACXUziSLxjsmv90_jGSfwHeZnuDQ0WbIJiqPFsU5Wk18l7wvk0s4icxkyYy2Ulwnd4tzqw" style="">
+                    <!-- SVG Overlay for "Schematic" feel -->
+                    <div class="absolute inset-0 border-[16px] border-surface-container-low pointer-events-none"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Right Column: Editorial Content -->
+        <section class="w-full md:w-1/2 flex flex-col h-full overflow-hidden">
+            <header class="mb-4">
+                <div class="font-label text-primary-container text-xs mb-1 tracking-tighter" style="">03 // SEGURIDAD INDUSTRIAL</div>
+                <h1 class="font-headline text-5xl md:text-6xl font-black uppercase leading-none tracking-tighter" style="">Postura para<br><span class="text-primary-container" style="">Soldar</span></h1>
+            </header>
+<div class="technical-line w-full"></div>                <div class="space-y-4 overflow-y-auto pr-2 custom-scrollbar">
+                    <!-- Recommendation Item 1 -->
+                    <div class="bg-surface-container border border-outline-variant/20 p-5 relative group hover:border-primary-container/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary-container text-4xl" style="">balance</span>
+                            <div>
+                                <h3 class="font-headline font-bold uppercase text-2xl text-primary-fixed-dim" style="">Balance Corporal</h3>
+                                <p class="text-on-surface-variant text-xl font-medium mt-1 leading-snug" style="">Mantenga el centro de gravedad estable. Mueva el torso, no el cuello para evitar fatiga cervical profunda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recommendation Item 2 -->
+                    <div class="bg-surface-container border border-outline-variant/20 p-5 relative group hover:border-primary-container/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary-container text-4xl" style="">airline_seat_recline_extra</span>
+                            <div>
+                                <h3 class="font-headline font-bold uppercase text-2xl text-primary-fixed-dim" style="">Soporte de Pies</h3>
+                                <p class="text-on-surface-variant text-xl font-medium mt-1 leading-snug" style="">Pies separados a la anchura de hombros. Mantenga base firme para evitar fatigas lumbares crónicas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recommendation Item 3 -->
+                    <div class="bg-surface-container border border-outline-variant/20 p-5 relative group hover:border-primary-container/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary-container text-4xl" style="">front_hand</span>
+                            <div>
+                                <h3 class="font-headline font-bold uppercase text-2xl text-primary-fixed-dim" style="">Apoyo de Manos</h3>
+                                <p class="text-on-surface-variant text-xl font-medium mt-1 leading-snug" style="">Use puntos de apoyo. Una mano firme reduce las oscilaciones y garantiza calidad uniforme en el cordón.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recommendation Item 4 -->
+                    <div class="bg-surface-container border border-outline-variant/20 p-5 relative group hover:border-primary-container/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary-container text-4xl" style="">visibility</span>
+                            <div>
+                                <h3 class="font-headline font-bold uppercase text-2xl text-primary-fixed-dim" style="">Visibilidad del Charco</h3>
+                                <p class="text-on-surface-variant text-xl font-medium mt-1 leading-snug" style="">Cabeza a un lado del humo. Asegure ver el baño de fusión sin forzar postura natural del cuello.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 bg-[#1C1B1B] dark:bg-[#1C1B1B] border-t border-[#3B4B37]/30 shadow-[0px_0px_15px_rgba(27,255,60,0.15)]">
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150 group" style="">
+<span class="material-symbols-outlined mb-1" style="">arrow_back</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase" style="">PREVIOUS</span>
+</button>
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-6 py-2 border-t-2 border-[#1BFF3C]">
+<span class="material-symbols-outlined mb-1" style="">numbers</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase" style="">12</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150 group" style="">
+<span class="material-symbols-outlined mb-1" style="">arrow_forward</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase" style="">NEXT</span>
+</button>
+<button class="hidden md:flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150 group" style="">
+<span class="material-symbols-outlined mb-1" style="">home</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase" style="">HOME</span>
+</button>
+</nav>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>WELD_TECH_OS - MODULE 4</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#410001",
+                        "tertiary-fixed": "#ffdad5",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "on-tertiary-container": "#c5020c",
+                        "on-primary-container": "#007112",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "on-tertiary": "#690003",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "primary": "#ecffe3",
+                        "outline": "#84967e",
+                        "on-primary-fixed-variant": "#00530a",
+                        "on-secondary-fixed-variant": "#554500",
+                        "background": "#131313",
+                        "primary-container": "#1bff3c",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#3b4b37",
+                        "secondary-container": "#fed400",
+                        "on-secondary-fixed": "#221b00",
+                        "on-primary": "#003a05",
+                        "surface-dim": "#131313",
+                        "surface": "#131313",
+                        "on-secondary-container": "#6f5c00",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#fff3d3",
+                        "inverse-primary": "#006e11",
+                        "error-container": "#93000a",
+                        "surface-tint": "#00e631",
+                        "surface-container-highest": "#353534",
+                        "on-surface-variant": "#baccb2",
+                        "on-secondary": "#3b2f00",
+                        "surface-variant": "#353534",
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "tertiary": "#fff8f7",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#74ff6d",
+                        "primary-fixed-dim": "#00e631",
+                        "secondary-fixed-dim": "#eac300",
+                        "secondary-fixed": "#ffe174",
+                        "tertiary-container": "#ffd3cd",
+                        "on-primary-fixed": "#002202",
+                        "on-background": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani"],
+                        "body": ["Space Grotesk"],
+                        "label": ["JetBrains Mono"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-text {
+            text-shadow: 0px 0px 15px rgba(27, 255, 60, 0.6);
+        }
+        .technical-line {
+            background: linear-gradient(90deg, transparent, #3B4B37 15%, #3B4B37 85%, transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-[#131313] dark:bg-[#131313] flex justify-between items-center w-full px-6 py-4 docked full-width top-0 border-b border-[#3B4B37]/20 z-50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#1BFF3C] tracking-tighter font-headline" style=""><span style="font-family: Rajdhani, sans-serif; letter-spacing: -1.2px; text-transform: uppercase;">WELD BEAR IEDU</span></span>
+<nav class="hidden md:flex gap-6">
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#" style="">MODULES</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SCHEMATICS</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SAFETY</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">RESOURCES</a>
+</nav>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-all duration-75 ease-in-out active:scale-95" data-icon="help" style="">help</button>
+<button class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-all duration-75 ease-in-out active:scale-95" data-icon="settings" style="">settings</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow blueprint-grid relative flex items-center justify-center py-12 px-6 pb-24">
+<!-- Background Technical Annotation Layer -->
+<div class="absolute inset-0 pointer-events-none opacity-20 overflow-hidden">
+<div class="absolute top-10 left-10 font-label text-[10px] text-outline uppercase" style="">COORD_SYSTEM: GRID_A1</div>
+<div class="absolute bottom-24 right-10 font-label text-[10px] text-outline uppercase rotate-90 origin-right" style="">REF_ISO_9001_2023</div>
+<div class="absolute top-1/2 left-4 h-[1px] w-24 bg-outline-variant"></div>
+<div class="absolute top-1/2 right-4 h-[1px] w-24 bg-outline-variant"></div>
+</div>
+<!-- Center Stage: Module Header -->
+<div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
+<!-- Left Branding & Title Section -->
+<div class="lg:col-span-7 flex flex-col space-y-6">
+<div class="flex items-center gap-4">
+<span class="bg-primary-container text-on-primary font-label px-4 py-1 text-sm font-black tracking-[0.2em] uppercase" style=""><br></span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="space-y-2">
+<h1 class="font-headline text-6xl md:text-8xl font-black text-on-surface leading-[0.85] tracking-tighter uppercase" style="">fundamentos de la soldadura</h1>
+<h2 class="font-headline text-3xl md:text-5xl font-bold text-outline uppercase tracking-tight opacity-70" style=""><br></h2>
+</div>
+<div class="pt-8 flex flex-col gap-6 border-l-4 border-primary-container/30 pl-8">
+<div class="space-y-6">
+<p class="font-headline text-2xl md:text-3xl font-bold text-primary-container uppercase tracking-wide" style="">Procesos de soldadura:</p>
+<p class="font-body text-on-surface text-xl md:text-2xl leading-relaxed" style="">
+                        En este curso se trabajarán dos procesos principales:
+                    </p>
+<ul class="space-y-4">
+<li class="flex gap-4 items-start" style="">
+<span class="text-primary-container font-black text-2xl" style="">—</span>
+<p class="font-body text-on-surface text-lg md:text-xl leading-snug" style="">
+<strong class="text-primary-container font-headline tracking-wider uppercase">SMAW (Shielded Metal Arc Welding):</strong> Proceso de soldadura manual con electrodo revestido.
+                            </p>
+</li>
+<li class="flex gap-4 items-start" style="">
+<span class="text-primary-container font-black text-2xl" style="">—</span>
+<p class="font-body text-on-surface text-lg md:text-xl leading-snug" style="">
+<strong class="text-primary-container font-headline tracking-wider uppercase">FCAW (Flux Cored Arc Welding):</strong> Proceso de soldadura con alambre tubular con fundente interno.
+                            </p>
+</li>
+</ul>
+<div class="bg-surface-container-high/40 p-6 border border-outline-variant/20">
+<p class="font-body text-on-surface-variant text-lg md:text-xl italic" style="">
+                            Ambos procesos generan calor mediante electricidad, pero utilizan consumibles y equipos diferentes.
+                        </p>
+</div>
+</div>
+<div class="flex gap-12 mt-4">
+<div class="flex flex-col">
+<span class="font-label text-xs text-outline uppercase tracking-widest" style=""><br></span>
+<span class="font-label text-lg text-primary-container font-bold" style=""><br></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-xs text-outline uppercase tracking-widest" style=""><br></span>
+<span class="font-label text-lg text-primary-container font-bold" style=""><br></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Schematic Section -->
+<div class="lg:col-span-5 relative group mt-8 lg:mt-0">
+<div class="relative bg-surface-container-low border border-outline-variant/30 p-8 aspect-square flex items-center justify-center overflow-hidden">
+<!-- Wireframe Schematic Mockup -->
+<div class="absolute inset-0 flex items-center justify-center">
+<svg class="w-full h-full p-12 text-primary-container/40" fill="none" stroke="currentColor" stroke-width="0.5" viewBox="0 0 200 200">
+<!-- Metal Plates -->
+<rect height="15" width="60" x="30" y="80"></rect>
+<rect height="15" width="60" x="110" y="80"></rect>
+<!-- Weld Bead -->
+<path d="M90 80 L110 80 L105 70 L95 70 Z" fill="currentColor" fill-opacity="0.1" stroke-width="1"></path>
+<!-- Dimensions -->
+<line stroke-dasharray="2 2" x1="30" x2="90" y1="105" y2="105"></line>
+<line stroke-dasharray="2 2" x1="110" x2="170" y1="105" y2="105"></line>
+<text class="font-label text-[6px]" fill="currentColor" x="50" y="115">60.00mm</text>
+<!-- Leader lines -->
+<path d="M100 70 L130 40 L150 40" stroke-width="0.5"></path>
+<text class="font-label text-[6px]" fill="currentColor" x="135" y="35">FILLET_WELD_V1</text>
+<!-- Heat Zone Circle -->
+<circle cx="100" cy="80" r="25" stroke-dasharray="4 2" stroke-opacity="0.5"></circle>
+</svg>
+</div>
+<!-- Decorative HUD element -->
+<div class="absolute top-4 right-4 text-primary-container font-label text-[8px] animate-pulse" style="">
+                        [ SYSTEM_SCAN: ACTIVE ]
+                    </div>
+<!-- Technical Image Frame Overlay -->
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary-container shadow-[0_0_15px_rgba(27,255,60,0.6)]"></div>
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container/20"></div>
+<!-- Schematic Image Alternative for SEO/Accessibility -->
+<img alt="Industrial welding blueprint" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-20 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhlV6WLpJf0rDU8KUTlByIDgEz8t1sJZp6-scKaWWZzyZudx1hH5T0QBhxsYy9nIye6cA9ykrZvvqAkaeOnPC8Ax7vLf0imeeTbJpRdPFxWARaC8G_y319xU39KTQNWCqv2NE07ihm2-Rtv-2uuGa0ouYfhqNZw6yZ9Arirs-ghzNPxVZuoLUA-vyG-Fe6GJ6YSvZUC3svHbiEB6Sr2hQxCCe_xZMONmJkWZGY3mjtC3Ms3elgKJvdc0eT4eP-inZkp1OirMjxpo0" style="">
+</div>
+<!-- Floating Annotation -->
+<div class="absolute -bottom-6 -right-4 bg-surface-container-high border border-primary-container p-4 max-w-[200px] shadow-[10px_10px_0px_rgba(59,75,55,0.2)]">
+<p class="font-label text-[10px] leading-tight text-on-surface uppercase" style="">
+                        Technical data visualization of joint stress points under thermal load.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<footer class="bg-[#1C1B1B] dark:bg-[#1C1B1B] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 border-t border-[#3B4B37]/30 shadow-[0px_0px_15px_rgba(27,255,60,0.15)]">
+<!-- Previous Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150 group" style="">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back" style="">arrow_back</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase tracking-widest" style="">PREVIOUS</span>
+</button>
+<!-- Status Indicator -->
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-10 py-2 border-t-2 border-[#1BFF3C]">
+<span class="material-symbols-outlined mb-1" data-icon="numbers" style="">numbers</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase tracking-widest" style=""><br></span>
+</div>
+<!-- Next Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150 group" style="">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_forward" style="">arrow_forward</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase tracking-widest" style="">NEXT</span>
+</button>
+<!-- Home Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150 group" style="">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="">home</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase tracking-widest" style="">HOME</span>
+</button>
+</footer>
+<!-- Background Decorative Textures -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute -top-20 -right-20 w-[600px] h-[600px] bg-primary-container opacity-[0.02] rotate-12 blur-3xl"></div>
+<div class="absolute top-[15%] right-0 w-[1px] h-[70%] technical-line opacity-30"></div>
+<div class="absolute top-[15%] left-[5%] w-[1px] h-[20%] technical-line opacity-30"></div>
+</div>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

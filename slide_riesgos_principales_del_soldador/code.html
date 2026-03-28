@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INDUSTRIAL_EDU_OS_v2.4 - Weld Bear Edu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#221b00",
+                        "on-secondary-container": "#6f5c00",
+                        "on-secondary": "#3b2f00",
+                        "tertiary-container": "#ffd3cd",
+                        "on-primary": "#003a05",
+                        "surface-container": "#201f1f",
+                        "inverse-primary": "#006e11",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed": "#410001",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "error-container": "#93000a",
+                        "secondary": "#fff3d3",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-variant": "#353534",
+                        "secondary-fixed-dim": "#eac300",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "primary": "#ecffe3",
+                        "surface-bright": "#393939",
+                        "primary-fixed": "#74ff6d",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#ffe174",
+                        "primary-fixed-dim": "#00e631",
+                        "surface-tint": "#00e631",
+                        "on-primary-container": "#007112",
+                        "on-tertiary-container": "#c5020c",
+                        "inverse-on-surface": "#313030",
+                        "on-background": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#002202",
+                        "on-primary-fixed-variant": "#00530a",
+                        "outline": "#84967e",
+                        "on-secondary-fixed-variant": "#554500",
+                        "secondary-container": "#fed400",
+                        "background": "#131313",
+                        "on-tertiary": "#690003",
+                        "primary-container": "#1bff3c",
+                        "outline-variant": "#3b4b37",
+                        "on-surface-variant": "#baccb2",
+                        "tertiary": "#fff8f7",
+                        "tertiary-fixed": "#ffdad5"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani"],
+                        "body": ["Space Grotesk"],
+                        "label": ["JetBrains Mono"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        html, body {
+            overflow: hidden !important;
+            height: 100%;
+        }
+        body {
+            background-image: linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(27, 255, 60, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- Grid Overlay -->
+<div class="fixed inset-0 blueprint-grid pointer-events-none z-0"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#131313]/80 backdrop-blur-md border-b border-[#3B4B37]/20 shadow-[0px_0px_15px_rgba(27,255,60,0.15)]">
+<div class="flex items-center gap-4">
+<span class="text-[#1BFF3C] font-bold tracking-tighter text-2xl font-headline" style="">WELD_BEAR_EDU</span>
+<div class="h-6 w-[1px] bg-outline-variant/30"></div>
+<span class="font-['Rajdhani'] uppercase tracking-widest font-bold text-xl text-[#1BFF3C]" style="">INDUSTRIAL_EDU_OS_v2.4</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1 font-['Rajdhani'] uppercase tracking-widest font-bold text-sm" href="#" style="">MODULES</a>
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors font-['Rajdhani'] uppercase tracking-widest font-bold text-sm" href="#" style="">SCHEMATICS</a>
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors font-['Rajdhani'] uppercase tracking-widest font-bold text-sm" href="#" style="">LOGS</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-all duration-150" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+</button>
+<button class="p-2 text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-all duration-150" style="">
+<span class="material-symbols-outlined" data-icon="sensors" style="">sensors</span>
+</button>
+<button class="p-2 text-error hover:bg-error/10 transition-all duration-150" style="">
+<span class="material-symbols-outlined" data-icon="power_settings_new" style="">power_settings_new</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-24 pb-6 w-64 z-40 bg-[#1C1B1B] border-r border-[#3B4B37]/20 hidden lg:flex">
+<div class="px-6 mb-8">
+<div class="font-['JetBrains_Mono'] text-[#1BFF3C] text-xs mb-1 tracking-widest" style="">SYSTEM_ACTIVE</div>
+<div class="font-['Space_Grotesk'] font-medium text-xs tracking-tight text-outline uppercase opacity-60" style="">OPERATOR_0821</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 px-6 py-3 text-[#84967E] hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group" href="#" style="">
+<span class="material-symbols-outlined text-lg" data-icon="grid_view" style="">grid_view</span>
+<span class="font-medium text-sm tracking-tight" style="">DASHBOARD</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 font-bold border-l-4 border-[#1BFF3C] text-white hover:bg-[#2A2A2A] transition-all" href="#" style="">
+<span class="material-symbols-outlined text-lg" data-icon="precision_manufacturing" style="">precision_manufacturing</span>
+<span class="font-medium text-sm tracking-tight" style="">EQUIPMENT</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#84967E] hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group" href="#" style="">
+<span class="material-symbols-outlined text-lg" data-icon="warning" style="">warning</span>
+<span class="font-medium text-sm tracking-tight" style="">SAFETY</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#84967E] hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group" href="#" style="">
+<span class="material-symbols-outlined text-lg" data-icon="biotech" style="">biotech</span>
+<span class="font-medium text-sm tracking-tight" style="">TELEMETRY</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-[#84967E] hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group" href="#" style="">
+<span class="material-symbols-outlined text-lg" data-icon="inventory_2" style="">inventory_2</span>
+<span class="font-medium text-sm tracking-tight" style="">ARCHIVE</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="bg-surface-container-highest p-3 border border-outline-variant/20">
+<p class="font-label text-[10px] text-primary mb-1" style="">CORE_TEMP</p>
+<div class="w-full h-1 bg-surface-variant">
+<div class="h-full bg-primary-fixed-dim" style="width: 42%;"></div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 lg:ml-64 pt-32 pb-6 px-6 md:px-12 relative z-10 h-[calc(100vh-100px)] overflow-hidden">
+<!-- Slide Header -->
+<div class="mb-10 border-l-4 border-primary-container pl-6">
+<h1 class="font-headline text-4xl md:text-5xl font-bold uppercase tracking-tighter text-on-surface mb-2" style="">
+                Riesgos principales del <span class="text-primary-container text-glow" style="">soldador</span>
+</h1>
+<p class="font-label text-sm text-outline uppercase tracking-[0.2em]" style="">Safety Protocol // Module_04 // Hazard_Assessment</p>
+</div>
+<!-- Risk Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Risk 1: Radiación -->
+<div class="bg-surface-container-low border border-outline-variant/30 hover:border-primary-container transition-colors group p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="exposure" style="">exposure</span>
+<span class="font-label text-[10px] text-outline opacity-40" style="">REF: HAZ_RAD_01</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3 uppercase tracking-wider" style="">Radiación</h3>
+<p class="font-body text-on-surface font-medium text-xl leading-relaxed mb-6" style="">
+                    El arco eléctrico produce radiación ultravioleta e infrarroja que puede afectar gravemente los ojos y la piel desprotegida.
+                </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 text-[10px] font-label text-secondary-container" style="">
+<span class="material-symbols-outlined text-xs" data-icon="emergency" style="">emergency</span>
+                        REQUERIDO: PROTECCIÓN OCULAR DIN 11+
+                    </div>
+</div>
+</div>
+<!-- Risk 2: Quemaduras -->
+<div class="bg-surface-container-low border border-outline-variant/30 hover:border-primary-container transition-colors group p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-error text-4xl" data-icon="local_fire_department" style="">local_fire_department</span>
+<span class="font-label text-[10px] text-outline opacity-40" style="">REF: HAZ_BURN_02</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3 uppercase tracking-wider" style="">Quemaduras</h3>
+<p class="font-body text-on-surface font-medium text-xl leading-relaxed mb-6" style="">
+                    Las chispas, la escoria caliente y el metal fundido pueden causar quemaduras severas instantáneas al contacto con la piel.
+                </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 text-[10px] font-label text-error" style="">
+<span class="material-symbols-outlined text-xs" data-icon="warning" style="">warning</span>
+                        ZONA DE ALTA TEMPERATURA
+                    </div>
+</div>
+</div>
+<!-- Risk 3: Riesgos respiratorios -->
+<div class="bg-surface-container-low border border-outline-variant/30 hover:border-primary-container transition-colors group p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="mask" style="">masks</span>
+<span class="font-label text-[10px] text-outline opacity-40" style="">REF: HAZ_TOX_03</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3 uppercase tracking-wider" style="">Riesgos respiratorios</h3>
+<p class="font-body text-on-surface font-medium text-xl leading-relaxed mb-6" style="">
+                    Los humos de soldadura pueden contener partículas metálicas y gases tóxicos altamente dañinos para el sistema pulmonar.
+                </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 text-[10px] font-label text-primary-container" style="">
+<span class="material-symbols-outlined text-xs" data-icon="air" style="">air</span>
+                        VENTILACIÓN FORZADA NECESARIA
+                    </div>
+</div>
+</div>
+<!-- Risk 4: Riesgo eléctrico -->
+<div class="bg-surface-container-low border border-outline-variant/30 hover:border-primary-container transition-colors group p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="bolt" style="">bolt</span>
+<span class="font-label text-[10px] text-outline opacity-40" style="">REF: HAZ_ELEC_04</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3 uppercase tracking-wider" style="">Riesgo eléctrico</h3>
+<p class="font-body text-on-surface font-medium text-xl leading-relaxed mb-6" style="">
+                    Una mala conexión, equipo defectuoso o superficies húmedas pueden provocar descargas eléctricas fatales durante la operación.
+                </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 text-[10px] font-label text-secondary-container" style="">
+<span class="material-symbols-outlined text-xs" data-icon="electrical_services" style="">electrical_services</span>
+                        VERIFICAR PUESTA A TIERRA
+                    </div>
+</div>
+</div>
+<!-- Risk 5: Incendio -->
+<div class="bg-surface-container-low border border-outline-variant/30 hover:border-primary-container transition-colors group p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-error text-4xl" data-icon="fire_extinguisher" style="">fire_extinguisher</span>
+<span class="font-label text-[10px] text-outline opacity-40" style="">REF: HAZ_FIRE_05</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-3 uppercase tracking-wider" style="">Incendio</h3>
+<p class="font-body text-on-surface font-medium text-xl leading-relaxed mb-6" style="">
+                    Las proyecciones de chispas y el calor radiante pueden prender materiales inflamables en un radio de hasta 10 metros.
+                </p>
+<div class="mt-auto pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 text-[10px] font-label text-error" style="">
+<span class="material-symbols-outlined text-xs" data-icon="detector_status" style="">detector_status</span>
+                        ZONA LIBRE DE COMBUSTIBLES
+                    </div>
+</div>
+</div>
+<!-- Image/Visual Panel -->
+<div class="relative bg-surface-container-high border border-primary-container/20 group overflow-hidden">
+<img alt="Welder working" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close-up of a professional welder in protective gear working with bright electric arc and flying sparks in a dark industrial setting with blue and green hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUBWOhAX1AFsGELKd220qfnizpaTzu59h3UrH_8RtCsXiKIywqDmUzfjwen5HC-wSkQNwDwExwUR2X0-l3f2F6tZ5uUx-AhzVuB0Ctwge8_tqJwRAi7xnij-sP4IdDWAwnXA8XYgXSXIzGTUifnyEAhpqBrff4Yeupf28BqMgFCOO1piYhDD6ai_s5dbJdj59EJkan-5-Z0KYrgTI_uqkfTl8oxHlEqOpV9jx_sMIt8NArEJP0d6cNKcm71OzxEe0wDYYcbdInaw0" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="font-label text-[10px] text-primary-container mb-1" style="">VISUAL_REF_08</div>
+<div class="h-[1px] w-full bg-primary-container/30 mb-2"></div>
+<div class="text-xs font-body text-on-surface italic" style="">Simulación de arco voltaico en entorno controlado.</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer / Slide Navigation -->
+<footer class="fixed bottom-0 w-full flex justify-between items-center px-6 py-2 z-50 bg-[#131313] border-t border-[#3B4B37]/20">
+<button class="flex items-center gap-2 group" style="">
+<span class="material-symbols-outlined text-sm text-[#84967E] group-hover:text-[#1BFF3C]" data-icon="chevron_left" style="">chevron_left</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase opacity-60 text-[#84967E] group-hover:opacity-100 group-hover:text-[#1BFF3C] underline decoration-[#1BFF3C]" style="">PREVIOUS</span>
+</button>
+<div class="flex items-center gap-4">
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase opacity-60 text-[#1BFF3C]" style="">05</span>
+<div class="flex gap-1">
+<div class="w-1.5 h-1.5 bg-primary-container"></div>
+<div class="w-1.5 h-1.5 bg-primary-container"></div>
+<div class="w-1.5 h-1.5 bg-outline-variant"></div>
+<div class="w-1.5 h-1.5 bg-outline-variant"></div>
+</div>
+</div>
+<button class="flex items-center gap-2 group" style="">
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase opacity-60 text-[#84967E] group-hover:opacity-100 group-hover:text-[#1BFF3C] underline decoration-[#1BFF3C]" style="">NEXT</span>
+<span class="material-symbols-outlined text-sm text-[#84967E] group-hover:text-[#1BFF3C]" data-icon="chevron_right" style="">chevron_right</span>
+</button>
+</footer>
+<!-- Fixed Decorative Label (Asymmetry) -->
+<div class="fixed right-6 top-1/2 -rotate-90 origin-right pointer-events-none hidden lg:block">
+<span class="font-label text-[8px] tracking-[0.5em] text-outline-variant uppercase" style="">CRITICAL_SYSTEM_DATA // WELD_SPEC_V02</span>
+</div>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

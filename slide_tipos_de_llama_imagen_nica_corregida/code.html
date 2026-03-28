@@ -1,0 +1,270 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#410001",
+              "tertiary-fixed": "#ffdad5",
+              "on-tertiary-fixed-variant": "#930005",
+              "on-tertiary-container": "#c5020c",
+              "on-primary-container": "#007112",
+              "inverse-surface": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "on-tertiary": "#690003",
+              "on-error": "#690005",
+              "surface-container-low": "#1c1b1b",
+              "primary": "#ecffe3",
+              "outline": "#84967e",
+              "on-primary-fixed-variant": "#00530a",
+              "on-secondary-fixed-variant": "#554500",
+              "background": "#131313",
+              "primary-container": "#1bff3c",
+              "on-surface": "#e5e2e1",
+              "outline-variant": "#3b4b37",
+              "secondary-container": "#fed400",
+              "on-secondary-fixed": "#221b00",
+              "on-primary": "#003a05",
+              "surface-dim": "#131313",
+              "surface": "#131313",
+              "on-secondary-container": "#6f5c00",
+              "surface-container-high": "#2a2a2a",
+              "surface-bright": "#393939",
+              "on-error-container": "#ffdad6",
+              "secondary": "#fff3d3",
+              "inverse-primary": "#006e11",
+              "error-container": "#93000a",
+              "surface-tint": "#00e631",
+              "surface-container-highest": "#353534",
+              "on-surface-variant": "#baccb2",
+              "on-secondary": "#3b2f00",
+              "surface-variant": "#353534",
+              "error": "#ffb4ab",
+              "surface-container": "#201f1f",
+              "tertiary": "#fff8f7",
+              "surface-container-lowest": "#0e0e0e",
+              "primary-fixed": "#74ff6d",
+              "primary-fixed-dim": "#00e631",
+              "secondary-fixed-dim": "#eac300",
+              "secondary-fixed": "#ffe174",
+              "tertiary-container": "#ffd3cd",
+              "on-primary-fixed": "#002202",
+              "on-background": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani", "sans-serif"],
+              "body": ["Space Grotesk", "sans-serif"],
+              "technical": ["JetBrains Mono", "monospace"]
+            },
+            borderRadius: {"none": "0px", "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-glow {
+            box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.15);
+        }
+        .flame-gradient-neutral {
+            background: radial-gradient(circle at 20% 50%, #1bff3c 0%, #007112 30%, transparent 70%);
+        }
+        .flame-gradient-carburante {
+            background: radial-gradient(circle at 20% 50%, #fed400 0%, #6f5c00 40%, transparent 80%);
+        }
+        .flame-gradient-oxidante {
+            background: radial-gradient(circle at 20% 50%, #ffffff 0%, #1bff3c 20%, #003a05 60%, transparent 90%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary">
+<!-- TopAppBar Navigation Shell -->
+<header class="bg-[#131313] dark:bg-[#131313] text-[#1BFF3C] font-['Rajdhani'] uppercase tracking-wider font-bold text-lg docked full-width top-0 border-b border-[#3B4B37]/20 flex justify-between items-center w-full px-6 py-4 z-50">
+<div class="text-2xl font-black text-[#1BFF3C] tracking-tighter" style=""><span style="font-family: Rajdhani, sans-serif; letter-spacing: -1.2px;">WELD BEAR IEDU</span></div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#" style="">MODULES</a>
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SCHEMATICS</a>
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SAFETY</a>
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">RESOURCES</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] p-2 transition-all duration-75 ease-in-out active:scale-95" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+</button>
+<button class="hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] p-2 transition-all duration-75 ease-in-out active:scale-95" style="">
+<span class="material-symbols-outlined" style="">help</span>
+</button>
+</div>
+</header>
+<main class="min-h-[calc(100vh-160px)] px-6 pt-12 max-w-7xl mx-auto pb-12">
+<!-- Breadcrumb / Header Section -->
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-3 text-primary-container font-technical text-sm">
+<span class="bg-primary-container/10 px-2 py-0.5" style="">SLIDE_ID: 14</span>
+<span class="opacity-40" style=""><br></span>
+<span class="" style=""><br></span>
+</div>
+<h1 class="text-5xl md:text-7xl font-headline font-black uppercase tracking-tighter leading-none" style="">
+                    Tipos de <span class="text-primary-container" style="">llama</span>
+</h1>
+</div>
+<div class="text-right font-technical text-xs text-outline uppercase">
+<p class="" style="">Blueprint Ref: 449-ALPHA</p>
+<p class="" style="">Status: ACTIVE_CALIBRATION</p>
+</div>
+</div>
+<!-- Flame Analysis Grid -->
+<div class="w-full bg-surface-container-lowest border border-outline-variant/20 mb-1 p-4 flex justify-center items-center overflow-hidden">
+<div class="relative max-w-2xl w-full">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 50% 50%, #1bff3c 1px, transparent 1px); background-size: 20px 20px;"></div>
+<img alt="Llamas de oxiacetileno" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujkI9zhfYOroWnT93lsWMTjdiGRV443r9xHS5My5pSAT_vkflM62fBFxqQnth1BC1bLreZhze4HnJrMaMcYUU1LF4B_AXWyvnBRnO8tiwSjwlyr73t0Mc5Negu9tMwXWs9FUHhSLnRh8aE8vpDhXN07TjgHI2h83tbwrNnxH-GQIJgiABTJpKoZfdLy5i5jZSUa89GTEbCtzzkHTBUgstuPahrmOJYrSXtLsUBKMzeS6USJN3KLfIpqDBSyVw8fTA-6EEcr7dgGhA" style="">
+</div>
+</div><div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+<!-- Flame Type: Neutra -->
+<section class="group relative bg-surface-container-low border border-outline-variant/20 transition-all duration-300 flex flex-col h-full">
+<div class="absolute top-0 right-0 p-4 font-technical text-[10px] text-outline opacity-50" style="">FLAME_TYPE_01</div>
+<!-- Visual Component -->
+<!-- Content Area -->
+<div class="p-8 space-y-4">
+<div class="flex items-baseline justify-between border-b border-outline-variant pb-2">
+<h3 class="text-2xl font-headline font-bold text-primary-container uppercase" style="">Neutra</h3>
+<span class="font-technical text-xs text-outline" style="">1:1 RATIO</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed font-medium" style="">Tiene balance correcto entre oxígeno y acetileno. Es la llama más estable y la más utilizada para trabajo general y preparación del corte.</p>
+<div class="pt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-technical uppercase border border-outline-variant/30" style="">Balanced</span>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-technical uppercase border border-outline-variant/30" style="">Stable Arc</span>
+</div>
+</div>
+</section>
+<!-- Flame Type: Carburante -->
+<section class="group relative bg-surface-container-low border border-outline-variant/20 transition-all duration-300 flex flex-col h-full">
+<div class="absolute top-0 right-0 p-4 font-technical text-[10px] text-outline opacity-50" style="">FLAME_TYPE_02</div>
+<!-- Visual Component -->
+<!-- Content Area -->
+<div class="p-8 space-y-4">
+<div class="flex items-baseline justify-between border-b border-outline-variant pb-2">
+<h3 class="text-2xl font-headline font-bold text-secondary-container uppercase" style="">Carburante</h3>
+<span class="font-technical text-xs text-outline" style="">EXCESS C₂H₂</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed font-medium" style="">Tiene exceso de acetileno. Produce una combustión más rica en combustible. Se usa cuando se quiere reducir oxidación o en algunos trabajos de calentamiento.</p>
+<div class="pt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-technical uppercase border border-outline-variant/30" style="">Reducing</span>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-technical uppercase border border-outline-variant/30" style="">Triple Cone</span>
+</div>
+</div>
+</section>
+<!-- Flame Type: Oxidante -->
+<section class="group relative bg-surface-container-low border border-outline-variant/20 transition-all duration-300 flex flex-col h-full">
+<div class="absolute top-0 right-0 p-4 font-technical text-[10px] text-outline opacity-50" style="">FLAME_TYPE_03</div>
+<!-- Visual Component -->
+<!-- Content Area -->
+<div class="p-8 space-y-4">
+<div class="flex items-baseline justify-between border-b border-outline-variant pb-2">
+<h3 class="text-2xl font-headline font-bold text-white uppercase" style="">Oxidante</h3>
+<span class="font-technical text-xs text-outline" style="">EXCESS O₂</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed font-medium" style="">Tiene exceso de oxígeno. Produce una llama más agresiva y más corta. Puede oxidar demasiado la superficie si no se controla bien.</p>
+<div class="pt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-technical uppercase border border-outline-variant/30" style="">Hot Arc</span>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] font-technical uppercase border border-outline-variant/30" style="">Hissing Audio</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Technical Metadata Overlay -->
+<div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="border-l border-primary-container/20 pl-4 py-2">
+<span class="block font-technical text-[10px] text-outline uppercase" style="">Oxygen Flow</span>
+<span class="text-xl font-headline font-bold" style="">1.2 BAR</span>
+</div>
+<div class="border-l border-primary-container/20 pl-4 py-2">
+<span class="block font-technical text-[10px] text-outline uppercase"><br></span>
+<span class="text-xl font-headline font-bold"></span>
+</div>
+<div class="border-l border-primary-container/20 pl-4 py-2">
+<span class="block font-technical text-[10px] text-outline uppercase" style=""><br></span>
+<span class="text-xl font-headline font-bold" style=""></span>
+</div>
+<div class="border-l border-primary-container/20 pl-4 py-2">
+<span class="block font-technical text-[10px] text-outline uppercase"><br></span>
+<span class="text-xl font-headline font-bold text-primary-container"></span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<footer class="bg-[#1C1B1B] dark:bg-[#1C1B1B] text-[#1BFF3C] font-['JetBrains_Mono'] text-xs font-medium uppercase left-0 w-full z-50 flex justify-around items-center h-20 px-4 border-t border-[#3B4B37]/30 technical-glow relative">
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150" style="">
+<span class="material-symbols-outlined mb-1" style="">arrow_back</span>
+<span class="" style="">PREVIOUS</span>
+</button>
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-8 py-2 border-t-2 border-[#1BFF3C]">
+<span class="material-symbols-outlined mb-1" style="">numbers</span>
+<span class="" style="">05</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150" style="">
+<span class="material-symbols-outlined mb-1" style="">arrow_forward</span>
+<span class="" style="">NEXT</span>
+</button>
+<button class="hidden md:flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all duration-150" style="">
+<span class="material-symbols-outlined mb-1" style="">home</span>
+<span class="" style="">HOME</span>
+</button>
+</footer>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        document.querySelectorAll('button').forEach(btn => {
+            const text = btn.innerText.toUpperCase();
+            if (text.includes('PREV') || text.includes('ANTERIOR') || text.includes('ARROW_BACK') || text.includes('BACK_IOS')) {
+                btn.onclick = () => window.parent.postMessage('PREV', '*');
+            } else if (text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('ARROW_FORWARD') || text.includes('FORWARD_IOS')) {
+                btn.onclick = () => window.parent.postMessage('NEXT', '*');
+            } else if (text.includes('HOME') || text.includes('INICIO')) {
+                btn.onclick = () => window.parent.postMessage('HOME', '*');
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            window.parent.postMessage('PREV', '*');
+        } else if (e.key === 'Home') {
+            window.parent.postMessage('HOME', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+\n</body></html>

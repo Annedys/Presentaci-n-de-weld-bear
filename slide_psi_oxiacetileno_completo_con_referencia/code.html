@@ -1,0 +1,196 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#1bff3c",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#3b4b37",
+                        "surface": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani"],
+                        "body": ["Space Grotesk"],
+                        "mono": ["JetBrains Mono"]
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            background-image: 
+                linear-gradient(rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #e5e2e1;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow: hidden;
+        }
+        .blueprint-border {
+            border: 2px solid #3b4b37;
+            position: relative;
+        }
+        .blueprint-border::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 1px solid rgba(27, 255, 60, 0.2);
+            pointer-events: none;
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(27, 255, 60, 0.7);
+        }
+    </style>
+</head>
+<body class="font-body">
+<div class="w-[90vw] max-w-5xl blueprint-border bg-surface shadow-[0px_0px_50px_rgba(0,0,0,0.8)] p-1">
+<!-- Slide Header -->
+<div class="bg-[#1E1E1E] border-b-4 border-primary-container p-8 flex justify-between items-end">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="h-1 w-12 bg-primary-container"></span>
+<span class="font-mono text-xs tracking-[0.3em] text-primary-container font-bold uppercase" style=""><span style="font-family: Rajdhani; font-size: 20px; letter-spacing: -1px; text-transform: none; background-color: rgb(19, 19, 19);">WELD&nbsp; BEAR&nbsp; INTERNATIONAL&nbsp; EDU</span></span>
+</div>
+<h1 class="font-headline text-6xl font-bold uppercase tracking-tighter leading-none" style="">
+                    PSI DE TRABAJO EN OXIACETILENO
+                </h1>
+</div>
+<div class="text-right font-mono text-sm opacity-50" style="">
+                REF: SLIDE_OS_v2.4<br>
+                STATUS: CALIBRATED
+            </div>
+</div>
+<!-- High-Density Table -->
+<div class="p-8">
+<div class="mb-6 font-mono text-xl tracking-wider text-primary-container neon-glow max-w-2xl uppercase">
+<p class="font-bold" style="">
+        Los PSI varían según la boquilla y el espesor del acero negro. 
+        <span class="block mt-1 underline" style="">Referencia práctica de taller:</span>
+</p>
+</div><table class="w-full border-collapse">
+<thead>
+<tr class="bg-[#1E1E1E]">
+<th class="px-8 py-5 border border-outline-variant font-headline text-xl tracking-widest uppercase text-on-surface text-left" style="">Espesor</th>
+<th class="px-8 py-5 border border-outline-variant font-headline text-xl tracking-widest uppercase text-on-surface text-left" style="">Boquilla</th>
+<th class="px-8 py-5 border border-outline-variant font-headline text-xl tracking-widest uppercase text-primary-container text-left" style="">Acetileno (PSI)</th>
+<th class="px-8 py-5 border border-outline-variant font-headline text-xl tracking-widest uppercase text-primary-container text-left" style="">Oxígeno (PSI)</th>
+</tr>
+</thead>
+<tbody class="font-mono text-xl">
+<!-- Row 1 -->
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="px-8 py-6 border border-outline-variant text-on-surface" style="">1/8" a 1/4"</td>
+<td class="px-8 py-6 border border-outline-variant text-on-surface italic" style="">Pequeña</td>
+<td class="px-8 py-6 border border-outline-variant font-bold text-primary-container neon-glow" style="">3 a 5</td>
+<td class="px-8 py-6 border border-outline-variant font-bold text-primary-container neon-glow" style="">20 a 25</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low/30 hover:bg-primary-container/5 transition-colors">
+<td class="px-8 py-6 border border-outline-variant text-on-surface" style="">3/8" a 1/2"</td>
+<td class="px-8 py-6 border border-outline-variant text-on-surface italic" style="">Mediana Pequeña</td>
+<td class="px-8 py-6 border border-outline-variant font-bold text-primary-container neon-glow" style="">4 a 5</td>
+<td class="px-8 py-6 border border-outline-variant font-bold text-primary-container neon-glow" style="">25 a 30</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="px-8 py-6 border border-outline-variant text-on-surface" style="">5/8" a 1"</td>
+<td class="px-8 py-6 border border-outline-variant text-on-surface italic" style="">Mediana</td>
+<td class="px-8 py-6 border border-outline-variant font-bold text-primary-container neon-glow" style="">5 a 6</td>
+<td class="px-8 py-6 border border-outline-variant font-bold text-primary-container neon-glow" style="">30 a 35</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-low/30 hover:bg-primary-container/5 transition-colors">
+<td class="px-8 py-6 border border-outline-variant text-on-surface" style="">1" a 2"</td>
+<td class="px-8 py-6 border border-outline-variant text-on-surface italic" style="">Grande</td>
+<td class="px-8 py-6 border border-outline-variant font-bold text-primary-container neon-glow" style="">6 a 7</td>
+<td class="px-8 py-6 border border-outline-variant font-bold text-primary-container neon-glow" style="">35 a 40</td>
+</tr>
+</tbody>
+</table>
+</div><div class="px-8 pb-8 pt-4 border-t border-outline-variant/30">
+<div class="flex items-start gap-4 text-primary-container font-mono text-xl leading-relaxed max-w-4xl">
+<span class="material-symbols-outlined shrink-0 text-2xl" style="">warning</span>
+<p class="neon-glow font-bold" style="">
+<span class="underline" style="">NOTA DE SEGURIDAD:</span> 
+            El acetileno no debe trabajarse a presiones excesivas porque puede volverse inestable. 
+            La presión final siempre debe ajustarse según la boquilla, el equipo y el corte que se quiere lograr.
+        </p>
+</div>
+</div>
+<!-- Slide Footer Decor -->
+<div class="bg-surface-container-high px-8 py-4 flex justify-between items-center border-t border-outline-variant font-mono text-[10px] tracking-widest text-outline-variant">
+<div class="flex gap-8">
+<span class="" style="">[ SAFETY_CRITICAL ]</span>
+<span class="" style="">[ GAS_EQUILIBRIUM: OPTIMAL ]</span>
+</div>
+<div class="flex gap-4 items-center">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="" style="">SYSTEM_LIVE_FEED</span>
+<span class="ml-4 opacity-50" style="">PAGE_01_OF_01</span>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

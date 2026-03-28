@@ -1,0 +1,254 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>KINETIC_SCHEMATIC_V1 - CORDÓN DE SOLDADURA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#fed400",
+              "tertiary-container": "#ffd3cd",
+              "on-surface-variant": "#baccb2",
+              "surface-dim": "#131313",
+              "error-container": "#93000a",
+              "inverse-on-surface": "#313030",
+              "on-background": "#e5e2e1",
+              "inverse-surface": "#e5e2e1",
+              "secondary-fixed-dim": "#eac300",
+              "on-error": "#690005",
+              "tertiary": "#fff8f7",
+              "on-tertiary": "#690003",
+              "inverse-primary": "#006e11",
+              "on-primary-fixed-variant": "#00530a",
+              "error": "#ffb4ab",
+              "secondary-fixed": "#ffe174",
+              "on-error-container": "#ffdad6",
+              "background": "#131313",
+              "surface-bright": "#393939",
+              "on-tertiary-fixed": "#410001",
+              "on-secondary-fixed": "#221b00",
+              "outline": "#84967e",
+              "surface-container-low": "#1c1b1b",
+              "surface": "#131313",
+              "on-secondary": "#3b2f00",
+              "tertiary-fixed": "#ffdad5",
+              "surface-container": "#201f1f",
+              "primary-fixed-dim": "#00e631",
+              "surface-container-highest": "#353534",
+              "primary-container": "#1bff3c",
+              "on-primary": "#003a05",
+              "secondary": "#fff3d3",
+              "surface-variant": "#353534",
+              "on-surface": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#930005",
+              "surface-container-lowest": "#0e0e0e",
+              "on-secondary-fixed-variant": "#554500",
+              "on-tertiary-container": "#c5020c",
+              "on-primary-fixed": "#002202",
+              "primary": "#ecffe3",
+              "surface-tint": "#00e631",
+              "primary-fixed": "#74ff6d",
+              "outline-variant": "#3b4b37",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-container": "#6f5c00",
+              "on-primary-container": "#007112"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"],
+              "mono": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container blueprint-grid min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full border-b border-[#3B4B37]/20 bg-[#131313] z-50 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black text-[#1BFF3C] drop-shadow-[0_0_8px_rgba(27,255,60,0.4)] font-['Rajdhani'] uppercase tracking-widest" style=""><span style="font-family: Rajdhani, sans-serif; font-size: 24px; letter-spacing: -1.2px;" class="">WELD BEAR IEDU</span></span>
+<div class="hidden md:block h-4 w-[1px] bg-outline-variant/30"></div>
+<span class="hidden md:block font-mono text-[10px] text-outline tracking-tighter uppercase" style="">
+                SYS_REF: SOLDADURA_MODULE_04
+            </span>
+</div>
+<nav class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 font-['Rajdhani'] uppercase tracking-widest font-bold text-sm">
+<a class="text-[#84967E]/60 hover:bg-[#1BFF3C]/10 transition-colors duration-200 px-2 py-1" href="#" style="">Overview</a>
+<a class="text-[#1BFF3C] border-b-2 border-[#1BFF3C] px-2 py-1" href="#" style="">Lecture</a>
+<a class="text-[#84967E]/60 hover:bg-[#1BFF3C]/10 transition-colors duration-200 px-2 py-1" href="#" style="">Resources</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-[#1BFF3C]/10 transition-colors duration-200 active:scale-95" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-[#1BFF3C]/10 transition-colors duration-200 active:scale-95" style="">
+<span class="material-symbols-outlined" data-icon="help_outline" style="">help_outline</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-20 pb-24 px-6 max-w-7xl mx-auto h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden">
+<!-- Header Section -->
+<div class="mb-4 border-l-4 border-primary-container pl-6 py-2">
+<div class="font-mono text-primary-container text-xs mb-2 tracking-[0.2em]" style=""><br></div>
+<h1 class="text-5xl md:text-7xl font-headline font-black uppercase tracking-tighter leading-none glow-text" style="">
+                CORDÓN DE<br>SOLDADURA
+            </h1>
+</div>
+<!-- Content Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Primary Definition Card -->
+<div class="md:col-span-12 bg-surface-container-low border-l border-t border-outline-variant/20 p-8 relative overflow-hidden group hover:border-primary-container/40 transition-colors duration-500">
+<div class="absolute top-0 right-0 p-4 font-mono text-[10px] text-outline/40" style="">ID_D_04-A</div>
+<div class="flex items-start gap-4 mb-6">
+<span class="material-symbols-outlined text-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<h2 class="text-2xl font-headline font-bold uppercase tracking-wide" style="">Definición Técnica</h2>
+</div>
+<p class="text-xl text-on-surface leading-normal max-w-none w-full" style="">
+                    El cordón de soldadura es el <span class="text-primary-container font-semibold" style="">depósito continuo de metal</span> formado durante el proceso de soldadura. Se origina mediante la fusión controlada del metal de aporte sobre el metal base, creando una unión estructural permanente.
+                </p>
+<div class="mt-6 h-1 w-full bg-surface-variant relative">
+<div class="absolute inset-0 w-3/4 bg-primary-container shadow-[0_0_10px_rgba(27,255,60,0.4)]"></div>
+</div>
+<div class="mt-2 flex justify-between font-mono text-[10px] text-outline uppercase">
+<span class="" style="">Deposition Rate</span>
+<span class="" style="">75% Optimal</span>
+</div>
+</div>
+<!-- Evaluation Criteria Section -->
+<div class="md:col-span-12 mt-6">
+<div class="flex items-center gap-4 mb-8">
+<h3 class="text-3xl font-headline font-black uppercase tracking-widest text-[#1BFF3C]" style="">CRITERIOS DE EVALUACIÓN</h3>
+<div class="h-[1px] flex-grow bg-gradient-to-r from-[#1BFF3C]/30 to-transparent"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<!-- Criteria Item -->
+<div class="bg-surface-container-low p-5 hover:bg-surface-container-high transition-colors">
+<div class="text-primary-container font-mono text-xs mb-3" style="">01.</div>
+<div class="font-headline font-bold text-xl uppercase mb-2" style="">Forma</div>
+<p class="text-lg text-on-surface font-medium font-body" style="">Perfil geométrico del depósito.</p>
+</div>
+<!-- Criteria Item -->
+<div class="bg-surface-container-low p-5 hover:bg-surface-container-high transition-colors border-t border-primary-container/20">
+<div class="text-primary-container font-mono text-xs mb-3" style="">02.</div>
+<div class="font-headline font-bold text-xl uppercase mb-2" style="">Tamaño</div>
+<p class="text-lg text-on-surface font-medium font-body" style="">Dimensiones según diseño.</p>
+</div>
+<!-- Criteria Item -->
+<div class="bg-surface-container-low p-5 hover:bg-surface-container-high transition-colors">
+<div class="text-primary-container font-mono text-xs mb-3" style="">03.</div>
+<div class="font-headline font-bold text-xl uppercase mb-2" style="">Penetración</div>
+<p class="text-lg text-on-surface font-medium font-body" style="">Profundidad en metal base.</p>
+</div>
+<!-- Criteria Item -->
+<div class="bg-surface-container-low p-5 hover:bg-surface-container-high transition-colors border-t border-primary-container/20">
+<div class="text-primary-container font-mono text-xs mb-3" style="">04.</div>
+<div class="font-headline font-bold text-xl uppercase mb-2" style="">Uniformidad</div>
+<p class="text-lg text-on-surface font-medium font-body" style="">Constancia estructural.</p>
+</div>
+<!-- Criteria Item -->
+<div class="bg-surface-container-low p-5 hover:bg-surface-container-high transition-colors">
+<div class="text-primary-container font-mono text-xs mb-3" style="">05.</div>
+<div class="font-headline font-bold text-xl uppercase mb-2" style="">Limpieza</div>
+<p class="text-lg text-on-surface font-medium font-body" style="">Ausencia de impurezas.</p>
+</div>
+</div>
+</div>
+<!-- Aesthetic Footer Note -->
+<div class="md:col-span-12 bg-primary-container/5 border border-primary-container/20 p-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container" style="">verified</span>
+<span class="font-headline font-semibold text-lg uppercase tracking-wide" style="">Evaluación de Ejecución</span>
+</div>
+<p class="text-xl font-medium font-body text-on-surface max-w-xl text-center md:text-left leading-snug" style="">
+                    El análisis integral de estos factores permite determinar si la soldadura cumple con los estándares de calidad y seguridad industrial requeridos.
+                </p>
+<div class="font-mono text-[10px] bg-primary-container text-on-primary px-3 py-1 font-bold" style="">QA_PASSED</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-center items-center gap-0 bg-[#1C1B1B] h-20 border-t border-[#3B4B37]/30 shadow-[0_-4px_20px_rgba(27,255,60,0.1)]">
+<a class="flex flex-col items-center justify-center text-[#84967E] px-8 h-full hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group active:brightness-125" href="#" style="">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="arrow_back_ios" style="">arrow_back_ios</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter" style="">PREVIOUS</span>
+</a>
+<a class="flex flex-col items-center justify-center px-12 h-full transition-all active:brightness-125 text-[#1BFF3C] border-x border-[#1BFF3C]" href="#" style="">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view" style="">grid_view</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter font-bold" style="">08</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#84967E] px-8 h-full hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group active:brightness-125" href="#" style="">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="arrow_forward_ios" style="">arrow_forward_ios</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter" style="">NEXT</span>
+</a>
+</nav>
+<!-- Blueprint Annotations (Floating Elements) -->
+<div class="fixed top-1/4 right-4 hidden lg:flex flex-col gap-8 opacity-20 pointer-events-none">
+<div class="font-mono text-[10px] rotate-90 origin-right" style="">COORD_X: 45.0029</div>
+<div class="font-mono text-[10px] rotate-90 origin-right" style="">COORD_Y: 12.8834</div>
+<div class="font-mono text-[10px] rotate-90 origin-right" style="">SCALE: 1:100</div>
+</div></nav>
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

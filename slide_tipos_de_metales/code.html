@@ -1,0 +1,158 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#1bff3c",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani"],
+                        "body": ["Space Grotesk"],
+                        "label": ["JetBrains Mono"]
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(27, 255, 60, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(27, 255, 60, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col overflow-hidden">
+<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-4 border-b border-[#1BFF3C]/20 z-50">
+<div class="text-xl font-bold text-[#1BFF3C] tracking-tighter font-headline uppercase">WELD BEAR IEDU</div>
+<div class="flex items-center space-x-4 text-[#84967E] font-label text-[10px] uppercase tracking-widest">
+<span>System: Active</span>
+<span class="text-[#1BFF3C]/50">|</span>
+<span>Module: Metallurgy</span>
+</div>
+</header>
+
+<main class="flex-grow relative blueprint-grid flex flex-col items-center justify-center px-12 pb-24">
+    <!-- Section Header -->
+    <div class="w-full max-w-7xl mb-12 border-l-4 border-[#1BFF3C] pl-6">
+        <span class="font-label text-[#1BFF3C] text-xs tracking-widest uppercase mb-1 block">METALLURGY // 01</span>
+        <h1 class="font-headline text-6xl font-black tracking-tight text-on-surface uppercase drop-shadow-[0_0_15px_rgba(27,255,60,0.2)]">TIPOS DE METALES</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl mb-12">
+        <!-- Card 1: Acero Negro -->
+        <div class="bg-[#1C1B1B] border border-[#1BFF3C]/20 p-8 shadow-[0_0_20px_rgba(0,0,0,0.5)] group hover:border-[#1BFF3C]/50 transition-all">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-[#1BFF3C]/10 p-3">
+                    <span class="material-symbols-outlined text-[#1BFF3C] text-3xl" data-icon="layers">layers</span>
+                </div>
+                <h3 class="font-headline text-3xl font-bold text-[#1BFF3C] tracking-tight uppercase">Acero Negro</h3>
+            </div>
+            <p class="text-on-surface text-xl font-medium leading-relaxed mb-4">
+                (Carbon Steel) Es el metal más común en soldadura estructural y fabricación.
+            </p>
+            <div class="flex gap-2">
+                <span class="bg-[#1BFF3C]/10 text-[#1BFF3C] px-2 py-1 font-label text-[10px] uppercase">Common</span>
+                <span class="bg-[#1BFF3C]/10 text-[#1BFF3C] px-2 py-1 font-label text-[10px] uppercase">Structural</span>
+            </div>
+        </div>
+
+        <!-- Card 2: Galvanizado -->
+        <div class="bg-[#1C1B1B] border border-[#1BFF3C]/20 p-8 shadow-[0_0_20px_rgba(0,0,0,0.5)] group hover:border-[#1BFF3C]/50 transition-all">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-[#1BFF3C]/10 p-3">
+                    <span class="material-symbols-outlined text-[#1BFF3C] text-3xl" data-icon="shield">shield</span>
+                </div>
+                <h3 class="font-headline text-3xl font-bold text-[#1BFF3C] tracking-tight uppercase">Galvanizado</h3>
+            </div>
+            <p class="text-on-surface text-xl font-medium leading-relaxed mb-4">
+                Es de acero recubierto con zinc para prevenir la corrosión.
+            </p>
+            <div class="flex gap-2">
+                <span class="bg-[#1BFF3C]/10 text-[#1BFF3C] px-2 py-1 font-label text-[10px] uppercase">Zinc Coated</span>
+                <span class="bg-[#1BFF3C]/10 text-[#1BFF3C] px-2 py-1 font-label text-[10px] uppercase">Anti-Corrosive</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Note / Highlight -->
+    <div class="w-full max-w-7xl bg-[#1BFF3C]/5 border border-[#1BFF3C]/20 p-6 flex items-center gap-6">
+        <span class="material-symbols-outlined text-[#1BFF3C] text-4xl" data-icon="warning">warning</span>
+        <p class="font-headline text-2xl font-bold text-[#1BFF3C] tracking-wide uppercase leading-tight">
+            Cada metal se comporta distinto al calentarse y requiere precauciones específicas.
+        </p>
+    </div>
+</main>
+
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 bg-[#1C1B1B] border-t border-[#1BFF3C]/20 shadow-[0_-5px_15px_rgba(27,255,60,0.05)]">
+    <button class="flex flex-col items-center justify-center text-[#84967E] px-8 py-2 hover:text-[#1BFF3C] transition-all group active:scale-95">
+        <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+        <span class="font-label text-[10px] uppercase mt-1">ANTERIOR</span>
+    </button>
+    <div class="flex flex-col items-center justify-center text-[#1BFF3C] px-12 py-2 border border-[#1BFF3C]/30 bg-[#1BFF3C]/5">
+        <span class="material-symbols-outlined text-sm mb-1" data-icon="format_list_numbered">format_list_numbered</span>
+        <span class="font-label text-[11px] font-bold">54</span>
+    </div>
+    <button class="flex flex-col items-center justify-center text-[#84967E] px-8 py-2 hover:text-[#1BFF3C] transition-all group active:scale-95">
+        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+        <span class="font-label text-[10px] uppercase mt-1">SIGUIENTE</span>
+    </button>
+</footer>
+
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

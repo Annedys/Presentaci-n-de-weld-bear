@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WELD_TECH_OS - EQUIPO DE CORTE OXIACETILENO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#1bff3c",
+                        "surface-bright": "#393939",
+                        "primary": "#ecffe3",
+                        "on-secondary-container": "#6f5c00",
+                        "surface-tint": "#00e631",
+                        "secondary": "#fff3d3",
+                        "on-secondary-fixed-variant": "#554500",
+                        "tertiary-container": "#ffd3cd",
+                        "on-tertiary": "#690003",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-container": "#007112",
+                        "on-background": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-fixed-variant": "#00530a",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "on-primary": "#003a05",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353534",
+                        "on-tertiary-container": "#c5020c",
+                        "secondary-fixed": "#ffe174",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "on-secondary": "#3b2f00",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed": "#410001",
+                        "on-surface": "#e5e2e1",
+                        "inverse-primary": "#006e11",
+                        "on-surface-variant": "#baccb2",
+                        "background": "#131313",
+                        "primary-fixed": "#74ff6d",
+                        "tertiary-fixed": "#ffdad5",
+                        "tertiary": "#fff8f7",
+                        "secondary-container": "#fed400",
+                        "primary-fixed-dim": "#00e631",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "outline": "#84967e",
+                        "on-secondary-fixed": "#221b00",
+                        "outline-variant": "#3b4b37",
+                        "on-primary-fixed": "#002202"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-border:hover {
+            box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.2);
+            border-color: #1bff3c;
+        }
+        .technical-line {
+            background: repeating-linear-gradient(90deg, #3b4b37 0, #3b4b37 2px, transparent 2px, transparent 4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-hidden min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top AppBar (JSON Derived) -->
+<header class="bg-[#131313] dark:bg-[#131313] border-b border-[#3B4B37]/20 flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
+<div class="text-2xl font-black text-[#1BFF3C] tracking-tighter font-headline uppercase"><span style="letter-spacing: -1.2px;">WELD BEAR IEDU</span></div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-headline uppercase tracking-wider font-bold text-lg text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#">MODULES</a>
+<a class="font-headline uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">SCHEMATICS</a>
+<a class="font-headline uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">SAFETY</a>
+<a class="font-headline uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">RESOURCES</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="text-[#84967E] hover:text-[#1BFF3C] p-2 hover:bg-[#1BFF3C]/10 transition-all duration-75 ease-in-out active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-[#84967E] hover:text-[#1BFF3C] p-2 hover:bg-[#1BFF3C]/10 transition-all duration-75 ease-in-out active:scale-95">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-20 px-12 h-screen relative blueprint-grid flex flex-col">
+<!-- Background Decorative Metadata -->
+<div class="absolute top-28 right-12 font-label text-[10px] text-outline opacity-40 uppercase tracking-widest text-right leading-relaxed">
+            SYS_REF: OXY_CUT_V02<br/>
+            OPERATING_TEMP: 3200C<br/>
+            GRID_LOC: 44.20.91
+        </div>
+<!-- Page Header -->
+<div class="mb-10">
+<h1 class="font-headline text-5xl font-black text-primary-container tracking-tighter uppercase mb-1">
+                EQUIPO DE CORTE OXIACETILENO
+            </h1>
+<div class="flex items-center gap-4">
+<div class="h-px w-12 bg-primary-container"></div>
+<h2 class="font-label text-sm uppercase tracking-[0.2em] text-outline">
+                    COMPONENTES PRINCIPALES (PARTE 2)
+                </h2>
+</div>
+</div>
+<!-- Layout Container -->
+<div class="flex-grow grid grid-cols-12 gap-10 overflow-hidden">
+<!-- Left: Visual Section -->
+<div class="col-span-12 lg:col-span-6 flex flex-col gap-6 relative">
+<div class="flex-grow bg-surface-container-low border border-outline-variant/30 relative overflow-hidden group p-10 flex items-center justify-center">
+<img alt="Technical diagram of oxy-acetylene cutting equipment" class="max-w-full max-h-full object-contain grayscale opacity-90 group-hover:grayscale-0 transition-all duration-700 bg-surface-container-lowest" src="https://lh3.googleusercontent.com/aida/ADBb0ugas3HG8u-amZzT_1UWS0eDno2wZm_RTZN3CAYKq60YT3plBuwPqFceD0fIrxMDeBjKk9Kec6__ijI3b5VeETtFa511iepKL9od9-AkLTiKcgQqWOs950swScU6gqrdFg0YDnzBySb1PmBX2tPjA23r2Q-qRIMRbn43Y7I9bKKRQeELY1u9Nbu2pVnQoPHSA7Uco8sdGluOd7JH5uc78kGu1_DKYI3IDkmyAYiKB9HRkI_nSe3UtnwXQxu-0t00XSB6LVhmvXCa2Q">
+<!-- Schematic Annotations Overlay -->
+<div class="absolute inset-0 pointer-events-none border-[1px] border-primary-container/10"></div>
+<div class="absolute top-4 left-4 font-label text-[10px] bg-primary-container text-on-primary px-2 py-1">LIVE_SPECIMEN_037</div>
+<!-- Tech Overlays -->
+<div class="absolute bottom-4 right-4 text-right">
+<div class="font-label text-[10px] text-primary-container mb-1">OPTIC_SCAN: 100%</div>
+<div class="w-32 h-1 bg-surface-variant">
+<div class="w-4/5 h-full bg-primary-container"></div>
+</div>
+</div>
+</div>
+<!-- Bottom Alert Card -->
+</div>
+<!-- Right: Technical Specifications -->
+<div class="col-span-12 lg:col-span-6 flex flex-col gap-4 overflow-y-auto pr-2 custom-scrollbar">
+<!-- Spec 05 -->
+<div class="bg-surface-container-low border border-outline-variant/30 p-5 glow-border transition-all flex items-start gap-5">
+<div class="font-headline text-4xl font-black text-primary-container/20 tabular-nums">05</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline text-xl font-bold text-primary-container uppercase tracking-wide">SOPLETE</h4>
+<span class="font-label text-[10px] text-outline bg-surface-container px-2 py-0.5">ID: BLW-TRC</span>
+</div>
+<p class="text-on-surface font-body text-xl leading-snug">
+                            Mezcla los gases y permite controlarlos manualmente.
+                        </p>
+</div>
+</div>
+<!-- Spec 06 -->
+<div class="bg-surface-container-low border border-outline-variant/30 p-5 glow-border transition-all flex items-start gap-5">
+<div class="font-headline text-4xl font-black text-primary-container/20 tabular-nums">06</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline text-xl font-bold text-primary-container uppercase tracking-wide">BOQUILLA DE CORTE</h4>
+<span class="font-label text-[10px] text-outline bg-surface-container px-2 py-0.5">ID: NOZ-X2</span>
+</div>
+<p class="text-on-surface font-body text-xl leading-snug">
+                            Dirige la llama de precalentamiento y el chorro de oxígeno. La boquilla cambia según el espesor del metal.
+                        </p>
+</div>
+</div>
+<!-- Spec 07 -->
+<div class="bg-surface-container-low border border-outline-variant/30 p-5 glow-border transition-all flex items-start gap-5">
+<div class="font-headline text-4xl font-black text-primary-container/20 tabular-nums">07</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline text-xl font-bold text-primary-container uppercase tracking-wide">VÁLVULAS</h4>
+<span class="font-label text-[10px] text-outline bg-surface-container px-2 py-0.5">ID: CTRL-V</span>
+</div>
+<p class="text-on-surface font-body text-xl leading-snug">
+                            Permiten abrir, cerrar y ajustar el flujo.
+                        </p>
+</div>
+</div>
+<!-- Spec 08 -->
+<div class="bg-surface-container-low border border-outline-variant/30 p-5 glow-border transition-all flex items-start gap-5">
+<div class="font-headline text-4xl font-black text-primary-container/20 tabular-nums">08</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline text-xl font-bold text-primary-container uppercase tracking-wide">CHISPERO O ENCENDEDOR</h4>
+<span class="font-label text-[10px] text-outline bg-surface-container px-2 py-0.5">ID: IGN-01</span>
+</div>
+<p class="text-on-surface font-body text-xl leading-snug">
+                            Se usa para encender el equipo de forma segura.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (JSON Derived) -->
+<footer class="fixed bottom-0 left-0 w-full z-50 bg-[#1C1B1B] dark:bg-[#1C1B1B] border-t border-[#3B4B37]/30 flex justify-around items-center h-20 px-4 shadow-[0px_0px_15px_rgba(27,255,60,0.15)]">
+<!-- Previous -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back">arrow_back</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase">PREVIOUS</span>
+</button>
+<!-- Current Status (Active) -->
+<button class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-8 py-2 border-t-2 border-[#1BFF3C] transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="numbers">numbers</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase">03</span>
+</button>
+<!-- Next -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase">NEXT</span>
+</button>
+<!-- Home -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase">HOME</span>
+</button>
+</footer>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary": "#fff3d3",
+            "primary": "#ecffe3",
+            "on-background": "#e5e2e1",
+            "surface-container-highest": "#353534",
+            "outline-variant": "#3b4b37",
+            "on-surface-variant": "#baccb2",
+            "on-surface": "#e5e2e1",
+            "on-secondary-fixed-variant": "#554500",
+            "on-error": "#690005",
+            "surface-container": "#201f1f",
+            "primary-fixed": "#74ff6d",
+            "error": "#ffb4ab",
+            "surface-bright": "#393939",
+            "background": "#131313",
+            "tertiary-fixed": "#ffdad5",
+            "surface-container-lowest": "#0e0e0e",
+            "error-container": "#93000a",
+            "inverse-surface": "#e5e2e1",
+            "tertiary-container": "#ffd3cd",
+            "primary-fixed-dim": "#00e631",
+            "on-tertiary-fixed": "#410001",
+            "on-tertiary-container": "#c5020c",
+            "surface-tint": "#00e631",
+            "secondary-fixed-dim": "#eac300",
+            "surface-dim": "#131313",
+            "surface-variant": "#353534",
+            "on-error-container": "#ffdad6",
+            "primary-container": "#1bff3c",
+            "on-tertiary-fixed-variant": "#930005",
+            "inverse-primary": "#006e11",
+            "tertiary-fixed-dim": "#ffb4aa",
+            "surface-container-high": "#2a2a2a",
+            "on-secondary-fixed": "#221b00",
+            "on-tertiary": "#690003",
+            "on-secondary-container": "#6f5c00",
+            "on-primary-container": "#007112",
+            "on-secondary": "#3b2f00",
+            "secondary-fixed": "#ffe174",
+            "outline": "#84967e",
+            "on-primary": "#003a05",
+            "tertiary": "#fff8f7",
+            "on-primary-fixed": "#002202",
+            "inverse-on-surface": "#313030",
+            "surface": "#131313",
+            "secondary-container": "#fed400",
+            "on-primary-fixed-variant": "#00530a",
+            "surface-container-low": "#1c1b1b"
+          },
+          fontFamily: {
+            "headline": ["Rajdhani"],
+            "body": ["Space Grotesk"],
+            "label": ["JetBrains Mono"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .bg-grid-pattern {
+      background-image: linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background text-on-background font-body h-screen overflow-hidden selection:bg-primary-container selection:text-on-primary-container">
+  <!-- Top Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#131313] shadow-[0px_0px_15px_rgba(27,255,60,0.15)]">
+    <div class="flex justify-between items-center w-full px-6 py-4">
+      <div class="text-2xl font-black text-[#1BFF3C] tracking-widest font-headline uppercase" style=""><span
+          style="font-family: Rajdhani, sans-serif; letter-spacing: -1.2px;">WELD BEAR IEDU</span></div>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="font-headline font-bold tracking-tighter uppercase text-[#1BFF3C] border-b-2 border-[#1BFF3C] py-1"
+          href="#" style="">Empresas</a>
+        <a class="font-headline font-bold tracking-tighter uppercase text-[#84967E] opacity-50 hover:bg-[#1BFF3C]/10 transition-colors py-1"
+          href="#" style="">Metodología</a>
+        <a class="font-headline font-bold tracking-tighter uppercase text-[#84967E] opacity-50 hover:bg-[#1BFF3C]/10 transition-colors py-1"
+          href="#" style="">Certificaciones</a>
+      </nav>
+      <div class="flex items-center gap-4 text-[#1BFF3C]">
+        <span class="material-symbols-outlined cursor-pointer hover:bg-[#1BFF3C]/10 p-2 transition-colors"
+          style="">info</span>
+        <span class="material-symbols-outlined cursor-pointer hover:bg-[#1BFF3C]/10 p-2 transition-colors"
+          style="">settings</span>
+      </div>
+    </div>
+  </header>
+  <!-- Main Content Canvas -->
+  <main class="h-screen pt-20 pb-20 overflow-hidden bg-grid-pattern relative flex flex-col justify-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Technical Header Section -->
+      <div class="mb-12 border-l-4 border-primary-container pl-6 py-2">
+        <span class="font-label text-primary-fixed-dim text-xs tracking-[0.2em] mb-2 block uppercase"
+          style=""><br></span>
+        <h1 class="font-headline text-5xl md:text-7xl font-bold uppercase tracking-tighter text-on-surface" style="">
+          Empresas que han confiado en nosotros
+        </h1>
+      </div>
+      <!-- Impact Metrics Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div
+          class="bg-surface-container-low p-8 border-t-2 border-primary-container flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+          <span class="font-label text-outline text-xs mb-4" style="">METRICA_01</span>
+          <div>
+            <div class="text-5xl font-headline font-bold text-primary-container mb-2 tracking-tight" style="">MÁS DE 50
+            </div>
+            <div class="font-headline text-xl uppercase tracking-widest text-on-surface-variant" style="">Empresas
+              Capacitadas</div>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-low p-8 border-t-2 border-primary-container flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+          <span class="font-label text-outline text-xs mb-4" style="">EVIDENCIA_02</span>
+          <div>
+            <div class="text-5xl font-headline font-bold text-primary-container mb-2 tracking-tight" style="">1.2K+
+            </div>
+            <div class="font-headline text-xl uppercase tracking-widest text-on-surface-variant" style="">Técnicos
+              Certificados</div>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-low p-8 border-t-2 border-secondary-container flex flex-col justify-between group hover:bg-surface-container-high transition-colors">
+          <span class="font-label text-outline text-xs mb-4" style="">KPI_GLOBAL</span>
+          <div>
+            <div class="text-5xl font-headline font-bold text-secondary-container mb-2 tracking-tight" style="">98.4%
+            </div>
+            <div class="font-headline text-xl uppercase tracking-widest text-on-surface-variant" style="">Efectividad en
+              Planta</div>
+          </div>
+        </div>
+      </div>
+      <!-- Corporate Partners Schematic Grid -->
+      <div class="bg-surface-container-low border border-outline-variant relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 font-label text-[10px] text-outline/30 uppercase tracking-[0.3em] z-20"
+          style="">
+          Log Data Cluster // Status: Verified
+        </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-[3/1] flex items-center justify-center p-8 bg-black/40">
+          <div class="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none"></div>
+          <img alt="Nuevos socios corporativos"
+            class="relative z-10 w-full h-full object-contain"
+            src="partners_logos.png"
+            style="">
+          <div class="absolute inset-0 border-2 border-primary-container/20 pointer-events-none"></div>
+        </div>
+        <!-- Bottom Row Evidence Section -->
+      </div>
+      <!-- Technical Annotations -->
+      <div class="mt-8 flex flex-wrap gap-12 font-label text-[10px] text-outline uppercase tracking-widest">
+        <div class="flex items-center gap-2" style="">
+          <span class="w-2 h-2 bg-primary-container"></span>
+          STATUS: SYSTEM_NOMINAL
+        </div>
+        <div class="flex items-center gap-2" style="">
+          <span class="w-2 h-2 bg-secondary-container"></span>
+          VERIFIED_CONTRACTS: 452
+        </div>
+        <div class="flex items-center gap-2" style="">
+          <span class="w-2 h-2 bg-outline"></span>
+          ISO_9001_COMPLIANT
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Navigation Shell -->
+  <nav
+    class="fixed bottom-0 left-0 w-full flex justify-between items-stretch h-16 bg-[#1C1B1B] border-t border-[#3B4B37]/20 z-50">
+    <!-- Anterior -->
+    <a class="flex flex-col items-center justify-center text-[#84967E] px-8 py-3 hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/5 active:opacity-80 transition-all flex-1"
+      href="#" style="">
+      <span class="material-symbols-outlined text-2xl" style="">arrow_back</span>
+      <span class="font-['JetBrains_Mono'] text-xs uppercase tracking-widest mt-1" style="">ANTERIOR</span>
+    </a>
+    <!-- Current Slide Indicator -->
+    <div
+      class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 border-x border-[#1BFF3C]/20 px-8 py-3 flex-1">
+      <span class="material-symbols-outlined text-2xl" data-weight="fill"
+        style="font-variation-settings: &quot;FILL&quot; 1;">analytics</span>
+      <span class="font-['JetBrains_Mono'] text-xs uppercase tracking-widest mt-1" style="">02</span>
+    </div>
+    <!-- Siguiente -->
+    <a class="flex flex-col items-center justify-center text-[#84967E] px-8 py-3 hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/5 active:opacity-80 transition-all flex-1"
+      href="#" style="">
+      <span class="material-symbols-outlined text-2xl" style="">arrow_forward</span>
+      <span class="font-['JetBrains_Mono'] text-xs uppercase tracking-widest mt-1" style="">SIGUIENTE</span>
+    </a>
+  </nav>
+
+
+  \n
+
+  \n
+
+  \n
+
+  \n
+
+  \n
+
+  \n
+
+
+
+
+
+
+  <script id="weld-bear-sync">
+    setTimeout(() => {
+      const triggers = document.querySelectorAll('button, a');
+      triggers.forEach(el => {
+        const text = el.innerText.toUpperCase();
+        const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+        const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+        const isHome = text.includes('HOME') || text.includes('INICIO');
+        const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+        if (isPrev || isNext || isHome || isFinish) {
+          el.onclick = (e) => {
+            e.preventDefault();
+            if (isPrev) window.parent.postMessage('PREV', '*');
+            if (isNext) window.parent.postMessage('NEXT', '*');
+            if (isHome) window.parent.postMessage('HOME', '*');
+            if (isFinish) window.parent.postMessage('FINISH', '*');
+          };
+        }
+      });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        window.parent.postMessage('NEXT', '*');
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        window.parent.postMessage('PREV', '*');
+      }
+    });
+
+    window.addEventListener('load', () => {
+      window.parent.postMessage('LOADED', '*');
+    });
+  </script>
+
+</body>
+
+</html>

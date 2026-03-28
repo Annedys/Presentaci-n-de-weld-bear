@@ -1,0 +1,216 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>WELD_SPEC // UNIT_01 - SLIDE 48</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#baccb2",
+              "on-error": "#690005",
+              "surface": "#131313",
+              "primary-fixed-dim": "#00e631",
+              "on-background": "#e5e2e1",
+              "error-container": "#93000a",
+              "tertiary": "#fff8f7",
+              "on-tertiary-fixed-variant": "#930005",
+              "on-primary-fixed-variant": "#00530a",
+              "on-error-container": "#ffdad6",
+              "outline-variant": "#3b4b37",
+              "inverse-primary": "#006e11",
+              "on-secondary-fixed": "#221b00",
+              "on-primary-fixed": "#002202",
+              "on-primary-container": "#007112",
+              "error": "#ffb4ab",
+              "surface-container-highest": "#353534",
+              "surface-tint": "#00e631",
+              "on-secondary": "#3b2f00",
+              "inverse-surface": "#e5e2e1",
+              "outline": "#84967e",
+              "on-surface": "#e5e2e1",
+              "secondary-fixed-dim": "#eac300",
+              "secondary-container": "#fed400",
+              "on-primary": "#003a05",
+              "on-tertiary": "#690003",
+              "background": "#131313",
+              "secondary": "#fff3d3",
+              "primary": "#ecffe3",
+              "surface-container": "#201f1f",
+              "primary-container": "#1bff3c",
+              "tertiary-container": "#ffd3cd",
+              "on-secondary-container": "#6f5c00",
+              "tertiary-fixed": "#ffdad5",
+              "on-tertiary-container": "#c5020c",
+              "surface-variant": "#353534",
+              "surface-container-high": "#2a2a2a",
+              "primary-fixed": "#74ff6d",
+              "secondary-fixed": "#ffe174",
+              "inverse-on-surface": "#313030",
+              "surface-container-low": "#1c1b1b",
+              "surface-bright": "#393939",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "on-tertiary-fixed": "#410001",
+              "on-secondary-fixed-variant": "#554500",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-dim": "#131313"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "label": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container h-screen overflow-hidden flex flex-col">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#131313] dark:bg-[#131313] border-b border-[#3B4B37]/20 shadow-[0_0_15px_rgba(27,255,60,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#1BFF3C]" style="">precision_manufacturing</span>
+<span class="text-xl font-bold text-[#1BFF3C] tracking-tighter" style=""><span style="font-family: Rajdhani, sans-serif; font-size: 24px; letter-spacing: -1.2px; text-transform: uppercase;" class="">WELD BEAR IEDU</span></span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Rajdhani'] uppercase tracking-widest text-sm">
+<a class="text-[#1BFF3C] font-bold transition-colors" href="#" style="">THEORY</a>
+<a class="text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors px-2" href="#" style="">PRACTICE</a>
+<a class="text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors px-2" href="#" style="">SAFETY</a>
+</div>
+<div class="flex items-center gap-4 text-[#1BFF3C]">
+<button class="material-symbols-outlined hover:bg-[#1BFF3C]/10 transition-colors p-2 active:scale-95 duration-75" style="">settings</button>
+<button class="material-symbols-outlined hover:bg-[#1BFF3C]/10 transition-colors p-2 active:scale-95 duration-75" style="">help_outline</button>
+<button class="material-symbols-outlined hover:bg-[#1BFF3C]/10 transition-colors p-2 active:scale-95 duration-75" style="">analytics</button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-24 pb-32 px-6 md:px-12 max-w-4xl mx-auto flex-grow flex flex-col justify-center">
+<!-- Section Header -->
+<header class="mb-12 border-l-4 border-primary-container pl-6 text-center !border-l-0 !pl-0">
+<div class="font-label text-primary-container text-sm mb-1 tracking-tighter opacity-80 uppercase" style=""><br></div>
+<h1 class="font-headline text-6xl md:text-8xl font-bold uppercase tracking-tighter leading-none text-on-surface" style="">
+                POSICIÓN <span class="text-primary-container" style="">1G</span>
+</h1>
+</header>
+<!-- Content Grid (Simplified and Centered) -->
+<div class="space-y-1">
+<!-- Definition Panel -->
+<div class="bg-surface-container-low border border-outline-variant/30 p-8 md:p-12 relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline opacity-40 uppercase" style="">
+                    COORD: X48_Y60 // REF: AWS-D1.1
+                </div>
+<div class="space-y-8">
+<p class="text-2xl md:text-4xl font-light leading-snug text-primary max-w-3xl" style="">
+                        La posición 1G es una soldadura de ranura o bisel en posición plana.
+                    </p>
+<p class="text-lg md:text-xl text-on-surface-variant font-body leading-relaxed max-w-3xl" style="">
+                        Se utiliza comúnmente en placas donde el bisel está hacia arriba y el soldador deposita el material en capas dentro de la ranura. Es una introducción importante para comprender soldaduras de junta a tope.
+                    </p>
+</div>
+</div>
+<!-- Technical Specs Bar -->
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-4 h-20 bg-[#1C1B1B] dark:bg-[#1C1B1B] border-t border-[#1BFF3C]/30 shadow-[0_-4px_20px_rgba(27,255,60,0.15)]">
+<!-- Previous Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter hover:bg-[#1BFF3C]/20 transition-all active:bg-[#1BFF3C] active:text-[#003A05] duration-150" style="">
+<span class="material-symbols-outlined" style="">chevron_left</span>
+<span class="" style="">ANTERIOR</span>
+</button>
+<!-- Slide Counter -->
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-10 py-2 border-x border-[#1BFF3C]/20 font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter">
+<span class="material-symbols-outlined mb-1" style="">layers</span>
+<span class="font-bold" style="">08</span>
+</div>
+<!-- Next Button -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter hover:bg-[#1BFF3C]/20 transition-all active:bg-[#1BFF3C] active:text-[#003A05] duration-150" style="">
+<span class="material-symbols-outlined" style="">chevron_right</span>
+<span class="" style="">SIGUIENTE</span>
+</button>
+</nav>
+<!-- Decorative Sidebar Coordinates -->
+<div class="fixed left-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-12 pointer-events-none opacity-20">
+<div class="rotate-90 origin-left font-label text-[10px] tracking-[0.5em] text-outline" style="">AXIS_HORIZONTAL_1G</div>
+<div class="rotate-90 origin-left font-label text-[10px] tracking-[0.5em] text-outline" style="">STATUS_OPERATIONAL</div>
+</div>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

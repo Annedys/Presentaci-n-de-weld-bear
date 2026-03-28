@@ -1,0 +1,169 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#2a2a2a",
+              "on-surface": "#e5e2e1",
+              "background": "#131313",
+              "primary-container": "#1bff3c",
+              "surface-container-low": "#1c1b1b",
+              "outline": "#84967e",
+              "outline-variant": "#3b4b37",
+              "secondary-container": "#fed400",
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "technical": ["JetBrains Mono"]
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col overflow-hidden">
+<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50 border-b border-[#3B4B37]/20">
+<div class="text-2xl font-bold tracking-tighter text-[#1BFF3C] uppercase font-headline">WELD BEAR IEDU</div>
+<div class="flex items-center gap-4">
+<button class="text-[#84967E] hover:text-[#1BFF3C] transition-all"><span class="material-symbols-outlined">bolt</span></button>
+</div>
+</header>
+
+<main class="flex-grow pt-24 pb-32 px-6 blueprint-grid relative h-[calc(100vh-80px)] overflow-hidden">
+<div class="max-w-7xl mx-auto h-full flex flex-col">
+<!-- Header -->
+<div class="mb-10 border-l-4 border-primary-container pl-6 py-2 bg-surface-container-low/50">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-technical text-[10px] text-outline uppercase tracking-widest">Amperage Logic // Output Factors</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<span class="font-technical text-[10px] text-primary-container">SYS_REF: AMP-VOLT-S2</span>
+</div>
+<h1 class="text-4xl md:text-6xl font-headline font-bold text-on-surface tracking-tight uppercase leading-none">
+                    AMPERAJES SEGÚN DIMENSIÓN Y VOLTAJE
+                </h1>
+</div>
+
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-1 items-stretch flex-grow bg-outline-variant/20 border border-outline-variant/30 overflow-hidden">
+<!-- Main Description Area -->
+<div class="lg:col-span-8 bg-surface-container-low p-10 flex flex-col justify-center">
+<div class="space-y-12">
+<div class="relative pl-12">
+<span class="absolute left-0 top-1 text-primary-container material-symbols-outlined text-4xl">manufacturing</span>
+<p class="text-2xl md:text-3xl font-body text-on-surface leading-snug tracking-tight font-medium uppercase italic">
+                                "Los amperajes dependen del <span class="text-primary-container font-black">diámetro del electrodo</span>, del <span class="text-primary-container font-black">tipo de electrodo</span>, del <span class="text-primary-container font-black">espesor del material</span> y del <span class="text-primary-container font-black">voltaje disponible</span> del equipo."
+                            </p>
+</div>
+</div>
+</div>
+
+<!-- Secondary Capability Card -->
+<div class="lg:col-span-4 bg-surface-container-high p-10 flex flex-col justify-between border-l border-outline-variant/20 relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary-container/5 rounded-full blur-3xl"></div>
+<div>
+<h3 class="font-headline text-primary-container text-xl font-bold mb-8 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined">power_input</span> CAPACIDAD DE MÁQUINA
+                            </h3>
+<div class="p-6 bg-surface-container-low border-l-4 border-secondary-container">
+<p class="text-lg md:text-xl text-on-surface font-body leading-relaxed font-bold uppercase italic">
+                                    "Una máquina en 110V normalmente tiene <span class="text-secondary-container underline">menos capacidad</span> para sostener electrodos grandes que una máquina en 220V."
+                                </p>
+</div>
+</div>
+<div class="mt-12 text-xs font-technical uppercase tracking-widest text-outline flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div>
+                                System Capability Analysis
+                            </div>
+</div>
+</div>
+
+<!-- Footer Info -->
+<div class="mt-8 flex justify-between items-end border-t border-outline-variant/30 pt-4">
+<div class="font-technical text-[10px] text-outline uppercase tracking-[0.2em]">Data // Amperage Consistency Optimization</div>
+<div class="flex gap-8">
+<div class="text-right">
+<div class="text-[10px] font-technical text-outline uppercase mb-1">Efficiency Ratio</div>
+<div class="text-xl font-black text-primary-container tracking-tighter">110V < 220V</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Bottom Nav -->
+<nav class="bg-[#1C1B1B] fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-4 h-20 border-t border-[#3B4B37]/20 shadow-[0px_0px_15px_rgba(27,255,60,0.15)]">
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:text-[#1BFF3C] px-6 py-2 group">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-technical text-[10px] mt-1 uppercase">ANTERIOR</span>
+</button>
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] font-bold">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-technical text-sm mt-1 uppercase tracking-widest">AMP_LOGIC</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:text-[#1BFF3C] px-6 py-2 group">
+<span class="material-symbols-outlined">arrow_forward</span>
+<span class="font-technical text-[10px] mt-1 uppercase">SIGUIENTE</span>
+</button>
+</nav>
+
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

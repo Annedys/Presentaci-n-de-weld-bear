@@ -1,0 +1,262 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>WELD_TECH_OS - Slide 06</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#410001",
+                        "tertiary-fixed": "#ffdad5",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "on-tertiary-container": "#c5020c",
+                        "on-primary-container": "#007112",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "on-tertiary": "#690003",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "primary": "#ecffe3",
+                        "outline": "#84967e",
+                        "on-primary-fixed-variant": "#00530a",
+                        "on-secondary-fixed-variant": "#554500",
+                        "background": "#131313",
+                        "primary-container": "#1bff3c",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#3b4b37",
+                        "secondary-container": "#fed400",
+                        "on-secondary-fixed": "#221b00",
+                        "on-primary": "#003a05",
+                        "surface-dim": "#131313",
+                        "surface": "#131313",
+                        "on-secondary-container": "#6f5c00",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#fff3d3",
+                        "inverse-primary": "#006e11",
+                        "error-container": "#93000a",
+                        "surface-tint": "#00e631",
+                        "surface-container-highest": "#353534",
+                        "on-surface-variant": "#baccb2",
+                        "on-secondary": "#3b2f00",
+                        "surface-variant": "#353534",
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "tertiary": "#fff8f7",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#74ff6d",
+                        "primary-fixed-dim": "#00e631",
+                        "secondary-fixed-dim": "#eac300",
+                        "secondary-fixed": "#ffe174",
+                        "tertiary-container": "#ffd3cd",
+                        "on-primary-fixed": "#002202",
+                        "on-background": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow {
+            box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.15);
+        }
+        .neon-text-glow {
+            text-shadow: 0 0 10px rgba(27, 255, 60, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body blueprint-grid min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#131313] dark:bg-[#131313] docked full-width top-0 border-b border-[#3B4B37]/20 flex justify-between items-center w-full px-6 py-4 z-50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#1BFF3C] tracking-tighter font-headline" style=""><span style="letter-spacing: -1.2px; text-transform: uppercase;">WELD&nbsp; BEAR&nbsp; IEDU</span></span>
+<nav class="hidden md:flex gap-6">
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">MODULES</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SCHEMATICS</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#" style="">SAFETY</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">RESOURCES</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] p-2 transition-all duration-75 ease-in-out scale-95" data-icon="settings" style="">settings</button>
+<button class="material-symbols-outlined text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] p-2 transition-all duration-75 ease-in-out scale-95" data-icon="help" style="">help</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
+<!-- Background Schematic Element -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none w-full max-w-4xl">
+<img alt="Industrial Blueprint Overlay" class="w-full grayscale invert" data-alt="Technical industrial drawing of safety equipment components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfVpsX6qBkbfg7crYjq8SQqzvlabFUW2l_eoBCE3tm4Na6g-YQZy14CMWOz-xAaAECJmQcfFlAXjVgZ-qXVNlv1cB7NX0QKtrff4EHVtzH0JqXtJWNpnRUUSuC4jGrKpOithwl15AiT_wr1F_Gubs-1Qld2xoMd1KF4CF-pO3YflcDPbAYDqjwpzL4RSrdFYKJXEFSxRnTdXtsBcb4aIluSWNxmbPjPKkXWJlgZuJ-z7hXAH7myFGa0CNLnM_gy_d96hkBJg2paIQ" style="">
+</div>
+<div class="max-w-6xl w-full z-10 grid grid-cols-1 md:grid-cols-12 gap-0 border border-outline-variant/30 bg-surface-container-low/80 backdrop-blur-sm">
+<!-- Hero Section -->
+<div class="md:col-span-7 p-12 border-r border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="font-label text-primary-container bg-primary-container/10 px-3 py-1 text-sm border border-primary-container/20" style="">TEMA PRINCIPAL 1</span>
+<span class="w-12 h-px bg-outline-variant/50"></span>
+</div>
+<h1 class="font-headline text-7xl md:text-8xl font-black text-on-surface uppercase leading-tight tracking-tighter mb-4" style="">
+                        seguridad industrial</h1>
+<div class="flex items-center gap-4">
+<div class="h-1 w-24 bg-primary-container neon-glow"></div>
+<h2 class="font-headline text-4xl text-primary-container font-bold uppercase tracking-widest neon-text-glow" style=""><br></h2>
+</div>
+</div>
+<div class="mt-24 grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest" style="">System Status</span>
+                    <p class="font-body text-on-surface/90 text-xl leading-relaxed border-l-4 border-primary-container pl-6 font-medium" style="">
+                            Protocolo de protección activa inicializado. Verificando integridad de sistemas de EPP y zonas de riesgo.
+                        </p>
+                </div>
+                <div class="space-y-4">
+                    <span class="font-label text-xs text-outline uppercase tracking-[0.2em]" style="">Access Level</span>
+                    <p class="font-body text-on-surface/90 text-xl leading-relaxed border-l-4 border-primary-container pl-6 font-medium" style="">
+                            Autorización requerida para operaciones de soldadura de alto riesgo en Clase-A.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Visual Column -->
+<div class="md:col-span-5 relative bg-surface-container-lowest overflow-hidden flex flex-col">
+<div class="flex-grow relative">
+<img alt="Safety Industrial Environment" class="w-full h-full object-cover opacity-60 mix-blend-screen" data-alt="Cyberpunk industrial workshop with welding sparks and safety gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexxc_KEggD5fKGlxnLFBDfIm36buJ59TWKc2OHhMRPeFqDdaDKJPS2vKanohYhqs0Ukc-mBvzTLFOnmxmpviRFhqJCyJfPJi7ZriDmGmCfuMsuMqAQlX0HYXIdk7A4iXjl_ov-tbdpP9o-DCVwyGYPXgavwyGt7fj-qtxbxbjs2OlSAK3w5mkuc6LhWHpXH6YTeDdAHu7Wz29n9pp8740zXWd1cxjMJuqAVPGkIGjyW7VMwxWA54q6YcBQ1X5ofjPJuxuFTP_tnc" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Floating Data Points -->
+<div class="absolute top-8 right-8 text-right font-label text-[10px] text-primary-container space-y-1">
+<div class="" style=""><br></div>
+<div class="" style=""><br></div>
+<div class="" style=""><br></div>
+</div>
+</div>
+<!-- Icons Bento Section -->
+<div class="p-8 border-t border-outline-variant/30 grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center justify-center p-4 border border-outline-variant/20 hover:border-primary-container/50 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-primary-container mb-2" data-icon="engineering" style="">engineering</span>
+<span class="font-label text-[8px] text-outline uppercase" style="">Protection</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 border border-outline-variant/20 hover:border-primary-container/50 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-primary-container mb-2" data-icon="warning" style="">warning</span>
+<span class="font-label text-[8px] text-outline uppercase" style="">Hazard</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 border border-outline-variant/20 hover:border-primary-container/50 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-primary-container mb-2" data-icon="hard_hat" style="">chef_hat</span>
+<span class="font-label text-[8px] text-outline uppercase" style="">Compliance</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Blueprint Corner -->
+<div class="absolute bottom-10 right-10 pointer-events-none hidden lg:block">
+<svg class="text-outline-variant opacity-30" fill="none" height="200" viewBox="0 0 200 200" width="200">
+<path d="M0 200H200V0" stroke="currentColor" stroke-width="1"></path>
+<circle cx="200" cy="200" r="150" stroke="currentColor" stroke-dasharray="4 4" stroke-width="0.5"></circle>
+<line stroke="currentColor" stroke-width="0.5" x1="100" x2="200" y1="200" y2="100"></line>
+</svg>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 bg-[#1C1B1B] dark:bg-[#1C1B1B] border-t border-[#3B4B37]/30 shadow-[0px_0px_15px_rgba(27,255,60,0.15)]">
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group" style="">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back" style="">arrow_back</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase" style="">PREVIOUS</span>
+</button>
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-8 py-2 border-t-2 border-[#1BFF3C]">
+<span class="material-symbols-outlined mb-1" data-icon="numbers" style="">numbers</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase" style=""><br></span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group" style="">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_forward" style="">arrow_forward</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase" style="">NEXT</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group" style="">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="">home</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase" style="">HOME</span>
+</button>
+</nav>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

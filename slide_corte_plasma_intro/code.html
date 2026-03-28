@@ -1,0 +1,224 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>WELD_TECH_OS - CORTE PLASMA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#00530a",
+                        "on-surface-variant": "#baccb2",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#410001",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#00e631",
+                        "on-secondary": "#3b2f00",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "primary-container": "#1bff3c",
+                        "surface": "#131313",
+                        "surface-container-highest": "#353534",
+                        "outline": "#84967e",
+                        "on-primary-container": "#007112",
+                        "surface-container-high": "#2a2a2a",
+                        "on-background": "#e5e2e1",
+                        "outline-variant": "#3b4b37",
+                        "secondary-container": "#fed400",
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: { "none": "0px" }
+                },
+            },
+        }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-primary {
+            box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#131313] dark:bg-[#131313] flex justify-between items-center w-full px-6 py-4 docked full-width top-0 border-b border-[#3B4B37]/20 z-50">
+<div class="text-2xl font-black text-[#1BFF3C] tracking-tighter font-headline" style=""><span style="letter-spacing: -1.2px; text-transform: uppercase;">WELD BEAR IEDU</span></div>
+<nav class="hidden md:flex gap-8">
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#" style="">MODULES</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SCHEMATICS</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">SAFETY</a>
+<a class="font-['Rajdhani'] uppercase tracking-wider font-bold text-lg text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#" style="">RESOURCES</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-all duration-75 ease-in-out active:scale-95" style="">help</button>
+<button class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-all duration-75 ease-in-out active:scale-95" style="">settings</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow blueprint-grid relative flex flex-col md:flex-row overflow-hidden">
+<!-- Left: Visual Asset Section -->
+<section class="w-full md:w-1/2 relative overflow-hidden border-r border-outline-variant/20">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-80" data-alt="close-up of a high-tech plasma cutter industrial torch emitting a brilliant blue-white ion arc with orange sparks flying in a dark factory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHkoIEFn1cgr47NGMHlAqdprya68-Tq2zMWJ4c31qiJBgROKeHXZsA93AMmbN5ZGv8SPM-89LIUilo2Yu8M9ursD6epGShXDauBfuVX3HLqJFuEZJ2EAK0aI1zTe9BPtCcb2sBXuGFVCYpvqNW5upIXSQqTARbBkvZfwoyIzGK8OUypPItFo8chn-BI5WsJc6BJVJQ-lhM9PEkciBLH_qim-EZ2gPbdKYyA5tsBnwbjVVTHDNZmGbxnHWH8_TRiWCKrGTHVZphbc" style="">
+<!-- Technical Overlay Annotation -->
+<div class="absolute bottom-12 left-12 z-20 font-mono text-[10px] text-primary-container/60 space-y-1">
+<p class="" style=""><br></p>
+<p class="" style="">COORD_Y: 12.8841</p>
+<p class="" style="">SYSTEM_STATUS: ACTIVE_ARC</p>
+</div>
+<div class="absolute top-12 left-12 z-20">
+<div class="border border-primary-container px-3 py-1 bg-background/80 backdrop-blur-sm">
+<span class="font-mono text-xs text-primary-container uppercase tracking-[0.2em]" style="">Live Schematic View</span>
+</div>
+</div>
+</section>
+<!-- Right: Editorial Data Section -->
+<section class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center bg-surface/40 backdrop-blur-[2px]">
+<div class="max-w-xl space-y-8">
+<!-- Headline -->
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="w-8 h-[1px] bg-primary-container"></span>
+<span class="font-mono text-xs text-primary-container tracking-widest uppercase" style=""><br></span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-on-background tracking-tighter uppercase leading-none" style="">
+                        CORTE <br> <span class="text-primary-container drop-shadow-[0_0_10px_rgba(27,255,60,0.4)]" style="">PLASMA</span>
+</h1>
+</div>
+<!-- Description Card -->
+<div class="bg-surface-container-low border-l-4 border-primary-container p-6 space-y-4">
+<p class="text-lg md:text-xl font-body leading-relaxed text-on-surface" style="">
+                        El corte plasma utiliza un arco eléctrico que ioniza un gas y lo convierte en plasma. Ese plasma sale a alta velocidad y alta temperatura, permitiendo fundir y expulsar el metal con gran precisión.
+                    </p>
+</div>
+<!-- Technical Specs Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="border border-outline-variant/30 p-4 bg-surface-container-lowest flex flex-col gap-2">
+<span class="font-mono text-[10px] text-outline uppercase tracking-widest" style=""><br></span>
+<p class="font-headline text-2xl font-bold text-secondary-container" style="">&gt; 20,000 °C</p>
+<p class="font-body text-xs text-on-surface-variant" style="">El plasma puede usar temperaturas superiores.</p>
+</div>
+<div class="border border-outline-variant/30 p-4 bg-surface-container-lowest flex flex-col gap-2">
+<span class="font-mono text-[10px] text-outline uppercase tracking-widest" style="">Este proceso se utiliza para cortes rápidos, limpios y precisos en:</span>
+<p class="font-headline text-2xl font-bold text-on-background uppercase" style="">Metales Conductores</p>
+<p class="font-body text-xs text-on-surface-variant" style=""><br></p>
+</div>
+</div>
+<!-- Aesthetic Blueprint Element -->
+<div class="pt-8 border-t border-outline-variant/20 flex items-center justify-between opacity-50">
+<span class="font-mono text-[10px] text-outline uppercase" style=""><br></span>
+<div class="flex gap-2">
+<div class="w-2 h-2 bg-primary-container"></div>
+<div class="w-2 h-2 bg-outline-variant"></div>
+<div class="w-2 h-2 bg-outline-variant"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<footer class="bg-[#1C1B1B] dark:bg-[#1C1B1B] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 border-t border-[#3B4B37]/30 glow-primary">
+<!-- Previous Tab -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all" style="">
+<span class="material-symbols-outlined" data-icon="arrow_back" style="">arrow_back</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase mt-1" style="">PREVIOUS</span>
+</button>
+<!-- Current Slide (Active) -->
+<button class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-8 py-2 border-t-2 border-[#1BFF3C] transition-all" style="">
+<span class="material-symbols-outlined" data-icon="numbers" style="">numbers</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase mt-1" style="">11</span>
+</button>
+<!-- Next Tab -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all" style="">
+<span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase mt-1" style="">NEXT</span>
+</button>
+<!-- Home Tab -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all" style="">
+<span class="material-symbols-outlined" data-icon="home" style="">home</span>
+<span class="font-['JetBrains_Mono'] text-xs font-medium uppercase mt-1" style="">HOME</span>
+</button>
+</footer>
+<!-- Structural Blueprint Corner Labels -->
+<div class="fixed top-24 left-6 pointer-events-none opacity-20 hidden lg:block">
+<p class="font-mono text-[10px] rotate-90 origin-left text-outline uppercase tracking-widest" style="">Sheet_Index: 62.A</p>
+</div>
+<div class="fixed bottom-24 right-6 pointer-events-none opacity-20 hidden lg:block">
+<p class="font-mono text-[10px] -rotate-90 origin-right text-outline uppercase tracking-widest" style="">Auth_Ref: PLASMA_PROC_04</p>
+</div>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

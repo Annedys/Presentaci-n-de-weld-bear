@@ -1,0 +1,232 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#fff3d3",
+              "primary": "#ecffe3",
+              "surface-container": "#201f1f",
+              "primary-container": "#1bff3c",
+              "tertiary-container": "#ffd3cd",
+              "on-secondary-container": "#6f5c00",
+              "on-tertiary": "#690003",
+              "background": "#131313",
+              "on-tertiary-container": "#c5020c",
+              "tertiary-fixed": "#ffdad5",
+              "surface-variant": "#353534",
+              "surface-container-high": "#2a2a2a",
+              "primary-fixed": "#74ff6d",
+              "secondary-fixed": "#ffe174",
+              "inverse-on-surface": "#313030",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-dim": "#131313",
+              "surface-container-low": "#1c1b1b",
+              "surface-bright": "#393939",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "on-tertiary-fixed": "#410001",
+              "on-secondary-fixed-variant": "#554500",
+              "surface": "#131313",
+              "primary-fixed-dim": "#00e631",
+              "on-background": "#e5e2e1",
+              "error-container": "#93000a",
+              "on-surface-variant": "#baccb2",
+              "on-error": "#690005",
+              "on-secondary-fixed": "#221b00",
+              "on-primary-fixed": "#002202",
+              "on-primary-container": "#007112",
+              "tertiary": "#fff8f7",
+              "on-tertiary-fixed-variant": "#930005",
+              "on-primary-fixed-variant": "#00530a",
+              "on-error-container": "#ffdad6",
+              "outline-variant": "#3b4b37",
+              "inverse-primary": "#006e11",
+              "surface-tint": "#00e631",
+              "on-secondary": "#3b2f00",
+              "inverse-surface": "#e5e2e1",
+              "error": "#ffb4ab",
+              "surface-container-highest": "#353534",
+              "secondary-fixed-dim": "#eac300",
+              "secondary-container": "#fed400",
+              "on-primary": "#003a05",
+              "outline": "#84967e",
+              "on-surface": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "label": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0", "lg": "0", "xl": "0", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            background-image: 
+                linear-gradient(rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #e5e2e1;
+            overflow: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-overlay {
+            mix-blend-mode: screen;
+            filter: grayscale(1) contrast(1.2) brightness(0.8);
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(27, 255, 60, 0.4);
+        }
+    </style>
+</head>
+<body class="font-body min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#131313] dark:bg-[#131313] shadow-[0px_0px_15px_rgba(27,255,60,0.1)] flex justify-between items-center px-6 py-4 w-full fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="text-[#1BFF3C] font-['Rajdhani'] font-black tracking-tighter text-2xl" style=""><span style="font-family: Rajdhani, sans-serif; letter-spacing: -1.2px; text-transform: uppercase;">WELD BEAR IEDU</span></span>
+<div class="bg-[#1C1B1B] h-8 w-px mx-2"></div>
+<h1 class="font-['Rajdhani'] uppercase tracking-wider text-xl font-bold text-[#1BFF3C] glow-text" style="">SEGURIDAD EN CORTE PLASMA</h1>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-colors cursor-pointer" data-icon="settings" style="">settings</span>
+<span class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-colors cursor-pointer" data-icon="help_outline" style="">help_outline</span>
+<div class="w-10 h-10 border border-outline-variant p-0.5">
+<img alt="instructor_avatar" class="w-full h-full object-cover grayscale" data-alt="Professional portrait of a technical instructor in a workshop setting, serious expression, high contrast lighting, black and white photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQm0eFmqvdMwfZLw_WI4TtaPGIGyzz0Wz5-UFLFk9KTRezZzrwalyyhipbAm-9kCALindAZJg4E-yeFEMCtYsutDv42SwkWisGtrBeyWkTyxFqkiabHXqpAe8_VlK2CC6leUosE5o_7tuovH8IlxCMWJduGD_H5oPPl9YpGAO-354cjbmVETFjVVytmW5GPkA64pALMHhBBlEHEjRdNg2VHpVGiwpodZuop7M6YTFGkW5u7JlpIcfwaEjcw2cx1hoiVvS5h46YlVA" style="">
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<main class="flex-grow pt-24 pb-20 px-12 grid grid-cols-12 gap-8 items-stretch">
+<!-- Left Column: Safety Protocol -->
+<div class="col-span-12 lg:col-span-5 flex flex-col justify-center space-y-8">
+<div class="border-l-4 border-primary-container pl-6 space-y-2">
+<p class="font-label text-primary-container text-sm tracking-[0.3em] uppercase opacity-70" style="">Protocolo de Operación</p>
+<h2 class="font-headline text-5xl font-bold tracking-tight uppercase leading-none" style="">Seguridad en corte plasma</h2>
+</div>
+<ul class="space-y-4">
+<li class="group flex items-center bg-surface-container-low p-4 border-r-4 border-transparent hover:border-primary-container transition-all" style="">
+<span class="font-label text-primary-container font-bold text-lg w-12 shrink-0" style="">01.</span>
+<span class="text-on-surface text-lg font-medium tracking-wide uppercase" style="">Usar careta o pantalla facial</span>
+<span class="ml-auto material-symbols-outlined opacity-0 group-hover:opacity-100 text-primary-container" data-icon="verified_user" style="">verified_user</span>
+</li>
+<li class="group flex items-center bg-surface-container-low p-4 border-r-4 border-transparent hover:border-primary-container transition-all" style="">
+<span class="font-label text-primary-container font-bold text-lg w-12 shrink-0" style="">02.</span>
+<span class="text-on-surface text-lg font-medium tracking-wide uppercase" style="">Usar guantes y ropa resistente al calor</span>
+</li>
+<li class="group flex items-center bg-surface-container-low p-4 border-r-4 border-transparent hover:border-primary-container transition-all" style="">
+<span class="font-label text-primary-container font-bold text-lg w-12 shrink-0" style="">03.</span>
+<span class="text-on-surface text-lg font-medium tracking-wide uppercase" style="">Proteger ojos y piel de radiación</span>
+</li>
+<li class="group flex items-center bg-surface-container-low p-4 border-r-4 border-transparent hover:border-primary-container transition-all" style="">
+<span class="font-label text-primary-container font-bold text-lg w-12 shrink-0" style="">04.</span>
+<span class="text-on-surface text-lg font-medium tracking-wide uppercase" style="">Trabajar con ventilación adecuada</span>
+</li>
+<li class="group flex items-center bg-surface-container-low p-4 border-r-4 border-transparent hover:border-primary-container transition-all" style="">
+<span class="font-label text-primary-container font-bold text-lg w-12 shrink-0" style="">05.</span>
+<span class="text-on-surface text-lg font-medium tracking-wide uppercase" style="">Mantener el área libre de materiales inflamables</span>
+</li>
+<li class="group flex items-center bg-surface-container-low p-4 border-r-4 border-transparent hover:border-primary-container transition-all" style="">
+<span class="font-label text-primary-container font-bold text-lg w-12 shrink-0" style="">06.</span>
+<span class="text-on-surface text-lg font-medium tracking-wide uppercase" style="">Revisar cables y conexiones antes de usar el equipo</span>
+</li>
+</ul>
+</div>
+<!-- Right Column: Technical Visualization & Warning -->
+<div class="col-span-12 lg:col-span-7 flex flex-col relative justify-end pb-8">
+<!-- Technical Image Container -->
+<div class="relative w-full h-[60%] border border-outline-variant bg-surface-container-lowest overflow-hidden mb-4">
+<div class="absolute inset-0 z-10 pointer-events-none border-[16px] border-surface"></div>
+<!-- Technical Annotation Markers -->
+<div class="absolute top-4 left-4 z-20 font-label text-[10px] text-primary-container uppercase bg-surface-container-highest px-2 py-1" style=""><br></div>
+<div class="absolute bottom-4 right-4 z-20 font-label text-[10px] text-primary-container uppercase bg-surface-container-highest px-2 py-1" style=""><br></div>
+<img alt="plasma_cutting_technical" class="w-full h-full object-cover blueprint-overlay" data-alt="Close-up of a worker in protective gear welding with intense sparks, reflecting the high-heat industrial environment." src="https://lh3.googleusercontent.com/aida/ADBb0ujAYVvzf22RV4VMcI8PDwswjbBOhMMI0pRtm3DxViVVqdNobw7wQn2cJea9otNuROGM63Dz13NUNyYcZRir7-vEV7WGgilgB9uZbaPWdiNF8RA3ztV0FW7FplorKGxbyFpSqhg-odhWfn6NDQ7Z6Ihr5NrqUobLV6hVLhnlhnZM0lO8zbpd0MCwwa-4Ct_v0ItHsY0s9B-L5_g_3h-cUUCTmNEfxDWJJJgB2P-E21TNfEgBj8t_Xgcgtw5BA47gw_KgA2uwIqzW-g" style="">
+<!-- Crosshair SVG overlay -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-30" xmlns="http://www.w3.org/2000/svg">
+<line stroke="#1BFF3C" stroke-width="0.5" x1="50%" x2="50%" y1="0" y2="100%"></line>
+<line stroke="#1BFF3C" stroke-width="0.5" x1="0" x2="100%" y1="50%" y2="50%"></line>
+<circle cx="50%" cy="50%" fill="none" r="40" stroke="#1BFF3C" stroke-width="0.5"></circle>
+</svg>
+</div>
+<!-- Danger / Warning Card -->
+<!-- Bottom Data Ribbon -->
+<div class="flex justify-between font-label text-[10px] text-outline tracking-widest uppercase mt-4">
+<span class="" style="">Coord: 45.322 // -12.441</span>
+<span class="" style="">System_Status: Operational</span>
+<span class="" style="">Module: Security_Training_v2</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-8 pb-4 h-20 bg-[#131313] border-t border-[#3B4B37]/20">
+<!-- Previous Segment -->
+<button class="flex flex-col items-center justify-center text-[#84967E] pt-2 hover:bg-[#1C1B1B] hover:text-[#1BFF3C] transition-all group" style="">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back_ios" style="">arrow_back_ios</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest" style="">PREVIOUS_SEGMENT</span>
+</button>
+<!-- Current Slide (Active State) -->
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] border-t-2 border-[#1BFF3C] pt-2 px-12 h-full">
+<span class="material-symbols-outlined text-3xl mb-1" data-icon="analytics" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">analytics</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest font-bold" style="">15</span>
+</div>
+<!-- Next Segment -->
+<button class="flex flex-col items-center justify-center text-[#84967E] pt-2 hover:bg-[#1C1B1B] hover:text-[#1BFF3C] transition-all group" style="">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_forward_ios" style="">arrow_forward_ios</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest" style="">NEXT_SEGMENT</span>
+</button>
+</nav>
+<!-- Background Decoration -->
+<div class="fixed top-0 left-0 w-full h-1 bg-[#1C1B1B]">
+<div class="bg-[#1BFF3C] h-full w-[30%] shadow-[0_0_10px_#1BFF3C]"></div>
+</div>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        document.querySelectorAll('button').forEach(btn => {
+            const text = btn.innerText.toUpperCase();
+            if (text.includes('PREV') || text.includes('ANTERIOR') || text.includes('ARROW_BACK') || text.includes('BACK_IOS')) {
+                btn.onclick = () => window.parent.postMessage('PREV', '*');
+            } else if (text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('ARROW_FORWARD') || text.includes('FORWARD_IOS')) {
+                btn.onclick = () => window.parent.postMessage('NEXT', '*');
+            } else if (text.includes('HOME') || text.includes('INICIO')) {
+                btn.onclick = () => window.parent.postMessage('HOME', '*');
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            window.parent.postMessage('PREV', '*');
+        } else if (e.key === 'Home') {
+            window.parent.postMessage('HOME', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+\n</body></html>

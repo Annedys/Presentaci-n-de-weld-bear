@@ -1,0 +1,212 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>WELD_SPEC // UNIT_01 - SLIDE 47</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#baccb2",
+              "on-error": "#690005",
+              "surface": "#131313",
+              "primary-fixed-dim": "#00e631",
+              "on-background": "#e5e2e1",
+              "error-container": "#93000a",
+              "tertiary": "#fff8f7",
+              "on-tertiary-fixed-variant": "#930005",
+              "on-primary-fixed-variant": "#00530a",
+              "on-error-container": "#ffdad6",
+              "outline-variant": "#3b4b37",
+              "inverse-primary": "#006e11",
+              "on-secondary-fixed": "#221b00",
+              "on-primary-fixed": "#002202",
+              "on-primary-container": "#007112",
+              "error": "#ffb4ab",
+              "surface-container-highest": "#353534",
+              "surface-tint": "#00e631",
+              "on-secondary": "#3b2f00",
+              "inverse-surface": "#e5e2e1",
+              "outline": "#84967e",
+              "on-surface": "#e5e2e1",
+              "secondary-fixed-dim": "#eac300",
+              "secondary-container": "#fed400",
+              "on-primary": "#003a05",
+              "on-tertiary": "#690003",
+              "background": "#131313",
+              "secondary": "#fff3d3",
+              "primary": "#ecffe3",
+              "surface-container": "#201f1f",
+              "primary-container": "#1bff3c",
+              "tertiary-container": "#ffd3cd",
+              "on-secondary-container": "#6f5c00",
+              "tertiary-fixed": "#ffdad5",
+              "on-tertiary-container": "#c5020c",
+              "surface-variant": "#353534",
+              "surface-container-high": "#2a2a2a",
+              "primary-fixed": "#74ff6d",
+              "secondary-fixed": "#ffe174",
+              "inverse-on-surface": "#313030",
+              "surface-container-low": "#1c1b1b",
+              "surface-bright": "#393939",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "on-tertiary-fixed": "#410001",
+              "on-secondary-fixed-variant": "#554500",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-dim": "#131313"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "label": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #131313;
+        background-image: 
+          linear-gradient(rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+          linear-gradient(90px, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
+        color: #e5e2e1;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body h-screen overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#131313] dark:bg-[#131313] border-b border-[#3B4B37]/20 shadow-[0_0_15px_rgba(27,255,60,0.1)]">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold text-[#1BFF3C] tracking-tighter font-headline uppercase" style=""><span style="font-family: Rajdhani, sans-serif; font-size: 24px; letter-spacing: -1.2px;" class="">WELD BEAR IEDU</span></span>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<span class="font-label text-[10px] text-outline tracking-[0.2em] uppercase" style="">Tech_Manual_v4.0</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors p-2 active:scale-95 duration-75" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+</button>
+<button class="text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors p-2 active:scale-95 duration-75" style="">
+<span class="material-symbols-outlined" data-icon="help_outline" style="">help_outline</span>
+</button>
+<button class="text-[#84967E] hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors p-2 active:scale-95 duration-75" style="">
+<span class="material-symbols-outlined" data-icon="analytics" style="">analytics</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow px-8 md:px-16 max-w-4xl mx-auto w-full flex flex-col items-center justify-center">
+<!-- Header Section with Metadata -->
+<div class="mb-12 w-full text-center flex flex-col items-center">
+<h1 class="text-6xl md:text-7xl font-headline font-bold text-on-background uppercase tracking-tight" style="">Posición 4F</h1>
+</div>
+<div class="w-full space-y-12">
+<!-- Technical Content -->
+<div class="bg-surface-container-low border border-outline-variant/20 p-8 md:p-12 shadow-[inset_0_0_20px_rgba(0,0,0,0.2)] text-center">
+<div class="flex flex-col items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="info" style="">info</span>
+<h2 class="font-headline text-3xl text-primary uppercase tracking-wider" style="">Soldadura filete sobre cabeza</h2>
+</div>
+<p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed font-light mb-12 max-w-2xl mx-auto" style="">
+                    El soldador trabaja <span class="text-primary-container font-medium" style="">por debajo de la junta</span>. Esta posición requiere mayor control del charco de soldadura, arco más corto, mejor postura y técnica más cuidadosa porque la gravedad trabaja en contra del cordón.
+                </p>
+<!-- Technical Parameters Grid -->
+</div>
+<!-- Warning Block -->
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-4 h-20 bg-[#1C1B1B] dark:bg-[#1C1B1B] border-t border-[#1BFF3C]/30 shadow-[0_-4px_20px_rgba(27,255,60,0.15)]">
+<!-- ANTERIOR -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#1BFF3C]/20 transition-all active:bg-[#1BFF3C] active:text-[#003A05] duration-150 group" style="">
+<span class="material-symbols-outlined mb-1 group-active:scale-110" data-icon="chevron_left" style="">chevron_left</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter" style="">ANTERIOR</span>
+</button>
+<!-- SLIDE 47 / 60 (ACTIVE) -->
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-12 py-2 h-full border-x border-[#1BFF3C]/20 relative">
+<!-- Scanline Effect -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#1BFF3C]/5 to-transparent h-1/2 w-full"></div>
+<span class="material-symbols-outlined mb-1 text-primary-fixed-dim" data-icon="layers" style="">layers</span>
+<span class="font-['JetBrains_Mono'] text-[12px] font-bold uppercase tracking-tighter" style="">07</span>
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-primary-container shadow-[0_0_10px_#1BFF3C]"></div>
+</div>
+<!-- SIGUIENTE -->
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:bg-[#1BFF3C]/20 transition-all active:bg-[#1BFF3C] active:text-[#003A05] duration-150 group" style="">
+<span class="material-symbols-outlined mb-1 group-active:scale-110" data-icon="chevron_right" style="">chevron_right</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter" style="">SIGUIENTE</span>
+</button>
+</nav>
+<!-- Side Data Strip -->
+<div class="hidden xl:flex fixed left-6 top-1/2 -translate-y-1/2 flex-col gap-8 opacity-40">
+<div class="h-32 w-[1px] bg-outline-variant"></div>
+<div class="rotate-90 origin-left translate-x-1 font-label text-[9px] uppercase tracking-[0.4em] whitespace-nowrap text-outline" style="">
+            TECHNICAL_SPECIFICATION_SHEET
+        </div>
+<div class="h-32 w-[1px] bg-outline-variant"></div>
+</div>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

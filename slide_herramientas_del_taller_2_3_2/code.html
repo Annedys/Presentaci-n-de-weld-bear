@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#ffd3cd",
+                        "surface-dim": "#131313",
+                        "surface-tint": "#00e631",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "primary-fixed": "#74ff6d",
+                        "secondary-fixed": "#ffe174",
+                        "on-surface-variant": "#baccb2",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-container": "#c5020c",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary": "#690003",
+                        "inverse-primary": "#006e11",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "on-secondary-fixed-variant": "#554500",
+                        "error": "#ffb4ab",
+                        "primary": "#ecffe3",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#84967e",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "primary-container": "#1bff3c",
+                        "on-primary-fixed": "#002202",
+                        "surface-container": "#201f1f",
+                        "on-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "surface-bright": "#393939",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#ffdad5",
+                        "primary-fixed-dim": "#00e631",
+                        "outline-variant": "#3b4b37",
+                        "on-secondary": "#3b2f00",
+                        "secondary-fixed-dim": "#eac300",
+                        "secondary": "#fff3d3",
+                        "on-secondary-container": "#6f5c00",
+                        "on-secondary-fixed": "#221b00",
+                        "on-primary-container": "#007112",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-container": "#fed400",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "tertiary": "#fff8f7",
+                        "on-primary-fixed-variant": "#00530a",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#410001",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#003a05"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani"],
+                        "body": ["Space Grotesk"],
+                        "label": ["JetBrains Mono"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .blueprint-grid {
+            background-image:
+                linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .neon-glow {
+            box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.2);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-hidden">
+    <!-- Top Navigation Bar -->
+    <header
+        class="bg-[#131313] dark:bg-[#131313] docked full-width top-0 border-b border-[#3B4B37]/20 flex justify-between items-center w-full px-6 py-4 z-50">
+        <div class="text-xl font-bold text-[#1BFF3C] tracking-tighter font-['Rajdhani'] uppercase" style=""><span
+                style="font-family: Rajdhani, sans-serif; font-size: 24px; letter-spacing: -1.2px;" class="">WELD&nbsp;
+                BEAR&nbsp; IEDU</span></div>
+        <nav class="hidden md:flex items-center space-x-8 font-['Rajdhani'] uppercase tracking-widest text-sm">
+            <a class="text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#" style="">MODULES</a>
+            <a class="text-[#84967E] hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-colors duration-200" href="#"
+                style="">SCHEMATICS</a>
+            <a class="text-[#84967E] hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-colors duration-200" href="#"
+                style="">SAFETY</a>
+            <a class="text-[#84967E] hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-colors duration-200" href="#"
+                style="">RESOURCES</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <button class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-colors scale-95-on-click"
+                data-icon="settings" style="">settings</button>
+            <button class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-colors scale-95-on-click"
+                data-icon="help" style="">help</button>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main
+        class="flex-grow relative blueprint-grid flex flex-col items-center justify-center px-8 pt-6 pb-24 overflow-y-auto">
+        <!-- Section Header -->
+        <div class="w-full max-w-7xl mb-8 border-l-4 border-primary-container pl-6">
+            <span class="font-label text-primary-container text-xs tracking-widest uppercase mb-1 block"
+                style=""><br></span>
+            <h1 class="font-headline text-5xl font-bold tracking-tighter text-on-background uppercase" style="">
+                HERRAMIENTAS DEL TALLER (3/3)</h1>
+        </div>
+        <!-- 2x2 Bento-Style Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-7xl">
+            <!-- Tool 1: Pinza de tierra -->
+            <div
+                class="bg-surface-container-low border border-outline-variant hover:border-primary-container transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline opacity-50" style="">REF:
+                    GND_CLP_01</div>
+                <div class="p-8 flex items-start gap-6">
+                    <div
+                        class="w-24 h-24 bg-surface-container flex items-center justify-center border border-outline-variant group-hover:bg-primary-container/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary-container"
+                            data-icon="settings_input_component" style="">settings_input_component</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-headline text-2xl font-bold text-primary tracking-tight mb-2 uppercase" style="">
+                            discos de corte</h3>
+                        <p class="text-on-surface-variant text-2xl font-medium leading-tight mb-4" style=""><span
+                                style="font-family: &quot;Space Grotesk&quot;, sans-serif;">Discos abrasivos de alta
+                                velocidad para seccionado preciso de perfiles y planchas metálicas.</span></p>
+                        <div class="flex items-center gap-4">
+                            <div class="px-2 py-1 bg-surface-container-highest font-label text-[10px] text-primary-fixed uppercase tracking-tighter"
+                                style="">Status: Nominal</div>
+                            <div class="px-2 py-1 bg-surface-container-highest font-label text-[10px] text-outline uppercase tracking-tighter"
+                                style="">Duty: 100%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tool 2: Pulidora -->
+            <div
+                class="bg-surface-container-low border border-outline-variant hover:border-primary-container transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline opacity-50" style=""><br></div>
+                <div class="p-8 flex items-start gap-6">
+                    <div
+                        class="w-24 h-24 bg-surface-container flex items-center justify-center border border-outline-variant group-hover:bg-primary-container/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary-container" data-icon="toys_fan"
+                            style="">toys_fan</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-headline text-2xl font-bold text-primary tracking-tight mb-2 uppercase" style="">
+                            discos de desbaste</h3>
+                        <p class="text-on-surface-variant text-2xl font-medium leading-tight mb-4" style=""><span
+                                style="font-family: &quot;Space Grotesk&quot;, sans-serif;">Diseñados para la remoción
+                                agresiva de material, limpieza de cordones y preparación de biseles.</span></p>
+                        <div class="flex items-center gap-4">
+                            <div class="px-2 py-1 bg-surface-container-highest font-label text-[10px] text-secondary-container uppercase tracking-tighter"
+                                style="">Safety: Critical</div>
+                            <div class="px-2 py-1 bg-surface-container-highest font-label text-[10px] text-outline uppercase tracking-tighter"
+                                style="">RPM: 11,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tool 3: Chop saw -->
+            <div
+                class="bg-surface-container-low border border-outline-variant hover:border-primary-container transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline opacity-50" style="">REF:
+                    SAW_MTL_14</div>
+                <div class="p-8 flex items-start gap-6">
+                    <div
+                        class="w-24 h-24 bg-surface-container flex items-center justify-center border border-outline-variant group-hover:bg-primary-container/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary-container"
+                            data-icon="precision_manufacturing" style="">precision_manufacturing</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-headline text-2xl font-bold text-primary tracking-tight mb-2 uppercase" style="">
+                            CINTA MÉTRICA</h3>
+                        <p class="text-on-surface-variant text-2xl font-medium leading-tight mb-4" style=""><span
+                                style="font-family: &quot;Space Grotesk&quot;, sans-serif;">Instrumento de medición de
+                                precisión para el dimensionamiento exacto de piezas y juntas de soldadura.</span></p>
+                        <div class="flex items-center gap-4">
+                            <div class="px-2 py-1 bg-surface-container-highest font-label text-[10px] text-primary-fixed uppercase tracking-tighter"
+                                style="">Power: 2200W</div>
+                            <div class="px-2 py-1 bg-surface-container-highest font-label text-[10px] text-outline uppercase tracking-tighter"
+                                style="">Blade: 14"</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tool 4: Prensas de mano -->
+            <div
+                class="bg-surface-container-low border border-outline-variant hover:border-primary-container transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline opacity-50" style="">REF:
+                    CLAMP_F_09</div>
+                <div class="p-8 flex items-start gap-6">
+                    <div
+                        class="w-24 h-24 bg-surface-container flex items-center justify-center border border-outline-variant group-hover:bg-primary-container/5 transition-colors">
+                        <span class="material-symbols-outlined text-4xl text-primary-container" data-icon="hand_gesture"
+                            style="">hand_gesture</span>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-headline text-2xl font-bold text-primary tracking-tight mb-2 uppercase" style="">
+                            TIZA BLANCA DE MARCAR</h3>
+                        <p class="text-on-surface-variant text-2xl font-medium leading-tight mb-4" style=""><span
+                                style="font-family: &quot;Space Grotesk&quot;, sans-serif;">Mineral para trazado
+                                resistente al calor, esencial para guiar el proceso de corte y unión.</span></p>
+                        <div class="flex items-center gap-4">
+                            <div class="px-2 py-1 bg-surface-container-highest font-label text-[10px] text-primary-fixed uppercase tracking-tighter"
+                                style="">Type: F-Clamp</div>
+                            <div class="px-2 py-1 bg-surface-container-highest font-label text-[10px] text-outline uppercase tracking-tighter"
+                                style="">Force: High</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background Blueprint Annotations -->
+        <div class="absolute bottom-28 left-8 pointer-events-none opacity-20 hidden lg:block">
+            <div class="font-label text-[10px] text-outline leading-tight uppercase" style="">
+                X-AXIS_COORD: 104.9928<br>
+                Y-AXIS_COORD: 442.1002<br>
+                SYS_STATUS: ACTIVE_STREAM
+            </div>
+        </div>
+        <div class="absolute top-28 right-8 pointer-events-none opacity-20 hidden lg:block text-right">
+            <div class="font-label text-[10px] text-outline leading-tight uppercase" style="">
+                PRESENTATION_MODE: 2.0<br>
+                AUTH: SYS_ADMIN<br>
+                LAYER: TOOLING_TECH
+            </div>
+        </div>
+        <div class="w-full max-w-7xl mt-8 text-center">
+            <p class="font-label text-[#1BFF3C] text-xs tracking-widest uppercase opacity-80" style=""><span
+                    style="font-family: Rajdhani, sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0.5px; background-color: rgba(14, 14, 14, 0.5);">ESTAS
+                    HERRAMIENTAS PERMITEN CORTAR, LIMPIAR, MEDIR, SUJETAR Y PREPARAR EL METAL ANTES DE SOLDAR.</span></p>
+        </div>
+    </main>
+    <!-- Bottom Navigation Bar -->
+    <footer
+        class="bg-[#1C1B1B] dark:bg-[#1C1B1B] fixed bottom-0 left-0 w-full z-50 border-t border-[#3B4B37]/30 flex justify-between items-center px-12 py-4 neon-glow">
+        <!-- Previous Button -->
+        <button
+            class="flex flex-col items-center justify-center text-[#84967E] px-8 py-2 hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all active:translate-y-0.5"
+            style="">
+            <span class="material-symbols-outlined text-sm mb-1" data-icon="arrow_back_ios"
+                style="">arrow_back_ios</span>
+            <span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-wider" style="">anterior</span>
+        </button>
+        <!-- Slide Index / Active Indicator -->
+        <button
+            class="flex flex-col items-center justify-center text-[#1BFF3C] border border-[#1BFF3C] px-12 py-2 hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all active:translate-y-0.5"
+            style="">
+            <span class="material-symbols-outlined text-sm mb-1" data-icon="format_list_numbered"
+                style="">format_list_numbered</span>
+            <span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-wider font-bold"
+                style="">&nbsp;03</span>
+        </button>
+        <!-- Next Button -->
+        <button
+            class="flex flex-col items-center justify-center text-[#84967E] px-8 py-2 hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all active:translate-y-0.5"
+            style="">
+            <span class="material-symbols-outlined text-sm mb-1" data-icon="arrow_forward_ios"
+                style="">arrow_forward_ios</span>
+            <span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-wider" style="">siguiente</span>
+        </button>
+        <!-- Home Button (Mobile or Additional Control) -->
+        <button
+            class="hidden lg:flex flex-col items-center justify-center text-[#84967E] px-8 py-2 hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all active:translate-y-0.5"
+            style="">
+            <span class="material-symbols-outlined text-sm mb-1" data-icon="home" style="">home</span>
+            <span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-wider" style="">HOME</span>
+        </button>
+    </footer>
+    <script id="weld-bear-sync">
+        setTimeout(() => {
+            const triggers = document.querySelectorAll('button, a');
+            triggers.forEach(el => {
+                const text = el.innerText.toUpperCase();
+                const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+                const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+                const isHome = text.includes('HOME') || text.includes('INICIO');
+                const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+                if (isPrev || isNext || isHome || isFinish) {
+                    el.onclick = (e) => {
+                        e.preventDefault();
+                        if (isPrev) window.parent.postMessage('PREV', '*');
+                        if (isNext) window.parent.postMessage('NEXT', '*');
+                        if (isHome) window.parent.postMessage('HOME', '*');
+                        if (isFinish) window.parent.postMessage('FINISH', '*');
+                    };
+                }
+            });
+        }, 500);
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+                e.preventDefault();
+                window.parent.postMessage('NEXT', '*');
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                e.preventDefault();
+                window.parent.postMessage('PREV', '*');
+            }
+        });
+
+        window.addEventListener('load', () => {
+            window.parent.postMessage('LOADED', '*');
+        });
+    </script>
+</body>
+
+</html>

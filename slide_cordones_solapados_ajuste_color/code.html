@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#fed400",
+                        "tertiary-container": "#ffd3cd",
+                        "on-surface-variant": "#baccb2",
+                        "surface-dim": "#131313",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#313030",
+                        "on-background": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#eac300",
+                        "on-error": "#690005",
+                        "tertiary": "#fff8f7",
+                        "on-tertiary": "#690003",
+                        "inverse-primary": "#006e11",
+                        "on-primary-fixed-variant": "#00530a",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#ffe174",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "surface-bright": "#393939",
+                        "on-tertiary-fixed": "#410001",
+                        "on-secondary-fixed": "#221b00",
+                        "outline": "#84967e",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary": "#3b2f00",
+                        "tertiary-fixed": "#ffdad5",
+                        "surface-container": "#201f1f",
+                        "primary-fixed-dim": "#00e631",
+                        "surface-container-highest": "#353534",
+                        "primary-container": "#1bff3c",
+                        "on-primary": "#003a05",
+                        "secondary": "#fff3d3",
+                        "surface-variant": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed-variant": "#554500",
+                        "on-tertiary-container": "#c5020c",
+                        "on-primary-fixed": "#002202",
+                        "primary": "#ecffe3",
+                        "surface-tint": "#00e631",
+                        "primary-fixed": "#74ff6d",
+                        "outline-variant": "#3b4b37",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#6f5c00",
+                        "on-primary-container": "#007112"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col blueprint-grid">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full border-b border-[#3B4B37]/20 bg-[#131313] dark:bg-[#131313] flex justify-between items-center px-6 h-16 z-50">
+        <div class="flex items-center gap-4">
+            <span
+                class="text-xl font-black text-[#1BFF3C] drop-shadow-[0_0_8px_rgba(27,255,60,0.4)] font-['Rajdhani'] uppercase tracking-widest"
+                style=""><span class=""
+                    style="font-family: Rajdhani, sans-serif; font-size: 24px; letter-spacing: -1.2px;">WELD BEAR
+                    IEDU</span></span>
+        </div>
+        <div class="flex items-center gap-2">
+            <button class="p-2 text-[#84967E]/60 hover:bg-[#1BFF3C]/10 transition-colors duration-200 active:scale-95"
+                style="">
+                <span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+            </button>
+            <button class="p-2 text-[#84967E]/60 hover:bg-[#1BFF3C]/10 transition-colors duration-200 active:scale-95"
+                style="">
+                <span class="material-symbols-outlined" data-icon="help_outline" style="">help_outline</span>
+            </button>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow pt-20 pb-20 px-6 max-w-7xl mx-auto w-full h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden">
+        <!-- Header Section -->
+        <div class="mb-6 border-l-4 border-primary-container pl-6 py-2">
+            <div class="font-label text-xs text-primary-container mb-2 tracking-[0.2em]" style="">
+                TECHNICAL_SPECIFICATION // REF_042</div>
+            <h1 class="font-headline text-5xl md:text-7xl font-bold uppercase tracking-tighter text-on-surface leading-none"
+                style="">
+                CORDONES <span class="text-primary-container" style="">SOLAPADOS</span>
+            </h1>
+        </div>
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-1">
+            <!-- Hero Definition Block -->
+            <div
+                class="md:col-span-8 bg-surface-container-low p-8 border border-outline-variant/20 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 font-label text-[10px] text-outline opacity-40" style="">XY_POS:
+                    104.22 // 88.01</div>
+                <h2 class="font-headline text-2xl font-semibold mb-6 flex items-center gap-3" style="">
+                    <span class="w-2 h-2 bg-primary-container"></span>
+                    DEFINICIÓN TÉCNICA
+                </h2>
+                <p class="text-xl md:text-2xl font-light leading-relaxed text-on-surface-variant max-w-2xl mb-8" style="">
+                    Cuando un área es demasiado ancha para cubrirla con un solo cordón, se aplican <span
+                        class="text-on-surface font-medium border-b border-primary-container" style="">varios
+                        cordones</span> uno al lado del otro.
+                </p>
+                <!-- Repositioned and Expanded Warning Note -->
+                <div class="mt-4 bg-surface-container-lowest p-6 border-l-2 border-secondary-container flex items-center gap-6">
+                    <span class="material-symbols-outlined text-secondary-container text-3xl shrink-0"
+                        data-icon="warning" style="">warning</span>
+                    <p class="font-label text-base font-bold text-on-surface leading-tight uppercase tracking-wide" style="">
+                        ASEGURAR FUSIÓN COMPLETA ENTRE CORDONES ADYACENTES PARA EVITAR INCLUSIÓN DE ESCORIA.
+                    </p>
+                </div>
+            </div>
+            <!-- Objective Block -->
+            <div
+                class="md:col-span-4 bg-surface-container-high p-8 border border-outline-variant/20 flex flex-col justify-center">
+                <div>
+                    <h2 class="font-headline text-2xl font-semibold mb-8 text-primary-container uppercase" style="">se
+                        hacen para:</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4" style="">
+                            <span class="font-label text-primary-container mt-1" style="">01</span>
+                            <span class="text-lg font-medium uppercase tracking-wide" style="">Cubrir superficies más
+                                anchas</span>
+                        </li>
+                        <li class="flex items-start gap-4" style="">
+                            <span class="font-label text-primary-container mt-1" style="">02</span>
+                            <span class="text-lg font-medium uppercase tracking-wide" style="">Rellenar áreas</span>
+                        </li>
+                        <li class="flex items-start gap-4" style="">
+                            <span class="font-label text-primary-container mt-1" style="">03</span>
+                            <span class="text-lg font-medium uppercase tracking-wide" style="">Aumentar volumen de
+                                depósito</span>
+                        </li>
+                        <li class="flex items-start gap-4" style="">
+                            <span class="font-label text-primary-container mt-1" style="">04</span>
+                            <span class="text-lg font-medium uppercase tracking-wide" style="">Construir capas de
+                                relleno</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Rule of Thumb / Technical Data -->
+            <div class="md:col-span-12 p-12 mt-1 relative bg-surface-container-high text-on-surface">
+                <div
+                    class="absolute top-0 right-0 h-full w-48 opacity-10 flex items-center justify-center overflow-hidden">
+                    <span class="material-symbols-outlined text-9xl scale-150" data-icon="straighten"
+                        style="">straighten</span>
+                </div>
+                <div class="w-full">
+                    <div class="font-label text-xl font-bold uppercase tracking-[0.2em] mb-4 text-primary-container"
+                        style="">como regla practica del taller se enseña que un cordon individual no debe ser muy
+                        ancho.</div>
+                    <h3 class="font-headline text-3xl md:text-4xl font-bold uppercase mb-8 leading-tight" style="">
+                        Mantenerlo alrededor de <span class="px-2 text-white bg-primary-container/20" style="">1/2"</span> o menos ayuda a que
+                        la soldadura conserve mejor forma y consistencia.
+                    </h3>
+                    <div class="flex flex-wrap gap-8 items-center border-t border-outline-variant/30 pt-8">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-4xl text-primary-container" data-icon="architecture"
+                                style="font-variation-settings: &quot;FILL&quot; 1;">architecture</span>
+                            <span class="font-label font-bold uppercase text-lg" style="">Control de Dimensión</span>
+                        </div>
+                        <div class="w-px h-10 hidden md:block bg-outline-variant/40"></div>
+                        <p class="text-lg font-medium uppercase tracking-wider w-full md:w-auto flex-1 text-on-surface-variant" style="">
+                            El cumplimiento de este límite dimensional garantiza una distribución térmica óptima y una
+                            morfología de cordón estable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Schematic Annotations Removed -->
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-center items-center gap-0 bg-[#1C1B1B] dark:bg-[#1C1B1B] h-20 border-t border-[#3B4B37]/30 shadow-[0_-4px_20px_rgba(27,255,60,0.1)]">
+        <a class="flex flex-col items-center justify-center text-[#84967E] px-8 h-full hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group active:brightness-125"
+            href="#" style="">
+            <span class="material-symbols-outlined mb-1" data-icon="arrow_back_ios" style="">arrow_back_ios</span>
+            <span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter" style="">PREVIOUS</span>
+        </a>
+        <a class="flex flex-col items-center justify-center px-8 h-full transition-all active:brightness-125 border-x border-[#1BFF3C] text-[#1BFF3C]"
+            href="#" style="">
+            <span class="material-symbols-outlined mb-1" data-icon="grid_view"
+                style="font-variation-settings: &quot;FILL&quot; 1;">grid_view</span>
+            <span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter font-bold" style="">09</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-[#84967E] px-8 h-full hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all group active:brightness-125"
+            href="#" style="">
+            <span class="material-symbols-outlined mb-1" data-icon="arrow_forward_ios" style="">arrow_forward_ios</span>
+            <span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-tighter" style="">NEXT</span>
+        </a>
+    </nav>
+
+
+    \n
+
+    \n
+
+    \n
+
+    \n
+
+    \n
+    
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INDUSTRIAL_EDU_OS_v2.4 - EQUIPO DE PROTECCIÓN PERSONAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#353534",
+              "on-secondary": "#3b2f00",
+              "primary-fixed-dim": "#00e631",
+              "on-primary": "#003a05",
+              "error": "#ffb4ab",
+              "outline": "#84967e",
+              "error-container": "#93000a",
+              "tertiary-container": "#ffd3cd",
+              "on-secondary-container": "#6f5c00",
+              "inverse-surface": "#e5e2e1",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "tertiary-fixed": "#ffdad5",
+              "primary-fixed": "#74ff6d",
+              "secondary-container": "#fed400",
+              "surface-container": "#201f1f",
+              "background": "#131313",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#554500",
+              "secondary-fixed-dim": "#eac300",
+              "on-error": "#690005",
+              "surface-bright": "#393939",
+              "surface": "#131313",
+              "surface-container-lowest": "#0e0e0e",
+              "on-primary-container": "#007112",
+              "surface-tint": "#00e631",
+              "inverse-on-surface": "#313030",
+              "surface-container-low": "#1c1b1b",
+              "secondary": "#fff3d3",
+              "primary-container": "#1bff3c",
+              "on-tertiary-fixed": "#410001",
+              "inverse-primary": "#006e11",
+              "tertiary": "#fff8f7",
+              "primary": "#ecffe3",
+              "outline-variant": "#3b4b37",
+              "on-tertiary-fixed-variant": "#930005",
+              "on-secondary-fixed": "#221b00",
+              "on-surface-variant": "#baccb2",
+              "surface-container-highest": "#353534",
+              "on-surface": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "on-primary-fixed-variant": "#00530a",
+              "on-primary-fixed": "#002202",
+              "on-tertiary-container": "#c5020c",
+              "surface-dim": "#131313",
+              "secondary-fixed": "#ffe174",
+              "on-tertiary": "#690003",
+              "on-background": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "label": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      html, body {
+        overflow: hidden !important;
+        height: 100%;
+      }
+      body {
+        background-color: #131313;
+        background-image: radial-gradient(#3b4b37 1px, transparent 1px);
+        background-size: 40px 40px;
+        color: #e5e2e1;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .pointer-line {
+        position: absolute;
+        height: 1px;
+        background: #1BFF3C;
+        box-shadow: 0 0 8px #1BFF3C;
+      }
+      .pointer-dot {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #1BFF3C;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #1BFF3C;
+      }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#131313] bg-opacity-80 backdrop-blur-md border-b border-[#3B4B37]/20">
+<div class="text-[#1BFF3C] font-bold tracking-tighter text-2xl font-headline"><span style="font-family: Rajdhani, sans-serif; letter-spacing: -1.2px; text-transform: uppercase; background-color: rgb(19, 19, 19);">WELD  BEAR  IEDU</span></div>
+<nav class="hidden md:flex gap-8 font-['Rajdhani'] uppercase tracking-widest font-bold text-xl">
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">MODULES</a>
+<a class="text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#">SCHEMATICS</a>
+<a class="text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">LOGS</a>
+</nav>
+<div class="flex gap-4 items-center">
+<button class="p-2 text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="p-2 text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</button>
+<button class="p-2 text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="power_settings_new">power_settings_new</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-24 pb-12 w-64 z-40 bg-[#131313] border-r border-[#3B4B37]/20 font-['Space_Grotesk'] font-medium text-sm tracking-tight">
+<div class="px-6 mb-8">
+<div class="font-['JetBrains_Mono'] text-[#1BFF3C] text-xs mb-1">SYSTEM_ACTIVE</div>
+<div class="text-outline text-[10px] uppercase">OPERATOR_0821</div>
+</div>
+<nav class="flex flex-col flex-grow">
+<a class="flex items-center gap-4 px-6 py-4 text-[#84967E] hover:bg-[#2A2A2A] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+                DASHBOARD
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 font-bold border-l-4 border-[#1BFF3C] bg-[#131313] text-white" href="#">
+<span class="material-symbols-outlined text-[#1BFF3C]" data-icon="precision_manufacturing">precision_manufacturing</span>
+                EQUIPMENT
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#84967E] hover:bg-[#2A2A2A] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+                SAFETY
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#84967E] hover:bg-[#2A2A2A] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+                TELEMETRY
+            </a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#84967E] hover:bg-[#2A2A2A] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                ARCHIVE
+            </a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 pt-24 pb-20 px-8 min-h-screen">
+<!-- Header -->
+<div class="mb-10 border-l-4 border-primary-container pl-6 py-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-primary-container material-symbols-outlined" data-icon="security">security</span>
+<span class="font-label text-primary-container text-xs tracking-widest uppercase">Safety Protocol 08 // EPP</span>
+</div>
+<h1 class="font-headline font-bold text-5xl text-on-surface uppercase tracking-tighter leading-none">
+                EQUIPO DE PROTECCIÓN PERSONAL
+            </h1>
+<p class="font-body text-outline mt-2 max-w-2xl text-lg uppercase tracking-widest">
+                Equipo de Protección Personal para Operaciones Industriales
+            </p>
+</div>
+<!-- Main Content Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Left: Verification Checklist -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
+<div class="bg-surface-container-low border border-outline-variant/30 overflow-hidden">
+<div class="bg-surface-container-high p-4 border-b border-outline-variant/30 flex justify-between items-center">
+<h2 class="font-label text-sm text-primary-container font-bold tracking-widest uppercase">VERIFICATION_CHECKLIST</h2>
+<span class="font-label text-[10px] text-outline">v2.4_CHECK</span>
+</div>
+<div class="p-4 space-y-2">
+<!-- Checklist items -->
+<div class="flex items-center gap-4 p-3 bg-surface-container-high/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_box">check_box</span>
+<span class="font-bold text-lg uppercase tracking-wider">Careta de soldar</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-high/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_box">check_box</span>
+<span class="font-bold text-lg uppercase tracking-wider">Gafas de seguridad</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-high/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_box">check_box</span>
+<span class="font-bold text-lg uppercase tracking-wider">Chaqueta de soldador</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-high/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_box">check_box</span>
+<span class="font-bold text-lg uppercase tracking-wider">Guantes de soldar</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-high/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_box">check_box</span>
+<span class="font-bold text-lg uppercase tracking-wider">Mascarilla 3M serie 6000</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-high/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_box">check_box</span>
+<span class="font-bold text-lg uppercase tracking-wider">Botas punta de acero</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-high/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_box">check_box</span>
+<span class="font-bold text-lg uppercase tracking-wider">Protección auditiva</span>
+</div>
+<div class="flex items-center gap-4 p-3 bg-surface-container-high/50 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="check_box">check_box</span>
+<span class="font-bold text-lg uppercase tracking-wider">Casco</span>
+</div>
+</div>
+<div class="bg-secondary-container/10 p-4 border-t border-secondary-container/30">
+<div class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-secondary-container" data-icon="report_problem">report_problem</span>
+<div>
+<div class="text-lg font-bold text-secondary-container uppercase">INFORMACION_DE_SEGURIDAD</div>
+<div class="text-base text-on-surface uppercase font-medium">El EPP protege al trabajador contra radiación, chispas, metal caliente, ruido y proyección de partículas.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Technical Image Area -->
+<div class="col-span-12 lg:col-span-8 relative bg-surface-container-lowest border border-outline-variant/20 p-8 min-h-[600px] flex items-center justify-center overflow-hidden">
+<!-- Background Grid Accent -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(#1BFF3C 0.5px, transparent 0.5px), linear-gradient(90deg, #1BFF3C 0.5px, transparent 0.5px); background-size: 20px 20px;"></div>
+<div class="relative h-full w-full flex justify-center items-center">
+<!-- Main Welder Image Updated -->
+<img alt="Professional welder in full PPE" class="max-h-full max-w-full object-contain brightness-110 contrast-125 z-10" src="https://lh3.googleusercontent.com/aida/ADBb0uil1FdMDcb3Ebd2A3ToS6wWNZIF1baNiwR0HKwRV2e32s7NRmkLdXodRXfWp8OyRllyPS805UhYVL0POnSRgPyPhxKkVJLHEbjmqOR3eKyUWoX7HSeLsEBq3JMyCQjpf9w8i7kM16bvHBLrrqKuW9FrvvggaKxEQKJd33M49ocNvR43qfIk-mMgaFC_H4KmL7f5jrIulvLe-HnSQskXLxaGQa8PDH1JyUUW_hesQOwX9Ul2RIbeJprI60XvvMMd59gWaM8krFHc"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Footer -->
+<footer class="fixed bottom-0 w-full z-50 bg-[#131313] border-t border-[#3B4B37]/20 px-6 py-4">
+<div class="max-w-[1440px] mx-auto flex justify-between items-center">
+<div class="flex items-center gap-6">
+<div class="font-['JetBrains_Mono'] text-[11px] font-bold text-primary-container tracking-[0.2em] uppercase">04</div>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<div class="font-['JetBrains_Mono'] text-[10px] text-outline uppercase opacity-60">SYS_VER_4.0.1 // GRID_STATUS: STABLE</div>
+</div>
+<div class="flex gap-8">
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase text-outline hover:text-primary-container transition-colors" href="#">DIAGNOSTICS</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase text-outline hover:text-primary-container transition-colors" href="#">SUPPORT</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase text-primary-container font-bold underline decoration-primary-container decoration-2 underline-offset-4" href="#">PROTOCOL_8</a>
+</div>
+</div>
+</footer>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Rajdhani:wght@500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#1c1b1b",
+                        "secondary": "#fff3d3",
+                        "outline": "#84967e",
+                        "on-tertiary-fixed": "#410001",
+                        "on-primary": "#003a05",
+                        "on-secondary-fixed": "#221b00",
+                        "on-primary-fixed-variant": "#00530a",
+                        "on-background": "#e5e2e1",
+                        "on-error": "#690005",
+                        "primary": "#ecffe3",
+                        "on-secondary": "#3b2f00",
+                        "secondary-fixed": "#ffe174",
+                        "surface-dim": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-tint": "#00e631",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "tertiary": "#fff8f7",
+                        "primary-container": "#1bff3c",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#007112",
+                        "primary-fixed": "#74ff6d",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed-dim": "#00e631",
+                        "on-primary-fixed": "#002202",
+                        "on-surface-variant": "#baccb2",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-container": "#c5020c",
+                        "on-tertiary": "#690003",
+                        "on-secondary-container": "#6f5c00",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "surface-bright": "#393939",
+                        "secondary-container": "#fed400",
+                        "tertiary-container": "#ffd3cd",
+                        "surface-variant": "#353534",
+                        "secondary-fixed-dim": "#eac300",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed-variant": "#554500",
+                        "surface": "#131313",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#ffdad5",
+                        "inverse-primary": "#006e11",
+                        "surface-container": "#201f1f",
+                        "outline-variant": "#3b4b37",
+                        "background": "#131313",
+                        "inverse-surface": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani"],
+                        "body": ["Space Grotesk"],
+                        "label": ["JetBrains Mono"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(27, 255, 60, 0.02) 50%);
+            background-size: 100% 4px;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#131313] dark:bg-[#131313] top-0 border-b border-[#3B4B37]/20 shadow-[0px_0px_15px_rgba(27,255,60,0.1)] flex justify-between items-center w-full px-6 py-4 h-16 z-50 shrink-0">
+<div class="flex items-center gap-4">
+<div class="font-['Rajdhani'] font-black text-[#1BFF3C] border-l-4 border-[#1BFF3C] pl-3 uppercase tracking-tighter text-xl" style=""><span style="font-family: Rajdhani, sans-serif; font-size: 24px; letter-spacing: -1.2px;" class="">WELD BEAR IEDU</span></div>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex items-center gap-6">
+<a class="text-[#1BFF3C] font-bold border-b-2 border-[#1BFF3C] font-['Rajdhani'] uppercase tracking-tighter text-xl py-1" href="#" style="">OVERVIEW</a>
+<a class="text-[#84967E] font-medium font-['Rajdhani'] uppercase tracking-tighter text-xl py-1 hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors duration-150" href="#" style="">DIAGRAMS</a>
+<a class="text-[#84967E] font-medium font-['Rajdhani'] uppercase tracking-tighter text-xl py-1 hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors duration-150" href="#" style="">ANALYSIS</a>
+</nav>
+<div class="flex items-center gap-4 border-l border-outline-variant/30 pl-6">
+<button class="text-[#1BFF3C] flex items-center justify-center p-2 hover:bg-[#1BFF3C]/10 transition-colors" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+</button>
+<button class="text-[#1BFF3C] flex items-center justify-center p-2 hover:bg-[#1BFF3C]/10 transition-colors" style="">
+<span class="material-symbols-outlined" data-icon="info" style="">info</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow relative blueprint-grid scanline overflow-y-auto px-8 md:px-12 py-12 pb-32">
+<!-- Background Metadata Labels (Industrial Decor) -->
+<div class="absolute top-4 right-8 font-label text-[10px] text-outline/40 uppercase tracking-[0.2em] pointer-events-none" style="">
+            SPEC_REF: 44-FCAW-TR <br>
+            LAT: 34.0522° N / LONG: 118.2437° W
+        </div>
+<!-- Hero Section: Full Width Reorganized -->
+<section class="max-w-7xl w-full mx-auto mb-16">
+<div class="mb-4 flex items-center gap-2">
+<span class="bg-primary-container text-on-primary text-[10px] font-bold px-2 py-0.5 tracking-widest font-label" style="">SYSTEM_ACTIVE</span>
+<span class="w-24 h-px bg-outline-variant/50"></span>
+</div>
+<div class="flex flex-col md:flex-row md:items-end gap-8 mb-8">
+<h1 class="font-headline text-7xl md:text-9xl font-black text-on-background uppercase tracking-tighter leading-none shrink-0" style="">
+                    Proceso <span class="text-primary-container" style="">FCAW</span>
+</h1>
+<p class="text-xl md:text-3xl text-on-surface-variant font-light leading-snug border-l-2 border-primary-container pl-6 pb-2 max-w-3xl" style="">
+                    FCAW es un proceso de soldadura que utiliza alambre tubular para aplicaciones de alta intensidad y rendimiento industrial.
+                </p>
+</div>
+</section>
+<!-- Characteristics: Full Width Grid -->
+<section class="max-w-7xl w-full mx-auto mb-16">
+<h2 class="font-headline text-sm text-outline-variant uppercase tracking-[0.4em] mb-8 flex items-center gap-4" style="">
+<span class="w-8 h-px bg-outline-variant"></span>
+                KEY_CHARACTERISTICS
+                <span class="flex-grow h-px bg-outline-variant/20"></span>
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-8 border-l-4 border-primary-container hover:bg-surface-container-high transition-colors group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 font-headline text-6xl text-outline/5 font-black group-hover:text-primary-container/10 transition-colors" style="">01</div>
+<div class="font-label text-primary-container text-xs mb-6 tracking-widest" style="">CONTINUOUS_FEED</div>
+<h3 class="font-headline text-3xl font-bold uppercase mb-4 text-on-surface" style="">Alambre Continuo</h3>
+<p class="text-lg font-medium text-on-surface leading-relaxed" style="">
+                        El alambre avanza de forma continua permitiendo cordones largos sin interrupciones por cambio de electrodo, optimizando el tiempo de arco.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-8 border-l-4 border-outline hover:border-primary-container hover:bg-surface-container-high transition-all group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 font-headline text-6xl text-outline/5 font-black group-hover:text-primary-container/10 transition-colors" style="">02</div>
+<div class="font-label text-outline group-hover:text-primary-container text-xs mb-6 tracking-widest" style="">FLUX_CORE_PROT</div>
+<h3 class="font-headline text-3xl font-bold uppercase mb-4 text-on-surface" style="">Fundente Interno</h3>
+<p class="text-lg font-medium text-on-surface leading-relaxed" style="">
+                        El fundente interno ayuda a proteger el baño de fusión, creando una escoria que purifica el metal depositado y estabiliza el arco.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-8 border-l-4 border-outline hover:border-primary-container hover:bg-surface-container-high transition-all group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 font-headline text-6xl text-outline/5 font-black group-hover:text-primary-container/10 transition-colors" style="">03</div>
+<div class="font-label text-outline group-hover:text-primary-container text-xs mb-6 tracking-widest" style="">DUAL_GAS_MODE</div>
+<h3 class="font-headline text-3xl font-bold uppercase mb-4 text-on-surface" style="">Gas Dual</h3>
+<p class="text-lg font-medium text-on-surface leading-relaxed" style="">
+                        Puede trabajar con o sin gas externo, según el tipo de alambre (Autoprotegido o con protección gaseosa externa) para versatilidad extrema.
+                    </p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low p-8 border-l-4 border-outline hover:border-primary-container hover:bg-surface-container-high transition-all group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 font-headline text-6xl text-outline/5 font-black group-hover:text-primary-container/10 transition-colors" style="">04</div>
+<div class="font-label text-outline group-hover:text-primary-container text-xs mb-6 tracking-widest" style="">HIGH_DEP_RATE</div>
+<h3 class="font-headline text-3xl font-bold uppercase mb-4 text-on-surface" style="">Alta Productividad</h3>
+<p class="text-lg font-medium text-on-surface leading-relaxed" style="">
+                        Ofrece excelente productividad y una de las tasas de deposición más elevadas, ideal para rellenos masivos en menor tiempo operativo.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Footer Highlight Box -->
+</main>
+<!-- Bottom Navigation Shell (Fixed to bottom edge) -->
+<footer class="bg-[#1C1B1B] fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-10 py-4 border-t border-[#3B4B37]/30">
+<button class="flex flex-col items-center justify-center text-[#1BFF3C] border border-[#1BFF3C]/30 px-8 py-2 hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all duration-200" style="">
+<span class="material-symbols-outlined" data-icon="arrow_back" style="">arrow_back</span>
+<span class="font-['JetBrains_Mono'] text-[12px] font-bold tracking-widest uppercase mt-1" style="">PREVIOUS</span>
+</button>
+<div class="flex flex-col items-center justify-center bg-transparent text-[#1BFF3C] border border-[#1BFF3C] px-8 py-2 shadow-[0px_0px_10px_rgba(27,255,60,0.2)]">
+<span class="material-symbols-outlined" data-icon="analytics" style="font-variation-settings: &quot;FILL&quot; 1;">analytics</span>
+<span class="font-['JetBrains_Mono'] text-[12px] font-bold tracking-widest uppercase mt-1" style="">02</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#1BFF3C] border border-[#1BFF3C]/30 px-8 py-2 hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all duration-200" style="">
+<span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+<span class="font-['JetBrains_Mono'] text-[12px] font-bold tracking-widest uppercase mt-1" style="">NEXT</span>
+</button>
+</footer>
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

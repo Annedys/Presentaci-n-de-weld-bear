@@ -1,0 +1,261 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MOD: INDUSTRIAL_SCHEMATIC_V1 - SOCAVADO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#930005",
+                        "on-surface-variant": "#baccb2",
+                        "primary-fixed-dim": "#00e631",
+                        "on-surface": "#e5e2e1",
+                        "on-primary": "#003a05",
+                        "surface-bright": "#393939",
+                        "on-tertiary": "#690003",
+                        "on-tertiary-container": "#c5020c",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "outline": "#84967e",
+                        "tertiary-container": "#ffd3cd",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#353534",
+                        "secondary-fixed-dim": "#eac300",
+                        "error": "#ffb4ab",
+                        "secondary": "#fff3d3",
+                        "on-secondary-fixed": "#221b00",
+                        "secondary-container": "#fed400",
+                        "surface-variant": "#353534",
+                        "on-secondary": "#3b2f00",
+                        "outline-variant": "#3b4b37",
+                        "inverse-on-surface": "#313030",
+                        "primary": "#ecffe3",
+                        "on-tertiary-fixed": "#410001",
+                        "background": "#131313",
+                        "on-primary-fixed": "#002202",
+                        "primary-container": "#1bff3c",
+                        "surface-dim": "#131313",
+                        "on-background": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed": "#ffdad5",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-fixed-variant": "#00530a",
+                        "primary-fixed": "#74ff6d",
+                        "surface-container": "#201f1f",
+                        "surface": "#131313",
+                        "tertiary": "#fff8f7",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#554500",
+                        "surface-tint": "#00e631",
+                        "secondary-fixed": "#ffe174",
+                        "on-primary-container": "#007112",
+                        "inverse-primary": "#006e11",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#6f5c00",
+                        "on-error-container": "#ffdad6"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(27, 255, 60, 0.02) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#131313] dark:bg-[#131313] fixed top-0 w-full z-50 border-b border-[#3B4B37]/20 shadow-[0px_0px_15px_rgba(27,255,60,0.1)] flex justify-between items-center px-6 py-4 h-16">
+<div class="font-['Rajdhani'] font-black text-[#1BFF3C] border-l-4 border-[#1BFF3C] pl-3 uppercase tracking-tighter text-xl" style=""><span style="font-family: Rajdhani, sans-serif; font-size: 24px; letter-spacing: -1.2px;" class="">WELD BEAR IEDU</span></div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#1BFF3C] font-bold border-b-2 border-[#1BFF3C] font-['Rajdhani'] uppercase tracking-tighter py-1 transition-all" href="#" style="">Training</a>
+<a class="text-[#84967E] font-medium font-['Rajdhani'] uppercase tracking-tighter py-1 hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors duration-150" href="#" style="">Module_04</a>
+<a class="text-[#84967E] font-medium font-['Rajdhani'] uppercase tracking-tighter py-1 hover:bg-[#1BFF3C]/10 hover:text-[#1BFF3C] transition-colors duration-150" href="#" style="">Vault</a>
+</nav>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#1BFF3C] cursor-pointer hover:bg-[#1BFF3C]/10 p-1" style="">info</span>
+<span class="material-symbols-outlined text-[#1BFF3C] cursor-pointer hover:bg-[#1BFF3C]/10 p-1" style="">settings</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 md:px-12 blueprint-grid relative">
+<div class="absolute inset-0 scanline pointer-events-none opacity-50"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
+<!-- Left Editorial Block -->
+<section class="lg:col-span-7 space-y-8">
+<header class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="font-['JetBrains_Mono'] text-primary-fixed-dim text-xs tracking-widest bg-primary-container/10 px-2 py-1" style=""><br></span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<h1 class="font-['Rajdhani'] font-black text-6xl md:text-8xl text-on-surface uppercase leading-none tracking-tighter" style="">
+                        SOCAVADO <br><br></h1>
+</header>
+<div class="bg-surface-container-low border-l-4 border-primary-container p-8 space-y-6">
+<p class="text-xl md:text-2xl font-light leading-relaxed text-on-surface-variant" style="">
+                        Es otro defecto común, ocurre cuando se forma una ranura en los bordes del cordón y se reduce material en la orilla de la unión.
+                    </p>
+<div class="flex gap-12 items-end">
+<div class="space-y-1">
+<span class="block font-['JetBrains_Mono'] text-[10px] text-outline uppercase tracking-[0.3em]" style=""><br></span>
+<span class="block font-['JetBrains_Mono'] text-lg text-primary-container font-bold" style=""><br></span>
+</div>
+<div class="space-y-1">
+<span class="block font-['JetBrains_Mono'] text-[10px] text-outline uppercase tracking-[0.3em]" style=""><br></span>
+<div class="flex gap-1">
+<div class="w-4 h-4 bg-primary-container"></div>
+<div class="w-4 h-4 bg-primary-container"></div>
+<div class="w-4 h-4 bg-primary-container"></div>
+<div class="w-4 h-4 bg-outline-variant/30"></div>
+<div class="w-4 h-4 bg-outline-variant/30"></div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<!-- Right Technical Checklist -->
+<aside class="lg:col-span-5">
+<div class="bg-surface-container border border-outline-variant/20 h-full p-8 shadow-[10px_10px_0px_rgba(59,75,55,0.1)]">
+<div class="mb-8 space-y-2">
+<h2 class="font-['Rajdhani'] font-bold text-3xl tracking-tight uppercase border-b border-primary-container pb-2" style="">
+                            CAUSAS COMUNES DE SOCAVADO
+                        </h2>
+<p class="font-['JetBrains_Mono'] text-[10px] text-outline" style=""><br></p>
+</div>
+<ul class="space-y-4">
+<li class="group flex items-start gap-4 p-4 border border-outline-variant/10 hover:bg-primary-container/5 hover:border-primary-container transition-all cursor-default" style="">
+<span class="font-['JetBrains_Mono'] text-primary-container font-bold" style="">01.</span>
+<div class="space-y-1">
+<span class="block text-2xl font-bold leading-none" style="">Amperaje demasiado alto</span>
+<span class="block font-['JetBrains_Mono'] text-[11px] text-outline" style=""><br></span>
+</div>
+</li>
+<li class="group flex items-start gap-4 p-4 border border-outline-variant/10 hover:bg-primary-container/5 hover:border-primary-container transition-all cursor-default" style="">
+<span class="font-['JetBrains_Mono'] text-primary-container font-bold" style="">02.</span>
+<div class="space-y-1">
+<span class="block text-2xl font-bold leading-none" style="">Velocidad excesiva</span>
+<span class="block font-['JetBrains_Mono'] text-[11px] text-outline" style=""><br></span>
+</div>
+</li>
+<li class="group flex items-start gap-4 p-4 border border-outline-variant/10 hover:bg-primary-container/5 hover:border-primary-container transition-all cursor-default" style="">
+<span class="font-['JetBrains_Mono'] text-primary-container font-bold" style="">03.</span>
+<div class="space-y-1">
+<span class="block text-2xl font-bold leading-none" style="">Mala manipulación del electrodo</span>
+<span class="block font-['JetBrains_Mono'] text-[11px] text-outline" style=""><br></span>
+</div>
+</li>
+<li class="group flex items-start gap-4 p-4 border border-outline-variant/10 hover:bg-primary-container/5 hover:border-primary-container transition-all cursor-default" style="">
+<span class="font-['JetBrains_Mono'] text-primary-container font-bold" style="">04.</span>
+<div class="space-y-1">
+<span class="block text-2xl font-bold leading-none" style="">Ángulo incorrecto</span>
+<span class="block font-['JetBrains_Mono'] text-[11px] text-outline" style=""><br></span>
+</div>
+</li>
+<li class="group flex items-start gap-4 p-4 border border-outline-variant/10 hover:bg-primary-container/5 hover:border-primary-container transition-all cursor-default" style="">
+<span class="font-['JetBrains_Mono'] text-primary-container font-bold" style="">05.</span>
+<div class="space-y-1">
+<span class="block text-2xl font-bold leading-none" style="">Permanencia insuficiente en los bordes</span>
+<span class="block font-['JetBrains_Mono'] text-[11px] text-outline" style=""><br></span>
+</div>
+</li>
+</ul>
+<div class="mt-12 p-4 bg-secondary-container/10 border border-secondary-container/30">
+<div class="flex items-center gap-3 text-secondary-container mb-2">
+<span class="material-symbols-outlined" style="">warning</span>
+<span class="font-bold uppercase tracking-widest text-sm" style="color:#ffffff">IMPORTANTE</span>
+</div>
+<p class="text-xl font-medium leading-relaxed italic" style="color:#ffffff">
+                            El socavado reduce drásticamente la resistencia a la fatiga. No proceder con el siguiente cordón sin rectificación técnica.
+                        </p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<footer class="bg-[#1C1B1B] dark:bg-[#1C1B1B] fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-10 py-4 border-t border-[#3B4B37]/30">
+<!-- PREVIOUS -->
+<button class="flex flex-col items-center justify-center text-[#1BFF3C] border border-[#1BFF3C]/30 px-8 py-2 hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all duration-200 active:shadow-[0px_0px_20px_rgba(27,255,60,0.5)]" style="">
+<span class="material-symbols-outlined" data-icon="arrow_back" style="">arrow_back</span>
+<span class="font-['JetBrains_Mono'] text-[12px] font-bold tracking-widest uppercase" style="">PREVIOUS</span>
+</button>
+<!-- ACTIVE PAGE SLIDE -->
+<div class="flex flex-col items-center justify-center px-12 py-2 border border-[#1BFF3C] text-[#1BFF3C]">
+<span class="material-symbols-outlined" data-icon="analytics" style="font-variation-settings: &quot;FILL&quot; 1;">analytics</span>
+<span class="font-['JetBrains_Mono'] text-[12px] font-bold tracking-widest uppercase" style="">07</span>
+</div>
+<!-- NEXT -->
+<button class="flex flex-col items-center justify-center text-[#1BFF3C] border border-[#1BFF3C]/30 px-8 py-2 hover:bg-[#1BFF3C] hover:text-[#003A05] transition-all duration-200 active:shadow-[0px_0px_20px_rgba(27,255,60,0.5)]" style="">
+<span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+<span class="font-['JetBrains_Mono'] text-[12px] font-bold tracking-widest uppercase" style="">NEXT</span>
+</button>
+</footer></nav>
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#930005",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary": "#fff3d3",
+                        "on-primary": "#003a05",
+                        "surface-variant": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#00e631",
+                        "surface-container": "#201f1f",
+                        "primary-container": "#1bff3c",
+                        "surface-container-highest": "#353534",
+                        "on-primary-container": "#007112",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#6f5c00",
+                        "outline-variant": "#3b4b37",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "primary": "#ecffe3",
+                        "primary-fixed": "#74ff6d",
+                        "surface-tint": "#00e631",
+                        "on-secondary-fixed-variant": "#554500",
+                        "on-tertiary-container": "#c5020c",
+                        "on-primary-fixed": "#002202",
+                        "on-background": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface-variant": "#baccb2",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#ffd3cd",
+                        "secondary-container": "#fed400",
+                        "tertiary-fixed": "#ffdad5",
+                        "on-secondary": "#3b2f00",
+                        "outline": "#84967e",
+                        "surface-bright": "#393939",
+                        "on-tertiary-fixed": "#410001",
+                        "on-secondary-fixed": "#221b00",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#ffe174",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131313",
+                        "tertiary": "#fff8f7",
+                        "on-tertiary": "#690003",
+                        "inverse-primary": "#006e11",
+                        "secondary-fixed-dim": "#eac300",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#00530a"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani"],
+                        "body": ["Space Grotesk"],
+                        "label": ["JetBrains Mono"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .blueprint-grid {
+            background-image:
+                linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body blueprint-grid min-h-screen flex flex-col overflow-hidden">
+    <!-- TopAppBar Section -->
+    <header
+        class="bg-[#131313] dark:bg-[#131313] flex justify-between items-center w-full px-6 py-4 border-b border-[#3B4B37]/20 flat shadow-[0_0_15px_rgba(27,255,60,0.1)] z-50">
+        <div class="flex items-center gap-4">
+            <span class="text-[#1BFF3C] font-['Rajdhani'] font-black tracking-tighter text-2xl" style="">WELD BEAR
+                IEDU&nbsp;</span>
+            <div class="h-6 w-px bg-outline-variant/30 hidden md:block"></div>
+            <span class="font-label text-xs text-outline tracking-widest hidden md:block"><br></span>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="hidden md:flex gap-8 font-['Rajdhani'] uppercase tracking-widest font-bold text-xl">
+                <a class="text-[#84967E] hover:bg-[#1BFF3C]/10 transition-colors duration-200 px-2" href="#"
+                    style="">MODULES</a>
+                <a class="text-[#1BFF3C] border-b-2 border-[#1BFF3C] px-2" href="#" style="">CURRICULUM</a>
+                <a class="text-[#84967E] hover:bg-[#1BFF3C]/10 transition-colors duration-200 px-2" href="#"
+                    style="">RESOURCES</a>
+            </div>
+            <div class="flex gap-2">
+                <button
+                    class="p-2 text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-colors duration-200 Active: ring-1 ring-[#1BFF3C]"
+                    style="">
+                    <span class="material-symbols-outlined" style="">terminal</span>
+                </button>
+                <button
+                    class="p-2 text-[#1BFF3C] hover:bg-[#1BFF3C]/10 transition-colors duration-200 Active: ring-1 ring-[#1BFF3C]"
+                    style="">
+                    <span class="material-symbols-outlined" style="">settings</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow relative flex flex-col p-8 md:p-12 gap-8 overflow-y-auto pb-24">
+        <!-- Background Decorative Element -->
+
+        <!-- Header Content -->
+        <div class="relative z-10 border-l-4 border-primary-container pl-6">
+            <div class="font-label text-primary-container text-sm tracking-[0.3em] mb-2"><br></div>
+            <h1 class="font-headline text-5xl md:text-7xl font-bold uppercase tracking-tighter text-on-surface"
+                style="">
+                LIMPIEZA DEL <span class="text-primary-container" style="">CORDÓN</span>
+            </h1>
+            <p class="mt-4 text-xl text-on-surface-variant max-w-2xl font-medium" style="">
+                Después de cada cordón se debe limpiar el área para asegurar la integridad estructural de la unión
+                soldada.
+            </p>
+        </div>
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10">
+            <!-- Purposes Section -->
+            <div
+                class="md:col-start-3 md:col-span-4 bg-surface-container-low border border-outline-variant/20 p-8 shadow-[inset_0_0_20px_rgba(0,0,0,0.2)]">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary-container"
+                        style="font-variation-settings: &quot;FILL&quot; 1;">task_alt</span>
+                    <h2 class="font-headline text-2xl font-bold uppercase tracking-widest" style="">OBJETIVOS DE
+                        LIMPIEZA</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-y-10">
+                    <div class="group">
+
+                        <h3 class="font-headline text-2xl font-bold text-primary-fixed mb-2 uppercase" style="">
+                            Inspeccionar defectos</h3>
+                        <div class="h-0.5 w-8 bg-primary-container/30 group-hover:w-full transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="group">
+
+                        <h3 class="font-headline text-2xl font-bold text-primary-fixed mb-2 uppercase" style="">Remover
+                            escoria</h3>
+                        <div class="h-0.5 w-8 bg-primary-container/30 group-hover:w-full transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="group">
+
+                        <h3 class="font-headline text-2xl font-bold text-primary-fixed mb-2 uppercase" style="">Preparar
+                            el siguiente pase</h3>
+                        <div class="h-0.5 w-8 bg-primary-container/30 group-hover:w-full transition-all duration-500">
+                        </div>
+                    </div>
+                    <div class="group">
+
+                        <h3 class="font-headline text-2xl font-bold text-primary-fixed mb-2 uppercase" style="">Evitar
+                            contaminación capas</h3>
+                        <div class="h-0.5 w-8 bg-primary-container/30 group-hover:w-full transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tools Section -->
+            <div
+                class="md:col-span-4 bg-surface-container-low border border-outline-variant/20 p-8 shadow-[inset_0_0_20px_rgba(0,0,0,0.2)]">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary-container"
+                        style="font-variation-settings: &quot;FILL&quot; 1;">construction</span>
+                    <h2 class="font-headline text-2xl font-bold uppercase tracking-widest text-on-surface" style="">
+                        HERRAMIENTAS COMUNES</h2>
+                </div>
+                <ul class="space-y-4 font-headline text-2xl font-bold uppercase text-on-surface">
+                    <li class="flex items-center justify-between border-b border-outline-variant/20 pb-2" style="">
+                        <span class="" style="">Piqueta</span>
+
+                    </li>
+                    <li class="flex items-center justify-between border-b border-outline-variant/20 pb-2" style="">
+                        <span class="" style="">Cepillo de acero</span>
+
+                    </li>
+                    <li class="flex items-center justify-between" style="">
+                        <span class="" style="">Pulidora <span class="text-sm font-normal opacity-60" style="">(SI
+                                APLICA)</span></span>
+
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Important Note -->
+            <div
+                class="md:col-start-3 md:col-span-8 bg-surface-container-high border-l-4 border-secondary-container p-8 flex items-center gap-6 mt-4 shadow-[inset_0_0_20px_rgba(0,0,0,0.2)]">
+                <span class="material-symbols-outlined text-secondary-container text-4xl"
+                    style="font-variation-settings: 'FILL' 1">warning</span>
+                <div>
+                    <div class="font-label text-xs text-secondary-container mb-1 tracking-widest font-bold uppercase"
+                        style="">IMPORTANTE_DATALOG:</div>
+                    <div class="text-base md:text-lg text-on-surface font-bold uppercase tracking-widest leading-relaxed"
+                        style="">
+                        La limpieza deficiente es la causa principal de inclusiones de escoria en soldaduras multipase.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Technical Metadata Footer within Canvas -->
+        <div
+            class="mt-auto pt-8 border-t border-outline-variant/20 flex flex-wrap justify-between items-end gap-4 relative z-10">
+            <div class="font-label text-[10px] text-outline space-y-1">
+                <p class="" style="">REF_ID: WLD-MOD-04-SEC-02</p>
+                <p class="" style="">TIMESTAMP: 2026-05-24T14:32:01Z</p>
+                <p class="" style="">STATUS: VERIFIED_DATA</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-1">
+                    <div class="w-3 h-3 bg-primary-container"></div>
+                    <div class="w-3 h-3 bg-primary-container/60"></div>
+                    <div class="w-3 h-3 bg-primary-container/30"></div>
+                </div>
+                <div class="font-headline text-4xl font-bold text-on-surface/20" style=""><br></div>
+            </div>
+        </div>
+    </main>
+    <!-- BottomNavBar Section -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-stretch h-16 bg-[#131313] dark:bg-[#131313] border-t border-[#3B4B37]/20">
+        <button
+            class="flex flex-col items-center justify-center text-[#84967E] px-8 py-3 hover:bg-[#1BFF3C]/20 hover:text-[#1BFF3C] transition-all duration-75 active:scale-95"
+            style="">
+            <span class="material-symbols-outlined mb-1" style="">arrow_back_ios</span>
+            <span class="font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-widest" style="">PREVIOUS</span>
+        </button>
+        <button
+            class="flex flex-col items-center justify-center text-[#1BFF3C] px-12 py-3 active:scale-95 duration-75 border-x border-[#1BFF3C]"
+            style="">
+            <span class="material-symbols-outlined mb-1"
+                style="font-variation-settings: &quot;FILL&quot; 1;">grid_view</span>
+            <span class="font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-widest" style="">13</span>
+        </button>
+        <button
+            class="flex flex-col items-center justify-center text-[#84967E] px-8 py-3 hover:bg-[#1BFF3C]/20 hover:text-[#1BFF3C] transition-all duration-75 active:scale-95"
+            style="">
+            <span class="material-symbols-outlined mb-1" style="">arrow_forward_ios</span>
+            <span class="font-['JetBrains_Mono'] text-xs font-bold uppercase tracking-widest" style="">NEXT</span>
+        </button>
+    </nav>
+
+
+    \n
+
+    \n
+
+    \n
+
+    \n
+
+    \n
+    
+    \n
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body>
+
+</html>

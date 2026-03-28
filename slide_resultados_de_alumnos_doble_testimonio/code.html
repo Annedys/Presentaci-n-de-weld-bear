@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary": "#fff3d3",
+            "primary": "#ecffe3",
+            "on-background": "#e5e2e1",
+            "surface-container-highest": "#353534",
+            "outline-variant": "#3b4b37",
+            "on-surface-variant": "#baccb2",
+            "on-surface": "#e5e2e1",
+            "on-secondary-fixed-variant": "#554500",
+            "on-error": "#690005",
+            "surface-container": "#201f1f",
+            "primary-fixed": "#74ff6d",
+            "error": "#ffb4ab",
+            "surface-bright": "#393939",
+            "background": "#131313",
+            "tertiary-fixed": "#ffdad5",
+            "surface-container-lowest": "#0e0e0e",
+            "error-container": "#93000a",
+            "inverse-surface": "#e5e2e1",
+            "tertiary-container": "#ffd3cd",
+            "primary-fixed-dim": "#00e631",
+            "on-tertiary-fixed": "#410001",
+            "on-tertiary-container": "#c5020c",
+            "surface-tint": "#00e631",
+            "secondary-fixed-dim": "#eac300",
+            "surface-dim": "#131313",
+            "surface-variant": "#353534",
+            "on-error-container": "#ffdad6",
+            "primary-container": "#1bff3c",
+            "on-tertiary-fixed-variant": "#930005",
+            "inverse-primary": "#006e11",
+            "tertiary-fixed-dim": "#ffb4aa",
+            "surface-container-high": "#2a2a2a",
+            "on-secondary-fixed": "#221b00",
+            "on-tertiary": "#690003",
+            "on-secondary-container": "#6f5c00",
+            "on-primary-container": "#007112",
+            "on-secondary": "#3b2f00",
+            "secondary-fixed": "#ffe174",
+            "outline": "#84967e",
+            "on-primary": "#003a05",
+            "tertiary": "#fff8f7",
+            "on-primary-fixed": "#002202",
+            "inverse-on-surface": "#313030",
+            "surface": "#131313",
+            "secondary-container": "#fed400",
+            "on-primary-fixed-variant": "#00530a",
+            "surface-container-low": "#1c1b1b"
+          },
+          fontFamily: {
+            "headline": ["Rajdhani"],
+            "body": ["Space Grotesk"],
+            "label": ["JetBrains Mono"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .blueprint-grid {
+      background-image: linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body blueprint-grid h-screen overflow-hidden">
+  <!-- Top Navigation -->
+  <header
+    class="bg-[#131313] shadow-[0px_0px_15px_rgba(27,255,60,0.15)] flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50">
+    <div class="text-2xl font-black text-[#1BFF3C] tracking-widest font-['Rajdhani'] uppercase" style=""><span
+        style="font-family: Rajdhani, sans-serif; letter-spacing: -1.2px;">WELD BEAR IEDU</span></div>
+    <div class="flex gap-4">
+      <button class="text-[#84967E] hover:bg-[#1BFF3C]/10 transition-colors p-2" style="">
+        <span class="material-symbols-outlined" style="">info</span>
+      </button>
+      <button class="text-[#84967E] hover:bg-[#1BFF3C]/10 transition-colors p-2" style="">
+        <span class="material-symbols-outlined" style="">settings</span>
+      </button>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-6 py-4 h-[calc(100vh-128px)] overflow-hidden flex flex-col justify-center">
+    <!-- Page Header Section -->
+    <div class="mb-12 border-l-4 border-primary-container pl-6">
+      <div class="font-label text-primary-container text-sm tracking-[0.2em] mb-2" style=""><br></div>
+      <h1 class="font-headline font-bold text-5xl md:text-6xl text-on-surface uppercase tracking-tighter" style="">
+        Resultados de nuestros alumnos
+      </h1>
+    </div>
+    <!-- Bento Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+      <!-- Main Hero Image (Workshop Action) -->
+      <div
+        class="md:col-span-8 bg-surface-container-low border border-outline-variant/30 relative group overflow-hidden">
+        <div
+          class="absolute top-4 left-4 z-10 bg-primary-container text-on-primary px-3 py-1 font-label text-xs font-bold tracking-widest"
+          style="">
+          LIVE_WORKSHOP_S01
+        </div>
+        <div class="absolute top-4 right-4 z-10 flex gap-2">
+          <span
+            class="bg-background/80 backdrop-blur-md border border-primary-container/30 text-primary-container px-2 py-1 font-label text-[10px]"
+            style="">COORD: 40.7128° N</span>
+        </div>
+        <img
+          class="w-full aspect-video object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+          data-alt="high contrast photo of students in a modern welding workshop using professional tools under bright industrial lighting"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb0K4bB1TTgej0NJBUiIUQ-zPetzyxGKFOGDL0fXcKQkpAd6WLAWhRMAoJ3FTsYUjwIbcpJ_R3Lk5mqEi0tcqPDBgoC3yAWFDc9Eft557nqRP7wN9ftZoyHdmXN_zbAiwP7w0oZxY9hLNCB3tWsWjeNipntATBdhFtQM3_ubO0JrTDI2OPmZkxNPqyk9qw3SwOwpG2hc440wgOa7I_ihcJ0R6VRhXCL85PRNQtFBbpJpctYOI_17POqDhbIbsp6hryhvjC-_sE0JQ"
+          style="">
+        <div class="p-6 border-t border-outline-variant/20">
+          <div class="flex justify-between items-end">
+            <div>
+              <h3 class="font-headline font-bold text-2xl text-primary-container uppercase tracking-tight" style="">
+                Capacitación Técnica Avanzada</h3>
+              <p class="text-on-surface text-xl font-medium mt-2 max-w-xl" style="">Inmersión total en procesos
+                industriales reales. El 94% de nuestros alumnos reporta una mejora inmediata en su precisión técnica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Side Stats/Badges -->
+      <div class="md:col-span-4 flex flex-col gap-6 h-full">
+        <div class="space-y-4 h-full flex flex-col">
+          <!-- Featured Review 1 -->
+          <div
+            class="bg-surface-container-low border border-outline-variant/20 p-8 hover:border-primary-container transition-all flex-1 flex flex-col justify-center relative">
+            <div class="absolute top-0 right-0 p-2 border-r border-t border-primary-container/20 w-4 h-4"></div>
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 border border-primary-container/30 overflow-hidden">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHqXbkBiE0ka1kgaLEzgmCxkTVUsWzXfa2j9R3-l-517d2Iw5qoPxA_eQi0gUtrCUh2qq60KerUBvhzBimQEsiqPq2z81oMlXxQGeKxyz0MIa3vPGKKhz3pj-_WJRbKY61X4NyNqLjV0Rbro3y4UXoT0CvUjpNlQSmBMou4djiD-r0czwjxEOEU37joUbDV5ItymqOOfZ8sh9C2tu5epRtQLgXcSeIcbLhde3Tsbce0ua2wR_BWBz2QijDnA23oedbVon02U6uZQg"
+                  class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h4 class="font-headline font-bold text-on-surface uppercase tracking-tight" style="">Carlos Mendoza
+                </h4>
+                <div class="font-label text-[10px] text-primary-container uppercase" style="">Industrial Specialist
+                </div>
+              </div>
+            </div>
+            <p class="text-xl font-bold italic text-on-surface leading-relaxed" style="">
+              "La metodología técnica superó mis expectativas. Logré certificarme en procesos TIG en tiempo récord
+              gracias al soporte 24/7."
+            </p>
+          </div>
+          <!-- Featured Review 2 -->
+          <div
+            class="bg-surface-container-low border border-outline-variant/20 p-8 hover:border-primary-container transition-all flex-1 flex flex-col justify-center relative">
+            <div class="absolute top-0 right-0 p-2 border-r border-t border-primary-container/20 w-4 h-4"></div>
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 border border-primary-container/30 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=facearea&facepad=2&w=256&h=256&q=80"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute -bottom-1 -right-1 bg-primary-container rounded-full p-0.5 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[10px] text-on-primary font-bold" style="">check</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-headline font-bold text-on-surface uppercase tracking-tight" style="">JOSÉ M. P...</h4>
+                <div class="font-label text-[10px] text-primary-container uppercase" style="">Industrial Technician
+                </div>
+                <div class="font-label text-[8px] text-outline mt-1 uppercase" style="">Hace 11 meses // Ponce</div>
+              </div>
+            </div>
+            <p class="text-xl font-bold italic text-on-surface leading-relaxed" style="">
+              "En el 2021 decidí tomar el curso con Weld Bear IEDU para ampliar mis conocimientos en soldadura. Hoy día
+              le saco mucho provecho a lo aprendido aquí."
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Row Content -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:col-span-12">
+        <!-- Mini Stat 1 -->
+        <div
+          class="bg-surface-container-low border border-outline-variant/30 px-6 py-4 flex flex-col items-center justify-center group overflow-hidden relative">
+          <div
+            class="absolute inset-0 bg-primary-container/0 group-hover:bg-primary-container/[0.03] transition-colors">
+          </div>
+          <div class="font-label text-base font-bold text-outline uppercase tracking-widest mb-1" style="">Certificados
+          </div>
+          <div class="text-2xl font-headline font-bold text-on-surface" style="">1,240+</div>
+        </div>
+        <!-- Mini Stat 2 -->
+        <div
+          class="bg-surface-container-low border border-primary-container/40 px-6 py-4 flex flex-col items-center justify-center group overflow-hidden relative">
+          <div class="absolute inset-0 bg-primary-container/[0.05]"></div>
+          <div class="font-label text-base font-bold text-primary-container uppercase tracking-widest mb-1" style="">
+            Empresas</div>
+          <div class="text-2xl font-headline font-bold text-primary-container" style="">45</div>
+        </div>
+        <!-- Mini Stat 3 -->
+        <div
+          class="bg-surface-container-low border border-outline-variant/30 px-6 py-4 flex flex-col items-center justify-center group overflow-hidden relative">
+          <div
+            class="absolute inset-0 bg-primary-container/0 group-hover:bg-primary-container/[0.03] transition-colors">
+          </div>
+          <div class="font-label text-base font-bold text-outline uppercase tracking-widest mb-1" style="">Países</div>
+          <div class="text-2xl font-headline font-bold text-on-surface" style="">12</div>
+        </div>
+        <!-- Mini Stat 4 -->
+        <div
+          class="bg-surface-container-low border border-outline-variant/30 px-6 py-4 flex flex-col items-center justify-center group overflow-hidden relative">
+          <div
+            class="absolute inset-0 bg-primary-container/0 group-hover:bg-primary-container/[0.03] transition-colors">
+          </div>
+          <div class="font-label text-base font-bold text-outline uppercase tracking-widest mb-1" style="">Garantía
+          </div>
+          <div class="text-2xl font-headline font-bold text-secondary-container" style="">100%</div>
+        </div>
+      </div>
+    </div>
+    <!-- Technical Annotation -->
+    <div
+      class="mt-12 flex justify-between items-center opacity-30 font-label text-[10px] tracking-widest uppercase border-t border-outline-variant/20 pt-4">
+      <div class="" style="">Data_Source: Student_Portal_V2</div>
+      <div class="" style="">Ref_System: Isometric_Projection_88</div>
+      <div class="" style="">Last_Update: 2023.10.24</div>
+    </div>
+  </main>
+  <!-- Navigation Shell -->
+  <nav
+    class="fixed bottom-0 left-0 w-full flex justify-between items-stretch h-16 bg-[#1C1B1B] dark:bg-[#1C1B1B] z-50 border-t border-[#3B4B37]/20">
+    <!-- Previous Button -->
+    <button
+      class="flex flex-col items-center justify-center text-[#84967E] px-8 py-3 hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/5 active:opacity-80 transition-all"
+      style="">
+      <span class="material-symbols-outlined mb-1" style="">arrow_back</span>
+      <span class="font-['JetBrains_Mono'] text-xs uppercase tracking-widest" style="">ANTERIOR</span>
+    </button>
+    <!-- Active/Current Slide -->
+    <div
+      class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 border-x border-[#1BFF3C]/20 px-8 py-3">
+      <span class="material-symbols-outlined mb-1" style="font-variation-settings: &quot;FILL&quot; 1;">analytics</span>
+      <span class="font-['JetBrains_Mono'] text-xs uppercase tracking-widest" style="">01</span>
+    </div>
+    <!-- Next Button -->
+    <button
+      class="flex flex-col items-center justify-center text-[#84967E] px-8 py-3 hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/5 active:opacity-80 transition-all"
+      style="">
+      <span class="material-symbols-outlined mb-1" style="">arrow_forward</span>
+      <span class="font-['JetBrains_Mono'] text-xs uppercase tracking-widest" style="">SIGUIENTE</span>
+    </button>
+  </nav>
+
+
+
+
+
+
+
+
+  <script id="weld-bear-sync">
+    setTimeout(() => {
+      const triggers = document.querySelectorAll('button, a');
+      triggers.forEach(el => {
+        const text = el.innerText.toUpperCase();
+        const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+        const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+        const isHome = text.includes('HOME') || text.includes('INICIO');
+        const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+        if (isPrev || isNext || isHome || isFinish) {
+          el.onclick = (e) => {
+            e.preventDefault();
+            if (isPrev) window.parent.postMessage('PREV', '*');
+            if (isNext) window.parent.postMessage('NEXT', '*');
+            if (isHome) window.parent.postMessage('HOME', '*');
+            if (isFinish) window.parent.postMessage('FINISH', '*');
+          };
+        }
+      });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        window.parent.postMessage('NEXT', '*');
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        window.parent.postMessage('PREV', '*');
+      }
+    });
+
+    window.addEventListener('load', () => {
+      window.parent.postMessage('LOADED', '*');
+    });
+  </script>
+
+</body>
+
+</html>

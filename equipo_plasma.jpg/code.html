@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Slide 999</title><style>body,html{margin:0;padding:0;background-color:#131313;width:100vw;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;}img{width:100%;height:100%;object-fit:contain;}</style></head><body><img src="screen.png"/>
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        document.querySelectorAll('button').forEach(btn => {
+            const text = btn.innerText.toUpperCase();
+            if (text.includes('PREV') || text.includes('ANTERIOR') || text.includes('ARROW_BACK') || text.includes('BACK_IOS')) {
+                btn.onclick = () => window.parent.postMessage('PREV', '*');
+            } else if (text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('ARROW_FORWARD') || text.includes('FORWARD_IOS')) {
+                btn.onclick = () => window.parent.postMessage('NEXT', '*');
+            } else if (text.includes('HOME') || text.includes('INICIO')) {
+                btn.onclick = () => window.parent.postMessage('HOME', '*');
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            window.parent.postMessage('PREV', '*');
+        } else if (e.key === 'Home') {
+            window.parent.postMessage('HOME', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+\n</body></html>

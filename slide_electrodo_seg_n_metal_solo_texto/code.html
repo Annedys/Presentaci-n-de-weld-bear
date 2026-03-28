@@ -1,0 +1,162 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#2a2a2a",
+              "on-surface": "#e5e2e1",
+              "background": "#131313",
+              "primary-container": "#1bff3c",
+              "surface-container-low": "#1c1b1b",
+              "outline": "#84967e",
+              "outline-variant": "#3b4b37",
+              "secondary-container": "#fed400",
+              "error": "#ffb4ab",
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "technical": ["JetBrains Mono"]
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col overflow-hidden">
+<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50 border-b border-[#3B4B37]/20">
+<div class="text-2xl font-bold tracking-tighter text-[#1BFF3C] uppercase font-headline">WELD BEAR IEDU</div>
+<div class="flex items-center gap-4">
+<button class="text-[#84967E] hover:text-[#1BFF3C] transition-all"><span class="material-symbols-outlined">precision_manufacturing</span></button>
+</div>
+</header>
+
+<main class="flex-grow pt-24 pb-32 px-6 blueprint-grid relative h-[calc(100vh-80px)] overflow-hidden">
+<div class="max-w-7xl mx-auto h-full flex flex-col">
+<!-- Section Header -->
+<div class="mb-12 border-l-4 border-primary-container pl-6 py-2 bg-surface-container-low/50">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-technical text-[10px] text-outline uppercase tracking-widest">Base Material // Electrodes Selections</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<span class="font-technical text-[10px] text-primary-container">SYS_REF: MET-SEL-v2</span>
+</div>
+<h1 class="text-4xl md:text-6xl font-headline font-bold text-on-surface tracking-tight uppercase leading-none">
+                    QUÉ ELECTRODO SE USA EN CADA METAL
+                </h1>
+</div>
+
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow pb-24 h-full">
+<!-- Acero Negro -->
+<div class="bg-surface-container-low border border-outline-variant/30 p-10 flex flex-col justify-between group hover:border-primary-container transition-all">
+<div>
+<h2 class="text-5xl font-black font-headline text-on-surface mb-8 uppercase tracking-widest flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container text-4xl">layers</span> ACERO NEGRO</h2>
+<div class="space-y-6">
+<div class="bg-primary-container/10 p-8 border-l-4 border-primary-container shadow-[inset_0_0_50px_rgba(27,255,60,0.05)]">
+<p class="text-3xl font-body text-on-surface leading-snug font-bold uppercase italic">
+                                    "Se trabaja comúnmente con <span class="text-primary-container font-black">E6013, E7018 o E6011</span> según el tipo de trabajo."
+                                </p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Galvanizado -->
+<div class="bg-surface-container-high border-2 border-outline-variant/20 p-10 flex flex-col justify-between group hover:border-secondary-container transition-all relative">
+<div class="absolute -top-3 left-6 bg-secondary-container text-background px-3 py-1 text-[10px] font-black uppercase tracking-widest">Safety Warning</div>
+<div>
+<h2 class="text-5xl font-black font-headline text-on-surface mb-8 uppercase tracking-widest flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container text-4xl">shield</span> GALVANIZADO</h2>
+<div class="space-y-6">
+<div class="bg-secondary-container/5 p-8 border-l-4 border-secondary-container">
+<p class="text-2xl font-body text-on-surface leading-snug font-medium uppercase italic">
+                                    "Puede soldarse, pero requiere <span class="text-secondary-container font-bold">limpieza de la zona</span> y precaución por los vapores del zinc."
+                                </p>
+<hr class="my-6 border-outline-variant/20">
+<p class="text-xl font-body text-on-surface/80 leading-relaxed font-normal uppercase italic">
+                                    "En trabajos básicos puede utilizarse electrodo <span class="text-primary-container font-black underline decoration-2 underline-offset-4">E6013</span> adecuado para acero galvanizado, luego limpiando bien el área."
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 bg-[#1C1B1B] border-t border-[#3B4B37]/20 shadow-[0_-5px_15px_rgba(27,255,60,0.05)]">
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:text-[#1BFF3C] px-8 py-2 group">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-technical text-[10px] mt-1 uppercase">ANTERIOR</span>
+</button>
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] font-bold">
+<span class="material-symbols-outlined">settings_backup_restore</span>
+<span class="font-technical text-sm mt-1 uppercase tracking-[0.2em]">METAL_GUIDE</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:text-[#1BFF3C] px-8 py-2 group">
+<span class="material-symbols-outlined">arrow_forward</span>
+<span class="font-technical text-[10px] mt-1 uppercase">SIGUIENTE</span>
+</button>
+</footer>
+
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

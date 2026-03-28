@@ -1,0 +1,232 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#e5e2e1",
+              "on-surface-variant": "#baccb2",
+              "on-tertiary-container": "#c5020c",
+              "surface-container": "#201f1f",
+              "outline-variant": "#3b4b37",
+              "inverse-on-surface": "#313030",
+              "on-secondary-container": "#6f5c00",
+              "on-error": "#690005",
+              "secondary-fixed": "#ffe174",
+              "on-primary-container": "#007112",
+              "surface-tint": "#00e631",
+              "inverse-primary": "#006e11",
+              "tertiary-fixed": "#ffdad5",
+              "secondary-fixed-dim": "#eac300",
+              "secondary": "#fff3d3",
+              "on-secondary-fixed": "#221b00",
+              "surface-container-low": "#1c1b1b",
+              "surface-variant": "#353534",
+              "on-tertiary-fixed-variant": "#930005",
+              "secondary-container": "#fed400",
+              "on-tertiary": "#690003",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "primary-fixed-dim": "#00e631",
+              "on-secondary": "#3b2f00",
+              "error-container": "#93000a",
+              "tertiary-container": "#ffd3cd",
+              "surface-container-high": "#2a2a2a",
+              "on-primary-fixed-variant": "#00530a",
+              "on-primary-fixed": "#002202",
+              "on-secondary-fixed-variant": "#554500",
+              "on-surface": "#e5e2e1",
+              "surface-container-highest": "#353534",
+              "primary-container": "#1bff3c",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#0e0e0e",
+              "surface": "#131313",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e5e2e1",
+              "primary": "#ecffe3",
+              "on-primary": "#003a05",
+              "tertiary": "#fff8f7",
+              "surface-dim": "#131313",
+              "outline": "#84967e",
+              "on-tertiary-fixed": "#410001",
+              "background": "#131313",
+              "primary-fixed": "#74ff6d",
+              "surface-bright": "#393939"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani", "sans-serif"],
+              "body": ["Space Grotesk", "sans-serif"],
+              "label": ["JetBrains Mono", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .blueprint-grid {
+        background-image: 
+          linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .scanline {
+        background: linear-gradient(to bottom, transparent 50%, rgba(27, 255, 60, 0.02) 50%);
+        background-size: 100% 4px;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary min-h-screen flex flex-col overflow-hidden">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#131313] dark:bg-[#131313] text-[#1BFF3C] font-['Rajdhani'] uppercase tracking-widest font-bold text-lg docked full-width top-0 border-b border-[#3B4B37]/20 flat-with-glow shadow-[0px_0px_15px_rgba(27,255,60,0.1)] flex justify-between items-center w-full px-6 h-16 z-50">
+<div class="text-[#1BFF3C] font-black tracking-tighter border-l-4 border-[#1BFF3C] pl-2 flex items-center gap-3">
+<span class="text-2xl" style=""><span style="font-family: Rajdhani, sans-serif; letter-spacing: -1.2px;">WELD&nbsp; BEAR&nbsp; IEDU</span></span>
+</div>
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="text-[#1BFF3C] border-b-2 border-[#1BFF3C] h-full flex items-center px-2 transition-all" href="#" style="">MODULE_01</a>
+<a class="text-[#84967E] hover:bg-[#1C1B1B] hover:text-[#1BFF3C] transition-colors duration-200 h-full flex items-center px-2" href="#" style="">CURRICULUM</a>
+<a class="text-[#84967E] hover:bg-[#1C1B1B] hover:text-[#1BFF3C] transition-colors duration-200 h-full flex items-center px-2" href="#" style="">RESOURCES</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-colors" style="">settings</button>
+<button class="material-symbols-outlined text-[#84967E] hover:text-[#1BFF3C] transition-colors" style="">fullscreen</button>
+</div>
+</header>
+<!-- Main Canvas: Slide Content -->
+<main class="flex-grow relative blueprint-grid overflow-hidden flex flex-col items-center justify-center p-8">
+<div class="absolute inset-0 scanline pointer-events-none"></div>
+<!-- Technical Watermarks/Metadata Anchors -->
+<div class="absolute top-8 left-8 flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-12 h-[1px] bg-primary-container"></span>
+<span class="font-label text-[10px] text-primary-container tracking-[0.2em]" style="">IDENTIFIER: WELD_BEAR_2026</span>
+</div>
+<div class="font-label text-[10px] text-outline opacity-50 pl-14" style="">COORD: 40.7128° N, 74.0060° W</div>
+</div>
+<div class="absolute top-8 right-8 text-right">
+<div class="font-label text-[10px] text-primary-container tracking-[0.2em] mb-1" style="">SYSTEM_STATUS: OPERATIONAL</div>
+<div class="flex gap-1 justify-end">
+<div class="w-1 h-4 bg-primary-container shadow-[0_0_8px_rgba(27,255,60,0.5)]"></div>
+<div class="w-1 h-4 bg-primary-container shadow-[0_0_8px_rgba(27,255,60,0.5)]"></div>
+<div class="w-1 h-4 bg-primary-container shadow-[0_0_8px_rgba(27,255,60,0.5)]"></div>
+<div class="w-1 h-4 bg-outline-variant"></div>
+</div>
+</div>
+<!-- Central Layout Block -->
+<div class="relative w-full max-w-6xl">
+<!-- Asymmetric Frame Elements -->
+<div class="absolute -top-12 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary-container/30"></div>
+<div class="absolute -bottom-12 -right-4 w-24 h-24 border-b-2 border-r-2 border-primary-container/30"></div>
+<div class="space-y-6">
+<!-- Decorative Prefix -->
+<div class="flex items-center gap-4">
+<span class="font-label text-primary-container bg-primary-container/10 px-3 py-1 text-sm border border-primary-container/20" style=""><br></span>
+<div class="flex-grow h-[1px] bg-gradient-to-right from-primary-container/40 to-transparent"></div>
+</div>
+<!-- Main Title Headline -->
+<h1 class="font-headline font-black text-6xl md:text-8xl lg:text-9xl leading-[0.9] text-primary tracking-tighter drop-shadow-[0_0_20px_rgba(27,255,60,0.15)]" style="">
+                    HERRAMIENTAS <br>
+                    NECESARIAS <br>
+<span class="text-primary-container" style="">PARA EL TALLER</span>
+</h1>
+<!-- Secondary Descriptive Metadata -->
+<div class="flex flex-col md:flex-row gap-8 mt-12 pt-8 border-t border-outline-variant/30">
+<div class="flex flex-col gap-1 min-w-[200px]">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest" style="">MODULE_REF</span>
+<span class="font-headline font-bold text-xl text-on-surface" style="">M-01: FOUNDATIONS</span>
+</div>
+<div class="flex flex-col gap-1 min-w-[200px]">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest" style="">EST_DURATION</span>
+<span class="font-headline font-bold text-xl text-on-surface" style="">45:00 MIN</span>
+</div>
+<div class="flex flex-col gap-1 flex-grow">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest" style="">TECHNICAL_NOTES</span>
+<p class="font-body text-sm text-on-surface-variant max-w-md" style="">
+                            Comprehensive inventory of welding apparatus, protective gear, and precision measuring instruments required for structural fabrication.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Visual: Schematic Placeholder/Graphic -->
+<!-- Corner Annotation -->
+</main>
+<!-- Bottom Navigation Anchor -->
+<footer class="bg-[#1C1B1B] dark:bg-[#1C1B1B] text-[#1BFF3C] font-['JetBrains_Mono'] text-xs font-bold tracking-tighter fixed bottom-0 w-full z-50 border-t border-[#3B4B37]/30 h-14 flex justify-between items-stretch">
+<button class="flex items-center justify-center text-[#84967E] px-8 h-full border-r border-[#3B4B37]/10 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all active:brightness-125" style="">
+<span class="material-symbols-outlined mr-2" data-icon="chevron_left" style="">chevron_left</span>
+            PREVIOUS
+        </button>
+<div class="flex items-center justify-center bg-[#1BFF3C] text-[#003A05] px-12 h-full transition-all flex-grow md:flex-grow-0" style="">
+<span class="material-symbols-outlined mr-2" data-icon="grid_view" style="">grid_view</span>1 / 60
+        </div>
+<button class="flex items-center justify-center text-[#84967E] px-8 h-full border-l border-[#3B4B37]/10 hover:bg-[#2A2A2A] hover:text-[#1BFF3C] transition-all active:brightness-125 ml-auto" style="">
+            NEXT
+            <span class="material-symbols-outlined ml-2" data-icon="chevron_right" style="">chevron_right</span>
+</button>
+</footer>
+
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+\n
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

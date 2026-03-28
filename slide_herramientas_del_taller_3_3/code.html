@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WELD_TECH: PHASE_01 - HERRAMIENTAS DEL TALLER</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#1c1b1b",
+                        "surface-dim": "#131313",
+                        "primary-container": "#1bff3c",
+                        "on-secondary-fixed-variant": "#554500",
+                        "on-primary-container": "#007112",
+                        "on-secondary": "#3b2f00",
+                        "secondary-fixed-dim": "#eac300",
+                        "secondary": "#fff3d3",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#002202",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed-dim": "#00e631",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#00530a",
+                        "on-tertiary-fixed": "#410001",
+                        "secondary-container": "#fed400",
+                        "surface-tint": "#00e631",
+                        "tertiary": "#fff8f7",
+                        "on-error": "#690005",
+                        "primary": "#ecffe3",
+                        "on-tertiary-container": "#c5020c",
+                        "background": "#131313",
+                        "on-primary": "#003a05",
+                        "on-surface-variant": "#baccb2",
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "surface-variant": "#353534",
+                        "inverse-primary": "#006e11",
+                        "error-container": "#93000a",
+                        "outline": "#84967e",
+                        "primary-fixed": "#74ff6d",
+                        "tertiary-fixed": "#ffdad5",
+                        "surface-container-highest": "#353534",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "on-background": "#e5e2e1",
+                        "surface-bright": "#393939",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "surface-container-high": "#2a2a2a",
+                        "outline-variant": "#3b4b37",
+                        "on-tertiary": "#690003",
+                        "secondary-fixed": "#ffe174",
+                        "on-secondary-fixed": "#221b00",
+                        "surface": "#131313",
+                        "on-secondary-container": "#6f5c00",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#ffd3cd"
+                    },
+                    fontFamily: {
+                        "headline": ["Rajdhani", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            background-image: 
+                linear-gradient(rgba(59, 75, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 75, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="text-on-surface font-body min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold text-[#1BFF3C] font-['Rajdhani'] tracking-tighter">WELD BEAR IEDU</span>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<span class="font-['Rajdhani'] uppercase tracking-widest text-sm text-[#1BFF3C]">PHASE_01</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Rajdhani'] uppercase tracking-widest text-sm text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#">MODULES</a>
+<a class="font-['Rajdhani'] uppercase tracking-widest text-sm text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">SCHEMATICS</a>
+<a class="font-['Rajdhani'] uppercase tracking-widest text-sm text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">SAFETY</a>
+<a class="font-['Rajdhani'] uppercase tracking-widest text-sm text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">RESOURCES</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-outline hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-outline hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-8 max-w-7xl mx-auto w-full">
+<!-- Technical Header Section -->
+<div class="mb-12 flex justify-between items-end border-b border-outline-variant pb-4">
+<div>
+<p class="font-label text-primary-container text-xs mb-1 tracking-[0.2em]">TECHNICAL SPECIFICATIONS // 03</p>
+<h1 class="font-headline text-5xl font-bold uppercase tracking-tight text-on-surface">HERRAMIENTAS DEL TALLER (3/3)</h1>
+</div>
+<div class="text-right hidden sm:block">
+<p class="font-label text-[10px] text-outline uppercase tracking-widest">System Status: Nominal</p>
+<p class="font-label text-[10px] text-outline uppercase tracking-widest">Environment: High_Temp_Workshop</p>
+</div>
+</div>
+<!-- 2x2 Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Card 1: DISCOS DE CORTE -->
+<div class="bg-surface-container-low border border-outline-variant p-6 relative group hover:border-primary-container transition-colors duration-300">
+                    <div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline">REF: GND_CLP_01</div>
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-primary-container/10 p-3">
+                            <span class="material-symbols-outlined text-primary-container" data-icon="grid_view">grid_view</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline text-3xl font-bold tracking-wide uppercase">DISCOS DE CORTE</h3>
+                        </div>
+                    </div>
+                                        <p class="text-on-surface-variant text-2xl font-medium leading-tight mb-6 font-body">
+                        Discos abrasivos de alta velocidad para seccionado preciso de perfiles y planchas metálicas.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="px-2 py-1 bg-primary-container/20 border border-primary-container/30 text-primary-container font-label text-[10px] uppercase">Status: Nominal</div>
+                        <div class="px-2 py-1 bg-surface-container-highest text-outline font-label text-[10px] uppercase">Duty: 100%</div>
+                    </div>
+                    <div class="w-full h-42 bg-surface-dim overflow-hidden border border-outline-variant/30 hidden">
+                        <img class="w-full h-full object-cover opacity-60" src="..."/>
+                    </div>
+</div>
+<!-- Card 2: DISCOS DE DESBASTE -->
+<div class="bg-surface-container-low border border-outline-variant p-6 relative group hover:border-primary-container transition-colors duration-300">
+                    <div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline">REF: GRND_AX_04</div>
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-secondary-container/10 p-3">
+                            <span class="material-symbols-outlined text-secondary-container" data-icon="toys_fan">toys_fan</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline text-3xl font-bold tracking-wide uppercase">DISCOS DE DESBASTE</h3>
+                        </div>
+                    </div>
+                                        <p class="text-on-surface-variant text-2xl font-medium leading-tight mb-6 font-body">
+                        Diseñados para la remoción agresiva de material, limpieza de cordones y preparación de biseles.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="px-2 py-1 bg-secondary-container/20 border border-secondary-container/30 text-secondary-container font-label text-[10px] uppercase">Safety: Critical</div>
+                        <div class="px-2 py-1 bg-surface-container-highest text-outline font-label text-[10px] uppercase">RPM: 11,000</div>
+                    </div>
+                    <div class="w-full h-42 bg-surface-dim overflow-hidden border border-outline-variant/30 hidden">
+                        <img class="w-full h-full object-cover opacity-60" src="..."/>
+                    </div>
+</div>
+<!-- Card 3: CINTA MÉTRICA -->
+<div class="bg-surface-container-low border border-outline-variant p-6 relative group hover:border-primary-container transition-colors duration-300">
+                    <div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline">REF: SAW_MTL_14</div>
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-primary-container/10 p-3">
+                            <span class="material-symbols-outlined text-primary-container" data-icon="precision_manufacturing">precision_manufacturing</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline text-3xl font-bold tracking-wide uppercase">CINTA MÉTRICA</h3>
+                        </div>
+                    </div>
+                                        <p class="text-on-surface-variant text-2xl font-medium leading-tight mb-6 font-body">
+                        Instrumento de medición de precisión para el dimensionamiento exacto de piezas y juntas de soldadura.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="px-2 py-1 bg-primary-container/20 border border-primary-container/30 text-primary-container font-label text-[10px] uppercase">Power: 2200W</div>
+                        <div class="px-2 py-1 bg-surface-container-highest text-outline font-label text-[10px] uppercase">Blade: 14"</div>
+                    </div>
+                    <div class="w-full h-42 bg-surface-dim overflow-hidden border border-outline-variant/30 hidden">
+                        <img class="w-full h-full object-cover opacity-60" src="..."/>
+                    </div>
+</div>
+<!-- Card 4: TIZA BLANCA DE MARCAR -->
+<div class="bg-surface-container-low border border-outline-variant p-6 relative group hover:border-primary-container transition-colors duration-300">
+                    <div class="absolute top-0 right-0 p-2 font-label text-[10px] text-outline">REF: CLAMP_F_09</div>
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-primary-container/10 p-3">
+                            <span class="material-symbols-outlined text-primary-container" data-icon="hand_gesture">hand_gesture</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline text-3xl font-bold tracking-wide uppercase">TIZA BLANCA DE MARCAR</h3>
+                        </div>
+                    </div>
+                                        <p class="text-on-surface-variant text-2xl font-medium leading-tight mb-6 font-body">
+                        Mineral para trazado resistente al calor, esencial para guiar el proceso de corte y unión.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="px-2 py-1 bg-primary-container/20 border border-primary-container/30 text-primary-container font-label text-[10px] uppercase">Type: F-Clamp</div>
+                        <div class="px-2 py-1 bg-surface-container-highest text-outline font-label text-[10px] uppercase">Force: High</div>
+                    </div>
+                    <div class="w-full h-42 bg-surface-dim overflow-hidden border border-outline-variant/30 hidden">
+                        <img class="w-full h-full object-cover opacity-60" src="..."/>
+                    </div>
+</div>
+</div>
+<!-- Descriptive Footer Text -->
+<div class="mt-12 text-center">
+                <p class="font-headline text-xl font-black tracking-widest uppercase text-[#1BFF3C] drop-shadow-[0_0_10px_rgba(27,255,60,0.2)]">
+                    ESTAS HERRAMIENTAS PERMITEN CORTAR, LIMPIAR, MEDIR, SUJETAR Y PREPARAR EL METAL ANTES DE SOLDAR
+                </p>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-8 py-3 bg-[#1C1B1B] shadow-[0px_0px_15px_rgba(27,255,60,0.1)]">
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/5 transition-all active:opacity-80 active:scale-[0.98]">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back">arrow_back</span>
+<span class="font-label text-xs font-bold">PREVIOUS</span>
+</button>
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] bg-[#1BFF3C]/10 px-8 py-2 border border-[#1BFF3C]/40">
+<span class="material-symbols-outlined mb-1" data-icon="analytics">analytics</span>
+<span class="font-label text-xs font-bold">SLIDE 04 / 60</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#84967E] px-6 py-2 hover:text-[#1BFF3C] hover:bg-[#1BFF3C]/5 transition-all active:opacity-80 active:scale-[0.98]">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label text-xs font-bold">NEXT</span>
+</button>
+</footer>
+
+
+\n
+
+\n
+
+\n
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        document.querySelectorAll('button').forEach(btn => {
+            const text = btn.innerText.toUpperCase();
+            if (text.includes('PREV') || text.includes('ANTERIOR') || text.includes('ARROW_BACK') || text.includes('BACK_IOS')) {
+                btn.onclick = () => window.parent.postMessage('PREV', '*');
+            } else if (text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('ARROW_FORWARD') || text.includes('FORWARD_IOS')) {
+                btn.onclick = () => window.parent.postMessage('NEXT', '*');
+            } else if (text.includes('HOME') || text.includes('INICIO')) {
+                btn.onclick = () => window.parent.postMessage('HOME', '*');
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            window.parent.postMessage('PREV', '*');
+        } else if (e.key === 'Home') {
+            window.parent.postMessage('HOME', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+\n</body></html>

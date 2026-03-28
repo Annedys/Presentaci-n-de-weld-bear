@@ -1,0 +1,192 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#2a2a2a",
+              "on-surface": "#e5e2e1",
+              "background": "#131313",
+              "primary": "#ecffe3",
+              "surface-container-low": "#1c1b1b",
+              "outline": "#84967e",
+              "primary-container": "#1bff3c",
+              "outline-variant": "#3b4b37",
+              "secondary-container": "#fed400",
+              "error": "#ffb4ab",
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "technical": ["JetBrains Mono"]
+            },
+            borderRadius: {"none": "0px", "DEFAULT": "0px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50 border-b border-[#3B4B37]/20">
+<div class="text-2xl font-bold tracking-tighter text-[#1BFF3C] uppercase font-headline">WELD BEAR IEDU</div>
+<div class="flex items-center gap-4">
+<button class="text-[#84967E] hover:text-[#1BFF3C] transition-all"><span class="material-symbols-outlined">settings</span></button>
+</div>
+</header>
+
+<!-- Main Content Area -->
+<main class="flex-grow pt-24 pb-32 px-6 blueprint-grid relative h-[calc(100vh-80px)] overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="mb-12 border-l-4 border-primary-container pl-6 py-2 bg-surface-container-low/50">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-technical text-[10px] text-outline uppercase tracking-widest">Power Management // Volt-Amp Comparison</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<span class="font-technical text-[10px] text-primary-container">REF_ID: VAMP-110-220</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tight uppercase leading-none">
+                    TABLA DE AMPERAJES: 110V vs 220V
+                </h1>
+</div>
+
+<!-- Bento Layout Technical Data -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-1 items-start bg-outline-variant/20 border border-outline-variant/30">
+<!-- Table Section -->
+<div class="lg:col-span-9 overflow-x-auto bg-surface-container-low">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-outline-variant/30">
+<th class="p-6 font-technical text-base text-primary-container uppercase border-r border-outline-variant/20">Electrodo</th>
+<th class="p-6 font-technical text-base text-on-surface-variant uppercase border-r border-outline-variant/20">Diámetro</th>
+<th class="p-6 font-technical text-base text-on-surface-variant uppercase border-r border-outline-variant/20">Amperaje 110V</th>
+<th class="p-6 font-technical text-base text-on-surface-variant uppercase">Amperaje 220V</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 font-technical text-lg">
+<tr class="hover:bg-primary-container/5 transition-colors group">
+<td class="p-6 border-r border-outline-variant/20 font-bold text-on-surface text-2xl">E6013</td>
+<td class="p-6 border-r border-outline-variant/20 text-on-surface font-bold text-xl">3/32"</td>
+<td class="p-6 border-r border-outline-variant/20 text-primary-container font-black text-2xl">40 a 90 A</td>
+<td class="p-6 text-primary-container font-black text-2xl">40 a 90 A</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-6 border-r border-outline-variant/20 font-bold text-on-surface text-2xl">E6013</td>
+<td class="p-6 border-r border-outline-variant/20 text-on-surface font-bold text-xl">1/8"</td>
+<td class="p-6 border-r border-outline-variant/20 text-error font-bold text-lg italic">Limitado según máquina</td>
+<td class="p-6 text-primary-container font-black text-2xl">80 a 130 A</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-6 border-r border-outline-variant/20 font-bold text-on-surface text-2xl">E7018</td>
+<td class="p-6 border-r border-outline-variant/20 text-on-surface font-bold text-xl">3/32"</td>
+<td class="p-6 border-r border-outline-variant/20 text-secondary-container font-bold text-lg">80 a 120 A aprox. según equipo</td>
+<td class="p-6 text-primary-container font-black text-2xl">65 a 100 A</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-6 border-r border-outline-variant/20 font-bold text-on-surface text-2xl">E7018</td>
+<td class="p-6 border-r border-outline-variant/20 text-on-surface font-bold text-xl">1/8"</td>
+<td class="p-6 border-r border-outline-variant/20 text-error uppercase font-black text-base">Muchas máquinas no lo sostienen bien</td>
+<td class="p-6 text-primary-container font-black text-2xl">110 a 165 A</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- Technical Context Sidebar -->
+<div class="lg:col-span-3 flex flex-col gap-1">
+<div class="bg-surface-container-high p-6 h-full border-l border-outline-variant/20 relative overflow-hidden group">
+<h3 class="font-headline text-primary-container text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                            NOTA DE POTENCIA
+                        </h3>
+<p class="text-on-surface-variant text-xl leading-relaxed mb-6 font-body italic font-bold">
+                            "En 220V el equipo tiene mayor capacidad para trabajar electrodos de mayor diámetro y mantener mejor estabilidad del arco."
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Removed Footer Annotations -->
+</div>
+</main>
+
+<!-- BottomNavBar -->
+<nav class="bg-[#1C1B1B] fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-4 h-20 border-t border-[#3B4B37]/20 shadow-[0px_0px_15px_rgba(27,255,60,0.15)]">
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:text-[#1BFF3C] transition-all px-6 py-2 group">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-technical text-[10px] mt-1">ANTERIOR</span>
+</button>
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] font-bold">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-technical text-sm mt-1">COMPARATIVA_V</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:text-[#1BFF3C] transition-all px-6 py-2 group">
+<span class="material-symbols-outlined">arrow_forward</span>
+<span class="font-technical text-[10px] mt-1">SIGUIENTE</span>
+</button>
+</nav>
+
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>

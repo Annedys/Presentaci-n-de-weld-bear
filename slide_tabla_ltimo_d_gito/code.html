@@ -1,0 +1,276 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#2a2a2a",
+              "on-primary-container": "#007112",
+              "error-container": "#93000a",
+              "on-surface": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "on-secondary-container": "#6f5c00",
+              "tertiary-container": "#ffd3cd",
+              "on-secondary-fixed": "#221b00",
+              "background": "#131313",
+              "primary": "#ecffe3",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "surface-container-low": "#1c1b1b",
+              "outline": "#84967e",
+              "on-tertiary": "#690003",
+              "primary-fixed-dim": "#00e631",
+              "on-primary-fixed-variant": "#00530a",
+              "on-secondary": "#3b2f00",
+              "surface-bright": "#393939",
+              "on-tertiary-fixed-variant": "#930005",
+              "on-primary-fixed": "#002202",
+              "on-tertiary-container": "#c5020c",
+              "on-primary": "#003a05",
+              "on-background": "#e5e2e1",
+              "surface-tint": "#00e631",
+              "inverse-surface": "#e5e2e1",
+              "surface-dim": "#131313",
+              "on-surface-variant": "#baccb2",
+              "error": "#ffb4ab",
+              "primary-container": "#1bff3c",
+              "on-error": "#690005",
+              "surface-container-highest": "#353534",
+              "secondary-fixed": "#ffe174",
+              "tertiary-fixed": "#ffdad5",
+              "outline-variant": "#3b4b37",
+              "on-tertiary-fixed": "#410001",
+              "inverse-primary": "#006e11",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary": "#fff3d3",
+              "secondary-container": "#fed400",
+              "on-secondary-fixed-variant": "#554500",
+              "primary-fixed": "#74ff6d",
+              "secondary-fixed-dim": "#eac300",
+              "surface-container": "#201f1f",
+              "surface-variant": "#353534",
+              "tertiary": "#fff8f7",
+              "surface": "#131313",
+              "on-error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Rajdhani"],
+              "body": ["Space Grotesk"],
+              "technical": ["JetBrains Mono"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"none": "0px", "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: linear-gradient(to right, rgba(59, 75, 55, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(59, 75, 55, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-hover:hover {
+            box-shadow: 0px 0px 15px rgba(27, 255, 60, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#131313] dark:bg-[#131313] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50 border-b border-[#3B4B37]/20">
+<div class="text-2xl font-bold tracking-tighter text-[#1BFF3C] uppercase font-headline"><span style="letter-spacing: -1.2px;" class="">WELD BEAR&nbsp; IEDU&nbsp;</span></div>
+<nav class="hidden md:flex space-x-8 items-center">
+<a class="font-headline text-sm tracking-widest text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">MODULES</a>
+<a class="font-headline text-sm tracking-widest text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">SAFETY</a>
+<a class="font-headline text-sm tracking-widest text-[#1BFF3C] border-b-2 border-[#1BFF3C] pb-1" href="#">PROCEDURES</a>
+<a class="font-headline text-sm tracking-widest text-[#84967E] hover:text-[#1BFF3C] transition-colors" href="#">METRICS</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-[#84967E] hover:text-[#1BFF3C] transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<button class="text-[#84967E] hover:text-[#1BFF3C] transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow pt-24 pb-32 px-6 blueprint-grid relative h-[calc(100vh-80px)] overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="mb-8 border-l-4 border-primary-container pl-6 py-2 bg-surface-container-low/50">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-technical text-[10px] text-outline uppercase tracking-widest">System Reference // Arc-Welding</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<span class="font-technical text-[10px] text-primary-container">REF_ID: EL-38-60</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight uppercase leading-none">
+                    REFERENCIA ÚLTIMO DÍGITO DEL ELECTRODO
+                </h1>
+</div>
+<!-- Bento Layout Technical Data -->
+<!-- Full Width Compact Table Layout -->
+<div class="bg-surface-container-low border border-outline-variant/30 overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.3)]">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high font-bold text-xs">
+<th class="px-6 py-4 font-technical text-primary-container uppercase border-r border-outline-variant/20 tracking-tighter">ÚLTIMO DÍGITO</th>
+<th class="px-6 py-4 font-technical text-on-surface-variant uppercase border-r border-outline-variant/20 tracking-tighter">CORRIENTE</th>
+<th class="px-6 py-4 font-technical text-on-surface-variant uppercase border-r border-outline-variant/20 tracking-tighter">REVESTIMIENTO</th>
+<th class="px-6 py-4 font-technical text-on-surface-variant uppercase tracking-tighter">PENETRACIÓN</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5 font-technical text-base font-bold">
+<tr class="hover:bg-primary-container/5 transition-colors group">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">0</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">DC+</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">CELULÓSICO SODIO</td>
+<td class="p-3 text-primary-container font-black">ALTA</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">1</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">AC/DC+</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">CELULÓSICO POTASIO</td>
+<td class="p-3 text-primary-container font-black">ALTA</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">2</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">AC/DC-</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">RUTILICO O TITANICO DE SODIO</td>
+<td class="p-3 text-on-surface">MEDIA</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">3</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">AC/DC±</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">RUTILO POTASIO</td>
+<td class="p-3 text-on-surface">BAJA/MEDIA</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">4</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">AC/DC±</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">RUTILO POLVO DE HIERRO</td>
+<td class="p-3 text-on-surface">BAJA A MEDIA</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">5</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">DC+</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">BAJO HIDRÓGENO SODIO</td>
+<td class="p-3 text-on-surface">MEDIA</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">6</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">AC/DC+</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">BAJO HIDRÓGENO POTASIO</td>
+<td class="p-3 text-on-surface">MEDIA</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">7</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20 tracking-tighter">DEPENDE DE CLASIFICACION ESPECIAL</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20 font-medium">FAMILIA ESPECIAL</td>
+<td class="p-3 text-on-surface">VARIABLE</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">8</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">AC/DC+</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20">BAJO HIDRÓGENO POLVO HIERRO</td>
+<td class="p-3 text-on-surface">MEDIA</td>
+</tr>
+<tr class="hover:bg-primary-container/5 transition-colors">
+<td class="p-3 font-black text-primary-container border-r border-outline-variant/20 bg-primary-container/5 text-2xl text-center">9</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20 tracking-tighter">DEPENDE DE CLASIFICACION ESPECIAL</td>
+<td class="p-3 text-on-surface border-r border-outline-variant/20 font-medium">FAMILIA ESPECIAL O MODIFICADA</td>
+<td class="p-3 text-primary-container font-black">VARIABLE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Full Width Footer Note -->
+<div class="mt-4 bg-surface-container-high border-l-4 border-primary-container p-4 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
+<p class="text-on-surface text-lg md:text-xl font-body italic leading-relaxed font-bold tracking-tight">
+<span class="text-primary-container font-black not-italic mr-2">NOTA:</span> Esta tabla sirve como referencia general de enseñanza para interpretar el último dígito en electrodos SMAW comunes. Debe presentarse como guía práctica, no como regla absoluta para todos los fabricantes.
+</p>
+</div>
+</div>
+<!-- Footer Annotations Removed -->
+</div>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 bg-[#1C1B1B] border-t border-[#1BFF3C]/20 shadow-[0_-5px_15px_rgba(27,255,60,0.05)]">
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:text-[#1BFF3C] transition-all px-8 py-2 group active:scale-95">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-technical text-[10px] uppercase mt-1">ANTERIOR</span>
+</button>
+<div class="flex flex-col items-center justify-center text-[#1BFF3C] font-bold">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-technical text-sm mt-1 uppercase tracking-widest">TABLA_ELECTRODO</span>
+</div>
+<button class="flex flex-col items-center justify-center text-[#84967E] hover:text-[#1BFF3C] transition-all px-8 py-2 group active:scale-95">
+<span class="material-symbols-outlined">arrow_forward</span>
+<span class="font-technical text-[10px] uppercase mt-1">SIGUIENTE</span>
+</button>
+</footer>
+<!-- Visual Polish: Corner Decoration -->
+<div class="fixed top-0 right-0 p-2 pointer-events-none opacity-20">
+<div class="text-[8px] font-technical text-outline leading-tight text-right">
+            SESS_ID: 9928-ALPHA<br>
+            USER: WELD_TECH_OS<br>
+            LOAD: 100%
+        </div>
+</div>
+
+
+
+
+
+
+
+
+<script id="weld-bear-sync">
+    setTimeout(() => {
+        const triggers = document.querySelectorAll('button, a');
+        triggers.forEach(el => {
+            const text = el.innerText.toUpperCase();
+            const isPrev = text.includes('PREV') || text.includes('ANTERIOR') || text.includes('BACK_IOS') || text.includes('ARROW_BACK');
+            const isNext = text.includes('NEXT') || text.includes('SIGUIENTE') || text.includes('SIGUE') || text.includes('CONTINUAR') || text.includes('ARROW_FORWARD');
+            const isHome = text.includes('HOME') || text.includes('INICIO');
+            const isFinish = text.includes('FINALIZAR') || text.includes('FINISH');
+
+            if (isPrev || isNext || isHome || isFinish) {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    if (isPrev) window.parent.postMessage('PREV', '*');
+                    if (isNext) window.parent.postMessage('NEXT', '*');
+                    if (isHome) window.parent.postMessage('HOME', '*');
+                    if (isFinish) window.parent.postMessage('FINISH', '*');
+                };
+            }
+        });
+    }, 500);
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            window.parent.postMessage('NEXT', '*');
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+            e.preventDefault();
+            window.parent.postMessage('PREV', '*');
+        }
+    });
+
+    window.addEventListener('load', () => {
+        window.parent.postMessage('LOADED', '*');
+    });
+</script>
+
+</body></html>
